@@ -57,15 +57,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       ]
     },
     {
-      id: 'organized-tours',
-      label: 'טיולים מאורגנים',
-      hasSubmenu: true,
-      submenu: [
-        { id: 'west-south-tour', label: 'טיול ממערב לדרום הודו' },
-        { id: 'west-east-tour', label: 'טיול ממערב למזרח הודו' }
-      ]
-    },
-    {
       id: 'weddings',
       label: 'חתונות בהודו',
       hasSubmenu: false
