@@ -213,7 +213,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
                   החלק האחרון יוביל אתכם לקרלה – האזור הירוק, השקט והקסום של הודו.
                 </p>
                 <button 
-                  onClick={() => onPageChange('kerala')}
+                  onClick={() => onPageChange('west-south-tour')}
                   className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   קראו עוד
@@ -238,7 +238,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
                   מדינת מערב בנגל. נגיע לכולכתא, העיר שמכונה "עיר האושר": בירתה התרבותית של הודו.
                 </p>
                 <button 
-                  onClick={() => onPageChange('kolkata')}
+                  onClick={() => onPageChange('west-east-tour')}
                   className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   קראו עוד

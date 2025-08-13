@@ -55,18 +55,18 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               </li>
               <li>
                 <button 
-                  onClick={() => onPageChange('services')}
+                  onClick={() => onPageChange('organized-tours')}
                   className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:translate-x-1 transform duration-200"
                 >
-                  שירותים
+                  טיולים מאורגנים
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => onPageChange('contact')}
+                  onClick={() => onPageChange('weddings')}
                   className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:translate-x-1 transform duration-200"
                 >
-                  צור קשר
+                  חתונות בהודו
                 </button>
               </li>
             </ul>
@@ -140,40 +140,46 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-wrap justify-center space-x-6 space-x-reverse text-sm">
             <button 
-              onClick={() => onPageChange('mumbai')}
+              onClick={() => onPageChange('mumbai-private')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
               מומבאי
             </button>
             <button 
-              onClick={() => onPageChange('bangalore')}
+              onClick={() => onPageChange('bangalore-tours')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
               בנגלור
             </button>
             <button 
-              onClick={() => onPageChange('goa')}
+              onClick={() => onPageChange('goa-tours')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
               גואה
             </button>
             <button 
-              onClick={() => onPageChange('kochi')}
+              onClick={() => onPageChange('kochi-tours')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
               קוצ'י
             </button>
             <button 
-              onClick={() => onPageChange('kerala')}
+              onClick={() => onPageChange('west-south-tour')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
-              קרלה
+              דרום הודו
             </button>
             <button 
-              onClick={() => onPageChange('kolkata')}
+              onClick={() => onPageChange('west-east-tour')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
-              קולקטה
+              מזרח הודו
+            </button>
+            <button 
+              onClick={() => onPageChange('weddings')}
+              className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
+            >
+              חתונות
             </button>
             <button 
               onClick={() => onPageChange('testimonials')}
@@ -186,12 +192,6 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
               בלוג
-            </button>
-            <button 
-              onClick={() => onPageChange('terms')}
-              className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
-            >
-              תנאים והגבלות
             </button>
           </div>
         </div>
