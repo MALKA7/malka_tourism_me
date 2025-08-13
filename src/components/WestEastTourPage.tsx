@@ -287,15 +287,15 @@ const WestEastTourPage: React.FC<WestEastTourPageProps> = ({ onPageChange }) => 
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="relative bg-gray-200 rounded-xl overflow-hidden shadow-xl">
-              <div className="aspect-video flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Play className="w-10 h-10 text-white mr-2" />
-                  </div>
-                  <p className="text-gray-600 hebrew-text">וידאו טעימה מהטיול</p>
-                </div>
-              </div>
+            <div className="relative bg-black rounded-xl overflow-hidden shadow-xl">
+              <video 
+                className="w-full aspect-video"
+                controls
+                poster="/kolkata.png"
+              >
+                <source src="/DIYA.mp4" type="video/mp4" />
+                הדפדפן שלכם לא תומך בתגית וידאו.
+              </video>
             </div>
             <p className="text-center text-gray-600 hebrew-text mt-4 italic">
               עוד לא יצאתם – אבל כבר אפשר לדמיין אתכם שם
