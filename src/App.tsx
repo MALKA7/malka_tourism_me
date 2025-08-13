@@ -58,12 +58,8 @@ function App() {
         return <MumbaiSharedTourPage onPageChange={setCurrentPage} />;
       case 'mumbai-private':
         return <MumbaiPrivateTourPage onPageChange={setCurrentPage} />;
-      case 'bangalore-tours':
-        return <BangaloreToursPage onPageChange={setCurrentPage} />;
-      case 'goa-tours':
-        return <GoaToursPage onPageChange={setCurrentPage} />;
-      case 'kochi-tours':
-        return <KochiToursPage onPageChange={setCurrentPage} />;
+      case 'additional-cities':
+        return <AdditionalCitiesPage onPageChange={setCurrentPage} />;
       
       // Organized Tours Pages (2)
       case 'west-south-tour':
