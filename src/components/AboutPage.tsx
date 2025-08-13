@@ -172,6 +172,9 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
             <p className="text-xl text-gray-600 hebrew-text">
               גלריה של תמונות אמיתיות מחיי מלכה בהודו
             </p>
+            <p className="text-lg text-blue-600 hebrew-text mt-4 font-medium">
+              רוצים להכיר אותי יותר? לחצו על התמונות וגלו עוד עובדות קטנות ומיוחדות עליי
+            </p>
           </div>
 
           {/* Professional Photo Grid with Hover Text */}
