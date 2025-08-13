@@ -57,6 +57,15 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       ]
     },
     {
+      id: 'organized-tours',
+      label: 'טיולים מאורגנים',
+      hasSubmenu: true,
+      submenu: [
+        { id: 'west-south-tour', label: 'טיול ממערב לדרום הודו' },
+        { id: 'west-east-tour', label: 'טיול ממערב למזרח הודו' }
+      ]
+    },
+    {
       id: 'weddings',
       label: 'חתונות בהודו',
       hasSubmenu: false
@@ -81,7 +90,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   const allPages = [
     'home', 'about', 'services', 'day-tours', 'organized-tours', 'weddings', 'testimonials', 'blog', 'contact', 'additional-cities',
     'trip-planning', 'trip-execution', 'hebrew-guiding', 'personal-hosting', 
-    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 'west-south-tour', 'west-east-tour', 'additional-cities'
+    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 
+    'west-south-tour', 'west-east-tour', 'additional-cities'
   ];
 
   const getPageTitle = (pageId: string): string => {
@@ -100,6 +110,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       'visa-assistance': 'סיוע בויזה והכנות',
       'mumbai-shared': 'מומבאי - סיור משותף',
       'mumbai-private': 'מומבאי - סיור פרטי',
+      'west-south-tour': 'טיול ממערב לדרום הודו',
+      'west-east-tour': 'טיול ממערב למזרח הודו',
+      'organized-tours': 'טיולים מאורגנים',
       'additional-cities': 'ערים נוספות',
       'west-south-tour': 'טיול ממערב לדרום הודו',
       'west-east-tour': 'טיול ממערב למזרח הודו',
