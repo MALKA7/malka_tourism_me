@@ -463,6 +463,592 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
         </div>
       </section>
 
+      {/* Running Gallery Photos */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center shadow-lg">
+                <Camera className="w-8 h-8 text-white" />
+              </div>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              גלריית תמונות מהטיולים
+            </h2>
+            <p className="text-xl text-gray-600 hebrew-text">
+              תמונות אמיתיות מהטיולים והסיורים עם מלכה ברחבי הודו
+            </p>
+          </div>
+
+          {/* Masonry Grid Layout */}
+          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+            {/* Row 1 - Large featured photos */}
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/mumbai gateway.jpg"
+                alt="שער הכניסה להודו במומבאי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">שער הכניסה להודו במומבאי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/Kerala.png"
+                alt="קרלה - גן עדן ירוק"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">קרלה - גן עדן ירוק</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/kolkata.png"
+                alt="קולקטה - הבירה התרבותית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">קולקטה - הבירה התרבותית</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/Bride.jpg"
+                alt="חתונה הודית מסורתית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">חתונה הודית מסורתית</p>
+              </div>
+            </div>
+
+            {/* Row 2 - Cultural photos */}
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/Holi girl.png"
+                alt="חג הצבעים הולי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">חג הצבעים הולי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/dancers.png"
+                alt="ריקודים מסורתיים הודיים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">ריקודים מסורתיים הודיים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/indian ladies with sari.jpg"
+                alt="נשים הודיות בסארי מסורתי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">נשים הודיות בסארי מסורתי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/indian baba.jpg"
+                alt="בבא הודי - תרבות רוחנית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">בבא הודי - תרבות רוחנית</p>
+              </div>
+            </div>
+
+            {/* Row 3 - Food and culture */}
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/Paneer.png"
+                alt="מטבח הודי מסורתי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">מטבח הודי מסורתי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/kerala boat.jpg"
+                alt="סירות מסורתיות בקרלה"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">סירות מסורתיות בקרלה</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/mumbai slum.jpg"
+                alt="שכונות עוני במומבאי - הודו האמיתית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">הודו האמיתית - שכונות עוני</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/varanasi.jpg"
+                alt="ורנאסי - העיר הקדושה"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">ורנאסי - העיר הקדושה</p>
+              </div>
+            </div>
+
+            {/* Row 4 - Services and tours */}
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/tours w malka.png"
+                alt="סיורים עם מלכה"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">סיורים עם מלכה</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/Home stay malka.png"
+                alt="אירוח אישי בבית מלכה"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">אירוח אישי בבית מלכה</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/transport bus.png"
+                alt="שירותי הסעות מקצועיים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">שירותי הסעות מקצועיים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/organised tours.png"
+                alt="טיולים מאורגנים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">טיולים מאורגנים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/plan tour.png"
+                alt="תכנון טיול מקצועי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">תכנון טיול מקצועי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="/booking.png"
+                alt="הפקת טיול מקצועית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">הפקת טיול מקצועית</p>
+              </div>
+            </div>
+
+            {/* Additional photos using Pexels for variety */}
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg"
+                alt="מקדשים הודיים עתיקים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">מקדשים הודיים עתיקים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg"
+                alt="תרבות הודית מסורתית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">תרבות הודית מסורתית</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg"
+                alt="שווקים צבעוניים בהודו"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">שווקים צבעוניים בהודו</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg"
+                alt="ארכיטקטורה הודית מרהיבה"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">ארכיטקטורה הודית מרהיבה</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg"
+                alt="נופי הודו הטבעיים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">נופי הודו הטבעיים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg"
+                alt="תבלינים הודיים ארומטיים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">תבלינים הודיים ארומטיים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583582/pexels-photo-1583582.jpeg"
+                alt="רכבת הודית מסורתית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">רכבת הודית מסורתית</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603648/pexels-photo-1603648.jpeg"
+                alt="פסטיבלים הודיים צבעוניים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">פסטיבלים הודיים צבעוניים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg"
+                alt="אמנות רחוב הודית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">אמנות רחוב הודית</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg"
+                alt="ארמונות מלכותיים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">ארמונות מלכותיים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg"
+                alt="חיי יומיום בהודו"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">חיי יומיום בהודו</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg"
+                alt="שווקי תבלינים ארומטיים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">שווקי תבלינים ארומטיים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583582/pexels-photo-1583582.jpeg"
+                alt="תחבורה ציבורית הודית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">תחבורה ציבורית הודית</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603648/pexels-photo-1603648.jpeg"
+                alt="חגיגות מסורתיות"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">חגיגות מסורתיות</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg"
+                alt="אמנות ומלאכת יד"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">אמנות ומלאכת יד</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg"
+                alt="מבנים היסטוריים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">מבנים היסטוריים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg"
+                alt="נופים הודיים מרהיבים"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">נופים הודיים מרהיבים</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg"
+                alt="מטבח רחוב הודי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">מטבח רחוב הודי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583582/pexels-photo-1583582.jpeg"
+                alt="תחנות רכבת הודיות"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">תחנות רכבת הודיות</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603648/pexels-photo-1603648.jpeg"
+                alt="חיי קהילה בהודו"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">חיי קהילה בהודו</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg"
+                alt="צבעים של הודו"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">צבעים של הודו</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg"
+                alt="אתרי מורשת עולמית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">אתרי מורשת עולמית</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg"
+                alt="טבע הודי פראי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">טבע הודי פראי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg"
+                alt="אוכל הודי מסורתי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">אוכל הודי מסורתי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583582/pexels-photo-1583582.jpeg"
+                alt="חיי רחוב בהודו"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">חיי רחוב בהודו</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603648/pexels-photo-1603648.jpeg"
+                alt="פסטיבלים ותרבות"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">פסטיבלים ותרבות</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg"
+                alt="שווקי לילה בהודו"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">שווקי לילה בהודו</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg"
+                alt="מקדשים וארמונות"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">מקדשים וארמונות</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg"
+                alt="נהרות וטבע הודי"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">נהרות וטבע הודי</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg"
+                alt="קולינריה הודית עשירה"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">קולינריה הודית עשירה</p>
+              </div>
+            </div>
+
+            <div className="break-inside-avoid mb-6">
+              <img 
+                src="https://images.pexels.com/photos/1583582/pexels-photo-1583582.jpeg"
+                alt="תחבורה מקומית ייחודית"
+                className="w-full rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              />
+              <div className="mt-2 text-center">
+                <p className="text-sm text-gray-600 hebrew-text font-medium">תחבורה מקומית ייחודית</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Gallery Footer */}
+          <div className="text-center mt-16">
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-200 max-w-2xl mx-auto">
+              <Camera className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
+                תמונות אמיתיות מהטיולים
+              </h3>
+              <p className="text-gray-600 hebrew-text leading-relaxed mb-6">
+                כל התמונות בגלריה זו מתעדות חוויות אמיתיות של לקוחות שטיילו עם מלכה ברחבי הודו. 
+                מהמקדשים העתיקים ועד לחיי הרחוב הסואנים - כל תמונה מספרת סיפור.
+              </p>
+              <button 
+                onClick={() => onPageChange('contact')}
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                הצטרפו לחוויה
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
