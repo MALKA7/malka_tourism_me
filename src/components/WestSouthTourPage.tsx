@@ -892,22 +892,102 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
     notIncluded: {
       title: 'לא כלול',
       content: (
-        <div className="space-y-3">
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">טיסות בינלאומיות</span>
+        <div className="space-y-6">
+          {/* Top Row - 3 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Additional Meals Card */}
+            <div className="bg-gradient-to-br from-white to-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-red-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-utensils text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-2 text-right">ארוחות נוספות</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
+                  צהריים שלא צוינו בתוכנית
+                </p>
+              </div>
+            </div>
+
+            {/* Personal Shopping Card */}
+            <div className="bg-gradient-to-br from-white to-orange-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-shopping-bag text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-2 text-right">קניות אישיות</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
+                  מזכרות, קניות והוצאות אישיות
+                </p>
+              </div>
+            </div>
+
+            {/* Beverages Card */}
+            <div className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-glass-cheers text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-2 text-right">משקאות</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
+                  כל סוגי המשקאות שאינם כלולים
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">ארוחות צהריים וערב</span>
-          </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">הוצאות אישיות</span>
-          </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">ויזה להודו</span>
+
+          {/* Bottom Row - 4 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Tips Card */}
+            <div className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-hand-holding-usd text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-2 text-right">טיפים</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
+                  טיפים למדריכים מקומיים ונהגים
+                </p>
+              </div>
+            </div>
+
+            {/* Travel Insurance Card */}
+            <div className="bg-gradient-to-br from-white to-yellow-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-yellow-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-shield-alt text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-2 text-right">ביטוח נסיעות (חובה!!!)</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
+                  ביטוח רפואי וכיסוי הוצאות חירום
+                </p>
+              </div>
+            </div>
+
+            {/* Visa Card */}
+            <div className="bg-gradient-to-br from-white to-purple-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-passport text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-2 text-right">ויזה</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
+                  עלות הוצאת ויזה להודו
+                </p>
+              </div>
+            </div>
+
+            {/* Everything Else Card */}
+            <div className="bg-gradient-to-br from-white to-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-gray-500 to-gray-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-ellipsis-h text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-2 text-right">כל מה שאינו כלול</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
+                  כל מה שאינו כלול בתוכנית ובמחיר הטיול
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       )
