@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Car, Camera, Building, Waves, Plane, Hotel, Play, RotateCcw, DollarSign } from 'lucide-react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Car, Camera, Building, Waves, Plane, Hotel, Play, RotateCcw, X } from 'lucide-react';
 
 interface WestSouthTourPageProps {
   onPageChange: (page: string) => void;
