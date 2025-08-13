@@ -53,7 +53,7 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
     {
       id: 1,
       name: 'מורן מינה',
-      location: 'תל אביב',
+      location: 'חיפה',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
       rating: 5,
       date: 'ינואר 2025',
