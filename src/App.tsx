@@ -66,10 +66,14 @@ function App() {
         return <KochiToursPage onPageChange={setCurrentPage} />;
       
       // Organized Tours Pages (2)
-      case 'kerala-tour':
-        return <KeralaOrganizedTourPage onPageChange={setCurrentPage} />;
-      case 'kolkata-tour':
-        return <KolkataOrganizedTourPage onPageChange={setCurrentPage} />;
+      case 'west-south-tour':
+        return <WestSouthTourPage onPageChange={setCurrentPage} />;
+      case 'west-east-tour':
+        return <WestEastTourPage onPageChange={setCurrentPage} />;
+      
+      // New Pages
+      case 'weddings':
+        return <WeddingsPage onPageChange={setCurrentPage} />;
       
       // Main Pages continued
       case 'testimonials':

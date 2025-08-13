@@ -20,13 +20,13 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       hasSubmenu: false
     },
     {
-      id: 'about',
-      label: 'אודות מלכה',
+      id: 'about', 
+      label: 'אודות',
       hasSubmenu: false
     },
     {
-      id: 'services',
-      label: 'שירותי נסיעות',
+      id: 'services', 
+      label: 'שירותים',
       hasSubmenu: true,
       submenu: [
         { id: 'trip-planning', label: 'תכנון טיול מותאם אישית' },
@@ -38,18 +38,30 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       ]
     },
     {
-      id: 'tours',
-      label: 'טיולים וסיורים',
+      id: 'day-tours',
+      label: 'סיורי יום',
       hasSubmenu: true,
       submenu: [
         { id: 'mumbai-shared', label: 'מומבאי - סיור משותף' },
         { id: 'mumbai-private', label: 'מומבאי - סיור פרטי' },
         { id: 'bangalore-tours', label: 'בנגלור - סיורי יום' },
         { id: 'goa-tours', label: 'גואה - סיורי יום' },
-        { id: 'kochi-tours', label: 'קוצ\'י - סיורי יום' },
-        { id: 'kerala-tour', label: 'טיול מאורגן לקרלה' },
-        { id: 'kolkata-tour', label: 'טיול מאורגן לקולקטה' }
+        { id: 'kochi-tours', label: 'קוצ\'י - סיורי יום' }
       ]
+    },
+    {
+      id: 'organized-tours',
+      label: 'טיולים מאורגנים',
+      hasSubmenu: true,
+      submenu: [
+        { id: 'west-south-tour', label: 'טיול ממערב לדרום הודו' },
+        { id: 'west-east-tour', label: 'טיול ממערב למזרח הודו' }
+      ]
+    },
+    {
+      id: 'weddings',
+      label: 'חתונות בהודו',
+      hasSubmenu: false
     },
     {
       id: 'testimonials',
@@ -69,18 +81,20 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   ];
 
   const allPages = [
-    'home', 'about', 'services', 'tours', 'testimonials', 'blog', 'contact',
+    'home', 'about', 'services', 'day-tours', 'organized-tours', 'weddings', 'testimonials', 'blog', 'contact',
     'trip-planning', 'trip-execution', 'hebrew-guiding', 'personal-hosting', 
-    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private',
-    'bangalore-tours', 'goa-tours', 'kochi-tours', 'kerala-tour', 'kolkata-tour'
+    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 
+    'bangalore-tours', 'goa-tours', 'kochi-tours', 'west-south-tour', 'west-east-tour'
   ];
 
   const getPageTitle = (pageId: string): string => {
     const pageTitles: { [key: string]: string } = {
       'home': 'בית',
-      'about': 'אודות מלכה',
-      'services': 'שירותי נסיעות',
-      'tours': 'טיולים וסיורים',
+      'about': 'אודות',
+      'services': 'שירותים',
+      'day-tours': 'סיורי יום',
+      'organized-tours': 'טיולים מאורגנים',
+      'weddings': 'חתונות בהודו',
       'trip-planning': 'תכנון טיול מותאם אישית',
       'trip-execution': 'הפקת טיול מקצועית',
       'hebrew-guiding': 'הדרכה בעברית',
@@ -92,8 +106,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       'bangalore-tours': 'בנגלור - סיורי יום',
       'goa-tours': 'גואה - סיורי יום',
       'kochi-tours': 'קוצ\'י - סיורי יום',
-      'kerala-tour': 'טיול מאורגן לקרלה',
-      'kolkata-tour': 'טיול מאורגן לקולקטה',
+      'west-south-tour': 'טיול ממערב לדרום הודו',
+      'west-east-tour': 'טיול ממערב למזרח הודו',
       'testimonials': 'המלצות לקוחות',
       'blog': 'בלוג הודו',
       'contact': 'צור קשר'
