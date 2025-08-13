@@ -44,34 +44,547 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
     itinerary: {
       title: 'מסלול הטיול',
       content: (
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h4 className="font-bold text-blue-900 mb-3 hebrew-text">ימים 1-5: מומבאי</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li className="hebrew-text">• שער הכניסה להודו</li>
-                <li className="hebrew-text">• סלאם דהרבי</li>
-                <li className="hebrew-text">• מרין דרייב</li>
-                <li className="hebrew-text">• בוליווד</li>
-              </ul>
+        <div className="space-y-8">
+          {/* Itinerary Timeline */}
+          <div className="space-y-6">
+            {/* Day 1 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">1</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 1: מומבאי</h3>
+                      <p className="text-gray-600 hebrew-text">הגעה והתמצאות בעיר</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">הגעה לנמל התעופה מומבאי</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">הסעה למלון ואכלוס</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">פגישת היכרות עם הקבוצה</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור ראשוני בסביבת המלון</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/mumbai gateway.jpg" alt="יום 1 - מומבאי" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
             </div>
-            <div className="bg-green-50 p-6 rounded-lg">
-              <h4 className="font-bold text-green-900 mb-3 hebrew-text">ימים 6-10: בנגלור</h4>
-              <ul className="space-y-2 text-gray-700">
-                <li className="hebrew-text">• ארמון טיפו סולטן</li>
-                <li className="hebrew-text">• גנים בוטניים</li>
-                <li className="hebrew-text">• מקדש בול</li>
-                <li className="hebrew-text">• שוק KR מרקט</li>
-              </ul>
+
+            {/* Day 2 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">2</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 2: מומבאי</h3>
+                      <p className="text-gray-600 hebrew-text">סיור מקיף בעיר</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור בשער הכניסה להודו</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור במלון טאג' מהאל</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">טיול במרין דרייב</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ארוחת ערב במסעדה מקומית</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/mumbai gateway.jpg" alt="יום 2 - שער הכניסה להודו" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
             </div>
-            <div className="bg-purple-50 p-6 rounded-lg md:col-span-2">
-              <h4 className="font-bold text-purple-900 mb-3 hebrew-text">ימים 11-15: קרלה</h4>
-              <ul className="space-y-2 text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-2">
-                <li className="hebrew-text">• שייט בתעלות המים</li>
-                <li className="hebrew-text">• מטעי תה במונאר</li>
-                <li className="hebrew-text">• עיסוי איורוודי</li>
-                <li className="hebrew-text">• הופעת קתקלי</li>
-              </ul>
+
+            {/* Day 3 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">3</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 3: מומבאי</h3>
+                      <p className="text-gray-600 hebrew-text">חקר העיר העתיקה</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור בסלאם דהרבי</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור בשוק קרופורד</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">מקדש מהלקשמי</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">צפייה בשליחי המזון</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/mumbai slum.jpg" alt="יום 3 - סלאם דהרבי" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 4 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">4</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 4: מומבאי / בנגלור</h3>
+                      <p className="text-gray-600 hebrew-text">מעבר לבירת הטכנולוגיה</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ארוחת בוקר במלון</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">טיסה למומבאי לבנגלור</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">הגעה לבנגלור ואכלוס במלון</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור ראשוני בעיר הגנים</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg" alt="יום 4 - בנגלור" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 5 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">5</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 5: בנגלור / מייסור</h3>
+                      <p className="text-gray-600 hebrew-text">מסע לעיר הארמונות</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור בארמון טיפו סולטן</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">נסיעה למייסור (3 שעות)</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">אכלוס במלון במייסור</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור ערב בשווקי מייסור</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" alt="יום 5 - מייסור" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 6 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">6</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 6: מייסור / קביני</h3>
+                      <p className="text-gray-600 hebrew-text">מסע לשמורת הטבע</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור בארמון מייסור המפואר</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">נסיעה לקביני (2 שעות)</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">אכלוס בלודג' בשמורת הטבע</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ספארי ערב ראשון</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg" alt="יום 6 - קביני" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 7 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">7</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 7: קביני / ווייאנאד</h3>
+                      <p className="text-gray-600 hebrew-text">מעבר לקרלה הירוקה</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ספארי בוקר אחרון בקביני</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">נסיעה לווייאנאד, קרלה (3 שעות)</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">אכלוס במלון בווייאנאד</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור במטעי התבלינים</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/Kerala.png" alt="יום 7 - ווייאנאד" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 8 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">8</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 8: ווייאנאד</h3>
+                      <p className="text-gray-600 hebrew-text">חקר הטבע הקרלי</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור במערות אדקל</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">טיול לאגם קרפדם</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור בשמורת חיות הבר</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">עיסוי איורוודי מסורתי</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/kerala boat.jpg" alt="יום 8 - טבע ווייאנאד" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 9 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">9</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 9: ווייאנאד / תריסור</h3>
+                      <p className="text-gray-600 hebrew-text">מסע לעיר התרבות</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ארוחת בוקר ויציאה מהמלון</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">נסיעה לתריסור (4 שעות)</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">אכלוס במלון בתריסור</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור במקדש גורוויור</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/dancers.png" alt="יום 9 - תריסור" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 10 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">10</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 10: תריסור / קוצ'י</h3>
+                      <p className="text-gray-600 hebrew-text">מלכת הים הערבי</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור בפסטיבל פורם</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">נסיעה לקוצ'י (2 שעות)</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">אכלוס במלון בקוצ'י</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור ברשתות הדיג הסיניות</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/kerala boat.jpg" alt="יום 10 - קוצ'י" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 11 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">11</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 11: קוצ'י / פרייאר</h3>
+                      <p className="text-gray-600 hebrew-text">מסע להרי התבלינים</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור בפורט קוצ'י העתיקה</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור בבית הכנסת הפרדסי</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">נסיעה לפרייאר (4 שעות)</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">אכלוס במלון בהרי התבלינים</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" alt="יום 11 - פרייאר" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 12 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-rose-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">12</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 12: פרייאר</h3>
+                      <p className="text-gray-600 hebrew-text">יום מלא בשמורת הטבע</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ספארי בוקר בשמורת פרייאר</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">שייט באגם פרייאר</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ביקור במטעי התבלינים</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">הופעת מחול קתקלי מסורתי</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/dancers.png" alt="יום 12 - מחול קתקלי" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 13 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">13</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 13: פרייאר / אלפי (לינה בסירת בית)</h3>
+                      <p className="text-gray-600 hebrew-text">חוויה ייחודית על המים</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">נסיעה לאלפי (3 שעות)</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">עלייה לסירת בית מסורתית</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">שייט בתעלות המים הרגועות</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">לינה על המים - חוויה בלתי נשכחת</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/kerala boat.jpg" alt="יום 13 - סירת בית באלפי" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 14 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">14</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 14: אלפי / קוצ'י</h3>
+                      <p className="text-gray-600 hebrew-text">חזרה לעיר הנמל</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ארוחת בוקר על סירת הבית</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">שייט אחרון בתעלות</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">נסיעה לקוצ'י (1.5 שעות)</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">אכלוס במלון בקוצ'י</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/kerala boat.jpg" alt="יום 14 - חזרה לקוצ'י" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
+            </div>
+
+            {/* Day 15 */}
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
+                <div className="lg:col-span-2">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">15</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 hebrew-text">יום 15: קוצ'י</h3>
+                      <p className="text-gray-600 hebrew-text">יום האחרון והחזרה</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">ארוחת בוקר במלון</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">סיור אחרון בשוק התבלינים</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">קניות מזכרות אחרונות</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
+                      <span className="hebrew-text text-gray-700">הסעה לנמל התעופה</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-1">
+                  <img src="/kerala boat.jpg" alt="יום 15 - יציאה מקוצ'י" className="w-full h-48 object-cover rounded-lg shadow-md" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
