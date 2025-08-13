@@ -389,20 +389,6 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
               </div>
             </div>
           </div>
-
-          {/* Gallery Description */}
-          <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 max-w-3xl mx-auto border border-blue-200">
-              <Camera className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
-                עוברו עם העכבר על התמונות לגילוי עובדות מעניינות
-              </h3>
-              <p className="text-gray-600 hebrew-text leading-relaxed">
-                כל תמונה בגלריה מסתירה עובדה אישית ומעניינת על מלכה. 
-                גלו את הסיפור האישי מאחורי המדריכה הישראלית המנוסה בהודו.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
