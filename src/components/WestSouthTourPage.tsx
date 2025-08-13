@@ -995,19 +995,110 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
     pricing: {
       title: 'מחיר',
       content: (
-        <div className="space-y-6">
-          <div className="bg-blue-50 p-6 rounded-lg text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">$1,400</div>
-            <div className="text-gray-700 hebrew-text">מחיר לאדם בחדר זוגי</div>
+        <div className="space-y-8">
+          {/* Main Header */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-blue-600 hebrew-text mb-8">מחירים ותנאי תשלום</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-green-50 p-4 rounded-lg">
-              <h4 className="font-bold text-green-900 mb-2 hebrew-text">הנחות</h4>
-              <p className="text-gray-700 hebrew-text text-sm">הנחה של 10% לזוגות צעירים</p>
+
+          {/* Top Row - 3 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Tour Departure Card */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-right">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-plane-departure text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-3 text-right">יציאת הטיול</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
+                  יציאת הטיול תובטח לאחר הרשמתם של 16 המטיילים הראשונים
+                </p>
+              </div>
             </div>
-            <div className="bg-yellow-50 p-4 rounded-lg">
-              <h4 className="font-bold text-yellow-900 mb-2 hebrew-text">תשלומים</h4>
-              <p className="text-gray-700 hebrew-text text-sm">אפשרות לתשלום במספר תשלומים</p>
+
+            {/* Single Room Supplement Card */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-right">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-bed text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-3 text-right">תוספת חדר יחיד</h3>
+                <div className="text-3xl font-bold text-orange-600 mb-2 text-right">$1,250</div>
+                <p className="text-gray-700 hebrew-text text-sm text-right">לכל התקופה</p>
+              </div>
+            </div>
+
+            {/* Base Price Card */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-right">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-dollar-sign text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-3 text-right">מחיר בסיסי לאדם</h3>
+                <div className="text-3xl font-bold text-orange-600 mb-2 text-right">$4,220</div>
+                <p className="text-gray-700 hebrew-text text-sm text-right">בחדר זוגי, כולל כל השירותים המפורטים</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Row - 4 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Cancellation Card */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-right">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-times-circle text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-3 text-right">ביטול</h3>
+                <div className="text-gray-700 hebrew-text text-xs leading-relaxed text-right space-y-1">
+                  <p><strong>תנאי ביטול:</strong> הרשמה באמצעות טופס הרשמה ובתשלום דמי רישום ע"ס 250$ שלא יוחזרו.</p>
+                  <p>מ־46-60 ימים לפני תאריך היציאה יחויב סכום של 20% מעלות הטיול</p>
+                  <p>מ־31-45 ימים לפני תאריך היציאה יחויב סכום של 40% מעלות הטיול</p>
+                  <p>מ־15-30 ימים לפני תאריך היציאה יחויב סכום של 60% מעלות הטיול</p>
+                  <p>מ־14 ימים לפני תאריך היציאה ועד למועד היציאה יחויב סכום של 100% מעלות הטיול</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Registration Fee Card */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-right">
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-file-signature text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-3 text-right">דמי הרשמה</h3>
+                <p className="text-gray-700 hebrew-text text-xs leading-relaxed text-right">
+                  ההרשמה באמצעות טופס הרשמה בצירוף צילום דרכון ותשלום דמי רישום בסך 250$ שלא יוחזרו ושיעוברו לנותני שירותים בחו"ל על מנת להבטיח את מקומכם בטיול.
+                  תשלום נוסף של 1250$ דולר ישולם עם ההכרזה על יציאה מובטחת של הטיול ולקריאת כרטיסי הטיסות. יתרת התשלום מוסדרת לא יאוחר מחודשיים לפני מועד יציאת הטיול
+                </p>
+              </div>
+            </div>
+
+            {/* Small Group Supplement Card */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-right">
+                <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-3 text-right">תוספת קבוצה קטנה</h3>
+                <div className="text-gray-700 hebrew-text text-xs leading-relaxed text-right space-y-1">
+                  <p>במצב של קבוצה בת 12–15 מטיילים בלבד, תחול תוספת מחיר של <span className="font-bold text-orange-600">350 דולר</span> למטייל.</p>
+                  <p>במצב של קבוצה בת 10–12 מטיילים בלבד, תחול תוספת מחיר של <span className="font-bold text-orange-600">500 דולר</span> למטייל.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Consumer Protection Law Card */}
+            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-right">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-balance-scale text-white text-2xl"></i>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 hebrew-text mb-3 text-right">בחירה במחיר הטיול לפי חוק הגנת הצרכן</h3>
+                <p className="text-gray-700 hebrew-text text-xs leading-relaxed text-right">
+                  במסלול המאפשר ביטול לפי חוק הגנת הצרכן, יש תוספת של <span className="font-bold text-orange-600">20%</span> למחיר הטיול במסלול הרגיל. יש לציין את הבחירה באפשרות זו בזמן ההרשמה לטיול.
+                </p>
+              </div>
             </div>
           </div>
         </div>
