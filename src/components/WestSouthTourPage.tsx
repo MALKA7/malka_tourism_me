@@ -593,64 +593,48 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
     accommodation: {
       title: 'לינה',
       content: (
-        <div className="space-y-6">
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>מומבאי</strong> – Taj Vivanta by President (03 Nights)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>בנגלור</strong> – Taj Vivanta by MG Road (01 Night)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>מייסור</strong> – Radisson Blu (01 Night)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>קביני</strong> – The Serai (01 Night)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>וויאנאד</strong> – Wayanadu Wild by CGH (02 Nights)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>טריסור</strong> – Hyatt (01 Night)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>קוצ'ין</strong> – Fragrant Nature (01 Night)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>פריאר</strong> – Spice Village (02 Nights)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>אלפי</strong> – BJ Luxury Houseboat (01 Night)</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-800 hebrew-text"><strong>קוצ'ין</strong> – Flora (01 Night)</p>
-            </div>
-          </div>
-          
-          <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-            <p className="text-gray-700 hebrew-text text-center font-medium">
-              מלונות אלו או דומיהם משמשים אותנו בטיולים
-            </p>
-          </div>
-                </div>
+        <>
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>מומבאי</strong> – Taj Vivanta by President (03 Nights)</p>
               </div>
-              <div className="space-y-2">
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                  <span className="hebrew-text text-gray-700">מיזוג אוויר</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                  <span className="hebrew-text text-gray-700">שירות חדרים</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                  <span className="hebrew-text text-gray-700">מתקני ספא ובריכה</span>
-                </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>בנגלור</strong> – Taj Vivanta by MG Road (01 Night)</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>מייסור</strong> – Radisson Blu (01 Night)</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>קביני</strong> – The Serai (01 Night)</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>וויאנאד</strong> – Wayanadu Wild by CGH (02 Nights)</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>טריסור</strong> – Hyatt (01 Night)</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>קוצ'ין</strong> – Fragrant Nature (01 Night)</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>פריאר</strong> – Spice Village (02 Nights)</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>אלפי</strong> – BJ Luxury Houseboat (01 Night)</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <p className="text-gray-800 hebrew-text"><strong>קוצ'ין</strong> – Flora (01 Night)</p>
               </div>
             </div>
+            
+            <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <p className="text-gray-700 hebrew-text text-center font-medium">
+                מלונות אלו או דומיהם משמשים אותנו בטיולים
+              </p>
+            </div>
           </div>
-        </div>
+        </>
       )
     },
     included: {
