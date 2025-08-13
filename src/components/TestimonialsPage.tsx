@@ -92,7 +92,7 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
     {
       id: 4,
       name: 'ליאת כבירי',
-      location: 'ישראל',
+      location: 'שמשית',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
       rating: 5,
       date: '2019',
