@@ -65,13 +65,13 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
     },
     {
       id: 2,
-      name: 'משפחת גולן',
-      location: 'חיפה',
+      name: 'תומר כנעני',
+      location: 'ישראל',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
       rating: 5,
-      date: 'פברואר 2024',
-      tour: 'סיור פרטי במומבאי',
-      text: 'הסיור הפרטי במומבאי עם מלכה היה הדבר הכי טוב בטיול שלנו להודו. היא מכירה כל פינה בעיר ויודעת לספר סיפורים מרתקים על כל מקום. הילדים שלנו נהנו מאוד והיא ידעה בדיוק איך לעניין אותם. השירות היה ברמה הכי גבוהה!',
+      date: '2019',
+      tour: 'יש לציין את הידע הרב של מלכה וצורת ההדרכה',
+      text: 'היינו קבוצה של 14 מטיילים והכל התנהל בצורה טובה במשך יומיים למדנו המון על מומבאי בפרט והודו בכלל יש לציין את הידע הרב של מלכה וצורת ההדרכה כולנו מודים לה מאוד על ההדרכה והשרות הנלווה',
       externalLink: 'https://www.google.com/review2',
       platform: 'Google Reviews',
       gradient: 'from-blue-100 to-indigo-100'
