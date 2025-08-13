@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       hasSubmenu: false
     },
     {
-      id: 'blog',
+      id: 'blog', 
       label: 'בלוג',
       hasSubmenu: false
     },
@@ -81,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   const allPages = [
     'home', 'about', 'services', 'day-tours', 'organized-tours', 'weddings', 'testimonials', 'blog', 'contact', 'additional-cities',
     'trip-planning', 'trip-execution', 'hebrew-guiding', 'personal-hosting', 
-    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 'west-south-tour', 'west-east-tour'
+    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 'west-south-tour', 'west-east-tour', 'additional-cities'
   ];
 
   const getPageTitle = (pageId: string): string => {

@@ -1,54 +1,239 @@
-import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Car, Camera, Trees as Tree, Waves, Plane, Hotel } from 'lucide-react';
+import React, { useState } from 'react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Car, Camera, Building, Waves, Plane, Hotel, Play, RotateCcw, DollarSign } from 'lucide-react';
 
 interface WestSouthTourPageProps {
   onPageChange: (page: string) => void;
 }
 
 const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) => {
-  const itinerary = [
-    { day: 'יום 1-2', location: 'מומבאי', activities: 'הגעה, סיור בעיר, שער הכניסה להודו, מוזיאון גנדי, בוליווד' },
-    { day: 'יום 3-4', location: 'בנגלור', activities: 'טיסה לבנגלור, סיור בעיר הגנים, ארמון טיפו סולטן' },
-    { day: 'יום 5-7', location: 'מייסור', activities: 'ארמון המהרג\'ה, שוק דוואר, גנים בריינדוון' },
-    { day: 'יום 8-10', location: 'קוצ\'י', activities: 'רשתות דיג סיניות, פורט קוצ\'י, שוק התבלינים' },
-    { day: 'יום 11-13', location: 'מונאר', activities: 'מטעי תה, אגם מטופטי, פארק אראוויקורם' },
-    { day: 'יום 14-16', location: 'אלפי', activities: 'שייט בתעלות המים, כפר דייגים, עיסוי איורוודי' },
-    { day: 'יום 17', location: 'חזרה', activities: 'טיסה חזרה דרך קוצ\'י או בנגלור' }
+  const [activeTab, setActiveTab] = useState('itinerary');
+  const [flippedCard, setFlippedCard] = useState<number | null>(null);
+
+  const flipCards = [
+    {
+      front: 'ניסיון של 15 שנה',
+      back: 'מלכה חיה בהודו מאז 2010 ומכירה את המדינה כמו כף ידה. ניסיון עשיר בהדרכה ותכנון טיולים.'
+    },
+    {
+      front: 'מדריכה דוברת עברית',
+      back: 'הדרכה מקצועית בעברית עם הבנה עמוקה של הצרכים הישראליים והתרבות המקומית.'
+    },
+    {
+      front: 'קבוצות קטנות',
+      back: 'עד 12 משתתפים בלבד לחוויה אישית ומותאמת לכל אחד מהמשתתפים.'
+    },
+    {
+      front: 'מלונות נבחרים',
+      back: 'מלכה בודקת כל מלון בעצמה ובוחרת רק את המלונות הטובים ביותר עבורכם.'
+    },
+    {
+      front: 'תמיכה 24/7',
+      back: 'זמינות מלאה לאורך כל הטיול לכל שאלה, בעיה או צורך שיעלה.'
+    },
+    {
+      front: 'מחירים שקופים',
+      back: 'ללא עלויות נסתרות - כל המחירים ברורים ושקופים מראש.'
+    },
+    {
+      front: 'חוויות אותנטיות',
+      back: 'לא רק אתרים תיירותיים - חוויות אמיתיות של התרבות וההיסטוריה ההודית.'
+    }
   ];
 
-  const highlights = [
-    'שייט בתעלות המים של קרלה (Backwaters)',
-    'ביקור במטעי התה של מונאר',
-    'הופעת קתקלי - ריקוד מסורתי של קרלה',
-    'עיסוי איורוודי מסורתי',
-    'טיול ביער הטרופי ותצפית על חיות בר',
-    'ביקור בכפר דייגים מסורתי',
-    'טעימות מהמטבח הקרלי המפורסם',
-    'שייט בשקיעה באגמי קרלה',
-    'סיור בארמונות מייסור ההיסטוריים',
-    'חוויה תרבותית עמוקה בדרום הודו'
-  ];
+  const tabContent = {
+    itinerary: {
+      title: 'מסלול הטיול',
+      content: (
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h4 className="font-bold text-blue-900 mb-3 hebrew-text">ימים 1-5: מומבאי</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="hebrew-text">• שער הכניסה להודו</li>
+                <li className="hebrew-text">• סלאם דהרבי</li>
+                <li className="hebrew-text">• מרין דרייב</li>
+                <li className="hebrew-text">• בוליווד</li>
+              </ul>
+            </div>
+            <div className="bg-green-50 p-6 rounded-lg">
+              <h4 className="font-bold text-green-900 mb-3 hebrew-text">ימים 6-10: בנגלור</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="hebrew-text">• ארמון טיפו סולטן</li>
+                <li className="hebrew-text">• גנים בוטניים</li>
+                <li className="hebrew-text">• מקדש בול</li>
+                <li className="hebrew-text">• שוק KR מרקט</li>
+              </ul>
+            </div>
+            <div className="bg-purple-50 p-6 rounded-lg md:col-span-2">
+              <h4 className="font-bold text-purple-900 mb-3 hebrew-text">ימים 11-15: קרלה</h4>
+              <ul className="space-y-2 text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-2">
+                <li className="hebrew-text">• שייט בתעלות המים</li>
+                <li className="hebrew-text">• מטעי תה במונאר</li>
+                <li className="hebrew-text">• עיסוי איורוודי</li>
+                <li className="hebrew-text">• הופעת קתקלי</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    accommodation: {
+      title: 'לינה',
+      content: (
+        <div className="space-y-4">
+          <div className="bg-blue-50 p-6 rounded-lg">
+            <h4 className="font-bold text-blue-900 mb-3 hebrew-text">מלונות 4-5 כוכבים</h4>
+            <p className="text-gray-700 hebrew-text">מלונות נבחרים שמלכה בדקה אישית ומאושרים לאיכות גבוהה.</p>
+          </div>
+          <div className="bg-green-50 p-6 rounded-lg">
+            <h4 className="font-bold text-green-900 mb-3 hebrew-text">חדרים זוגיים</h4>
+            <p className="text-gray-700 hebrew-text">חדרים נוחים עם כל השירותים הנדרשים לשהייה נעימה.</p>
+          </div>
+        </div>
+      )
+    },
+    included: {
+      title: 'כלול במחיר',
+      content: (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-3">
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              <span className="hebrew-text">לינה במלונות 4-5 כוכבים</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              <span className="hebrew-text">ארוחת בוקר יומית</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              <span className="hebrew-text">תחבורה פרטית עם נהג</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              <span className="hebrew-text">הדרכה בעברית</span>
+            </div>
+          </div>
+          <div className="space-y-3">
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              <span className="hebrew-text">כניסות לאתרים</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              <span className="hebrew-text">טיסות פנים</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              <span className="hebrew-text">ביטוח נסיעות</span>
+            </div>
+            <div className="flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              <span className="hebrew-text">תמיכה 24/7</span>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    notIncluded: {
+      title: 'לא כלול',
+      content: (
+        <div className="space-y-3">
+          <div className="flex items-center">
+            <X className="w-5 h-5 text-red-600 ml-2" />
+            <span className="hebrew-text">טיסות בינלאומיות</span>
+          </div>
+          <div className="flex items-center">
+            <X className="w-5 h-5 text-red-600 ml-2" />
+            <span className="hebrew-text">ארוחות צהריים וערב</span>
+          </div>
+          <div className="flex items-center">
+            <X className="w-5 h-5 text-red-600 ml-2" />
+            <span className="hebrew-text">הוצאות אישיות</span>
+          </div>
+          <div className="flex items-center">
+            <X className="w-5 h-5 text-red-600 ml-2" />
+            <span className="hebrew-text">ויזה להודו</span>
+          </div>
+        </div>
+      )
+    },
+    pricing: {
+      title: 'מחיר',
+      content: (
+        <div className="space-y-6">
+          <div className="bg-blue-50 p-6 rounded-lg text-center">
+            <div className="text-4xl font-bold text-blue-600 mb-2">$1,400</div>
+            <div className="text-gray-700 hebrew-text">מחיר לאדם בחדר זוגי</div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h4 className="font-bold text-green-900 mb-2 hebrew-text">הנחות</h4>
+              <p className="text-gray-700 hebrew-text text-sm">הנחה של 10% לזוגות צעירים</p>
+            </div>
+            <div className="bg-yellow-50 p-4 rounded-lg">
+              <h4 className="font-bold text-yellow-900 mb-2 hebrew-text">תשלומים</h4>
+              <p className="text-gray-700 hebrew-text text-sm">אפשרות לתשלום במספר תשלומים</p>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    terms: {
+      title: 'תנאים',
+      content: (
+        <div className="space-y-4">
+          <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+            <h4 className="font-bold text-yellow-900 mb-2 hebrew-text">ביטול</h4>
+            <p className="text-gray-700 hebrew-text text-sm">ביטול עד 30 יום לפני הטיול - החזר מלא</p>
+          </div>
+          <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+            <h4 className="font-bold text-blue-900 mb-2 hebrew-text">שינויים</h4>
+            <p className="text-gray-700 hebrew-text text-sm">שינויים במסלול אפשריים עד 14 יום לפני היציאה</p>
+          </div>
+          <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+            <h4 className="font-bold text-red-900 mb-2 hebrew-text">דרישות</h4>
+            <p className="text-gray-700 hebrew-text text-sm">נדרש דרכון בתוקף לפחות 6 חודשים וויזה להודו</p>
+          </div>
+        </div>
+      )
+    },
+    notes: {
+      title: 'הערות',
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gray-50 p-4 rounded-lg">
+            <p className="text-gray-700 hebrew-text">המסלול עשוי להשתנות בהתאם לתנאי מזג האוויר ונסיבות מקומיות.</p>
+          </div>
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <p className="text-gray-700 hebrew-text">מומלץ להגיע יום לפני תחילת הטיול להתאקלמות.</p>
+          </div>
+          <div className="bg-green-50 p-4 rounded-lg">
+            <p className="text-gray-700 hebrew-text">כל המשתתפים מקבלים חבילת מידע מפורטת לפני היציאה.</p>
+          </div>
+        </div>
+      )
+    }
+  };
 
-  const tourFeatures = [
+  const futureTours = [
     {
-      icon: Hotel,
-      title: 'מלונות יוקרה',
-      description: 'לינה במלונות 4-5 כוכבים נבחרים'
+      name: 'הודו בשלושה טעמים',
+      dates: '15-30 במרץ 2024',
+      guide: 'מלכה אירני',
+      status: 'פתוח להרשמה'
     },
     {
-      icon: Car,
-      title: 'תחבורה פרטית',
-      description: 'רכב פרטי עם נהג מקצועי לכל הטיול'
+      name: 'הודו בשלושה טעמים',
+      dates: '10-25 באפריל 2024',
+      guide: 'מלכה אירני',
+      status: 'מלא'
     },
     {
-      icon: Users,
-      title: 'קבוצה קטנה',
-      description: 'עד 12 משתתפים לחוויה אישית'
-    },
-    {
-      icon: Star,
-      title: 'מדריכה מקצועית',
-      description: 'מלכה מלווה אתכם לכל הטיול'
+      name: 'הודו בשלושה טעמים',
+      dates: '5-20 במאי 2024',
+      guide: 'מלכה אירני',
+      status: 'פתוח להרשמה'
     }
   ];
 
@@ -65,241 +250,200 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="text-white max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6 hebrew-text">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center text-center">
+          <div className="text-white max-w-4xl">
+            <h1 className="text-5xl font-bold mb-4 hebrew-text">
               טיול ממערב לדרום הודו
             </h1>
-            <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
-              "הודו בשלושה טעמים" - מסע מרתק ממומבאי הסואנת דרך בנגלור הטכנולוגית 
-              אל קרלה הירוקה והשקטה. 17 ימים של חוויות בלתי נשכחות
+            <p className="text-lg mb-8 leading-relaxed hebrew-text opacity-95">
+              מסע של 15 ימים ממומבאי דרך בנגלור ועד לקרלה הקסומה
             </p>
             <button 
               onClick={() => onPageChange('contact')}
               className="btn-primary text-lg px-8 py-4"
             >
-              הצטרפו לטיול
+              גלו את המחירים
             </button>
           </div>
         </div>
       </section>
 
-      {/* Running Banner */}
-      <div className="bg-gradient-to-r from-green-500 to-blue-600 text-white py-3 overflow-hidden shadow-md">
-        <div className="running-banner whitespace-nowrap">
-          <span className="mx-8">הרשמו עכשיו לטיול ממערב לדרום הודו - מקומות מוגבלים</span>
-          <span className="mx-8">חוויה בלתי נשכחת עם מלכה המדריכה הישראלית</span>
-        </div>
-      </div>
-
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="breadcrumb">
-            <button onClick={() => onPageChange('home')} className="breadcrumb-item">בית</button>
-            <span className="breadcrumb-separator">←</span>
-            <button onClick={() => onPageChange('organized-tours')} className="breadcrumb-item">טיולים מאורגנים</button>
-            <span className="breadcrumb-separator">←</span>
-            <span className="text-blue-600 font-bold">טיול ממערב לדרום הודו</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content */}
+      {/* Section 1 - Video Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Main Content */}
-            <div className="lg:col-span-2">
-              <div className="prose prose-lg max-w-none">
-                <h2 className="text-4xl font-bold text-gray-900 mb-8 hebrew-text">
-                  הודו בשלושה טעמים - ממערב לדרום
-                </h2>
-                
-                <div className="bg-blue-50 p-8 rounded-xl mb-8 border border-blue-200">
-                  <div className="flex items-start">
-                    <div className="text-4xl ml-4">
-                      <Tree className="w-12 h-12 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-4">
-                        טיול שמתחיל בקצב המהיר של מומבאי, העיר הענקית והמרתקת שמציעה שילוב בלתי נגמר 
-                        של המודרני והמסורתי. לאחר מכן, תעברו לבנגלור, בירת הטכנולוגיה של הודו.
-                      </p>
-                      <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
-                        <strong>החלק האחרון יוביל אתכם לקרלה – האזור הירוק, השקט והקסום של הודו.</strong> 
-                        כאן תצללו לתוך חוויות טבע מרהיבות ותיהנו מהשקט והשלווה של האזור.
-                      </p>
-                    </div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              טעימה מהאזור
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-gray-200 rounded-xl overflow-hidden shadow-xl">
+              <div className="aspect-video flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Play className="w-10 h-10 text-white mr-2" />
                   </div>
-                </div>
-
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  תוכנית הטיול - 17 ימים
-                </h3>
-
-                <div className="space-y-4 mb-8">
-                  {itinerary.map((item, index) => (
-                    <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                      <div className="flex items-start">
-                        <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold">
-                          {index + 1}
-                        </div>
-                        <div>
-                          <h4 className="text-xl font-bold text-gray-900 mb-2 hebrew-text">{item.day} - {item.location}</h4>
-                          <p className="text-gray-700 hebrew-text">{item.activities}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  הדגשים המיוחדים של הטיול
-                </h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {highlights.map((highlight, index) => (
-                    <div key={index} className="flex items-start bg-gray-50 p-4 rounded-lg">
-                      <CheckCircle className="w-5 h-5 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700 hebrew-text">{highlight}</span>
-                    </div>
-                  ))}
+                  <p className="text-gray-600 hebrew-text">וידאו טעימה מהטיול</p>
                 </div>
               </div>
             </div>
+            <p className="text-center text-gray-600 hebrew-text mt-4 italic">
+              עוד לא יצאתם – אבל כבר אפשר לדמיין אתכם שם
+            </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              {/* Contact Card */}
-              <div className="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-200">
-                <div className="text-center mb-6">
-                  <img 
-                    src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
-                    alt="מלכה"
-                    className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300"
-                  />
-                  <h3 className="text-2xl font-bold text-gray-900 hebrew-text">מלכה אירני</h3>
-                  <p className="text-gray-700 hebrew-text">מדריכת הטיול לדרום הודו</p>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
-                    <Phone className="w-5 h-5 text-blue-600 ml-3" />
-                    <span className="text-gray-800">+91-9980601979</span>
-                  </div>
-                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
-                    <Mail className="w-5 h-5 text-blue-600 ml-3" />
-                    <span className="text-gray-800">Malka@shalom-india.com</span>
-                  </div>
-                  <div className="flex items-start bg-gray-50 p-3 rounded-lg">
-                    <MapPin className="w-5 h-5 text-blue-600 ml-3 mt-1" />
-                    <span className="text-gray-800">בנגלור, הודו</span>
-                  </div>
-                </div>
-
-                <button 
-                  onClick={() => onPageChange('contact')}
-                  className="w-full btn-primary py-4 text-lg"
-                >
-                  הצטרפו לטיול
-                </button>
-              </div>
-
-              {/* Tour Details Card */}
-              <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">פרטי הטיול</h3>
-                
-                <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">משך הטיול</span>
-                      <span className="font-bold text-blue-600 text-xl">17 ימים</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">כולל טיסות פנים</p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">גודל קבוצה</span>
-                      <span className="font-bold text-green-600 text-xl">8-12</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">משתתפים מקסימום</p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-purple-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">מחיר לאדם</span>
-                      <span className="font-bold text-purple-600 text-xl">$1,400</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">כולל הכל חוץ מטיסות בינלאומיות</p>
-                  </div>
-                </div>
-                
-                <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
-                  <p className="text-sm text-red-700 hebrew-text text-center font-bold">
-                    מקומות מוגבלים - הרשמו עכשיו!
-                  </p>
-                </div>
-              </div>
+      {/* Section 2 - Photo + Content */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              המסע – הסיפור המלא
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="/Kerala.png" 
+                alt="קרלה הקסומה"
+                className="w-full h-96 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+            
+            <div className="space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed hebrew-text">
+                טיול שמתחיל בקצב המהיר של מומבאי, העיר הענקית והמרתקת שמציעה שילוב בלתי נגמר 
+                של המודרני והמסורתי. תיהנו מהרחובות הסואנים, מהשווקים הצבעוניים ומתרבות עשירה.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed hebrew-text">
+                לאחר מכן, תעברו לבנגלור, בירת הטכנולוגיה של הודו, מקום שבו היי-טק וחדשנות 
+                נפגשים עם קסם מקומי. כאן תרגישו את האווירה המיוחדת של העיר.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed hebrew-text">
+                החלק האחרון יוביל אתכם לקרלה – האזור הירוק, השקט והקסום של הודו. 
+                כאן תצללו לתוך חוויות טבע מרהיבות ותיהנו מהשקט והשלווה של האזור.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tour Features */}
-      <section className="py-20 bg-gray-50">
+      {/* Section 3 - 7 Flip Cards */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              מה מייחד את הטיול?
+              למה לטייל עם מלכה אירני?
             </h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {tourFeatures.map((feature, index) => (
-              <div key={index} className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {flipCards.map((card, index) => (
+              <div 
+                key={index}
+                className="relative h-48 cursor-pointer"
+                onClick={() => setFlippedCard(flippedCard === index ? null : index)}
+                onMouseEnter={() => setFlippedCard(index)}
+                onMouseLeave={() => setFlippedCard(null)}
+              >
+                <div className={`absolute inset-0 w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
+                  flippedCard === index ? 'rotate-y-180' : ''
+                }`}>
+                  {/* Front */}
+                  <div className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg flex items-center justify-center p-6">
+                    <div className="text-center">
+                      <RotateCcw className="w-8 h-8 text-white mx-auto mb-3" />
+                      <h3 className="text-white font-bold hebrew-text text-lg">{card.front}</h3>
+                    </div>
+                  </div>
+                  
+                  {/* Back */}
+                  <div className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-lg flex items-center justify-center p-6 rotate-y-180 border border-gray-200">
+                    <p className="text-gray-700 hebrew-text text-center leading-relaxed">{card.back}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 hebrew-text">{feature.title}</h3>
-                <p className="text-gray-600 hebrew-text">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6 hebrew-text">
-            מוכנים לחוות את הודו בשלושה טעמים?
-          </h2>
-          <p className="text-xl mb-8 hebrew-text leading-relaxed">
-            הצטרפו לטיול המאורגן ממערב לדרום הודו עם מלכה - 
-            חוויה בלתי נשכחת של 17 ימים בהודו המופלאה
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => onPageChange('contact')}
-              className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300"
-            >
-              הצטרפו לטיול
-            </button>
-            <a 
-              href="https://wa.me/919980601979"
-              className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 inline-block"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WhatsApp
-            </a>
+      {/* Section 4 - Tabs Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              מוכנים לצאת לדרך? הנה הפרטים
+            </h2>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            {/* Tab Headers */}
+            <div className="flex flex-wrap border-b border-gray-200">
+              {Object.entries(tabContent).map(([key, tab]) => (
+                <button
+                  key={key}
+                  onClick={() => setActiveTab(key)}
+                  className={`px-6 py-4 font-medium hebrew-text transition-all duration-300 ${
+                    activeTab === key
+                      ? 'bg-blue-600 text-white border-b-2 border-blue-600'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  }`}
+                >
+                  {tab.title}
+                </button>
+              ))}
+            </div>
+            
+            {/* Tab Content */}
+            <div className="p-8">
+              {tabContent[activeTab as keyof typeof tabContent].content}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 - Future Tours */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              טיולים עתידיים
+            </h2>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <table className="w-full">
+              <thead className="bg-blue-600 text-white">
+                <tr>
+                  <th className="px-6 py-4 text-right hebrew-text font-semibold">שם הטיול</th>
+                  <th className="px-6 py-4 text-right hebrew-text font-semibold">תאריכים</th>
+                  <th className="px-6 py-4 text-right hebrew-text font-semibold">מדריכה</th>
+                  <th className="px-6 py-4 text-right hebrew-text font-semibold">סטטוס טיול</th>
+                </tr>
+              </thead>
+              <tbody>
+                {futureTours.map((tour, index) => (
+                  <tr key={index} className="border-b border-gray-200 hover:bg-blue-50 transition-colors">
+                    <td className="px-6 py-4 hebrew-text font-medium">{tour.name}</td>
+                    <td className="px-6 py-4 hebrew-text">{tour.dates}</td>
+                    <td className="px-6 py-4 hebrew-text">{tour.guide}</td>
+                    <td className="px-6 py-4">
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium hebrew-text ${
+                        tour.status === 'פתוח להרשמה' 
+                          ? 'bg-green-100 text-green-800' 
+                          : 'bg-red-100 text-red-800'
+                      }`}>
+                        {tour.status}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
