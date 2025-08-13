@@ -174,19 +174,231 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
             </p>
           </div>
 
-          <div className="gallery-grid">
-            {galleryImages.map((image, index) => (
-              <div key={index} className="gallery-item group">
-                <img 
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="gallery-overlay">
-                  <div className="gallery-text">{image.alt}</div>
+          {/* Professional Photo Grid with Hover Text */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {/* Photo 1 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/Bride.jpg"
+                alt="מלכה בהודו"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">אמא של הומאי ובן ארי</p>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Photo 2 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/indian ladies with sari.jpg"
+                alt="תרבות הודית"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">יודעת לכתוב קצת בהינדית</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 3 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/mumbai gateway.jpg"
+                alt="מומבאי"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">נוהגת בקטנוע בהודו</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 4 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/indian baba.jpg"
+                alt="תרבות רוחנית"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">אני לא שותה קפה</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 5 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/mumbai slum.jpg"
+                alt="הודו האמיתית"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">גרתי בדלהי מומבאי ובנגלור</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 6 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/kerala boat.jpg"
+                alt="קרלה"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">פסיכולוגית קלינית בהכשרה</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 7 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/Holi girl.png"
+                alt="חג הצבעים"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">בת לעדת היהודים ההרריים</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 8 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/dancers.png"
+                alt="ריקודים הודיים"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">לא שותה אלכוהול</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 9 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/Paneer.png"
+                alt="אוכל הודי"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">כבר לא אוכלת עוף ובשר</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 10 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/kolkata.png"
+                alt="קולקטה"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">סרט הודי ראשון שראיתי היה בגיל 8</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 11 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/varanasi.jpg"
+                alt="ורנאסי"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">גרתי בישראל, ארהב סרי לנקה והודו</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 12 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/tours w malka.png"
+                alt="סיורים עם מלכה"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">הייתי דוגמנית בית של ויקטוריה סיקרט</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 13 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/Home stay malka.png"
+                alt="אירוח אישי"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">אם הייתי יכולה לשנות מקצועי הייתי עורכת דין</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 14 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/transport bus.png"
+                alt="תחבורה בהודו"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">בחרתי לילדי שמות ותאריכי לידה לפי הקבלה והנומרולוגיה</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 15 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/organised tours.png"
+                alt="טיולים מאורגנים"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">בת מזל עקרב</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Gallery Description */}
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 max-w-3xl mx-auto border border-blue-200">
+              <Camera className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
+                עוברו עם העכבר על התמונות לגילוי עובדות מעניינות
+              </h3>
+              <p className="text-gray-600 hebrew-text leading-relaxed">
+                כל תמונה בגלריה מסתירה עובדה אישית ומעניינת על מלכה. 
+                גלו את הסיפור האישי מאחורי המדריכה הישראלית המנוסה בהודו.
+              </p>
+            </div>
           </div>
         </div>
       </section>
