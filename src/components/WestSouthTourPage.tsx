@@ -11,32 +11,32 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
 
   const flipCards = [
     {
-      front: 'ניסיון של 15 שנה',
-      back: 'מלכה חיה בהודו מאז 2010 ומכירה את המדינה כמו כף ידה. ניסיון עשיר בהדרכה ותכנון טיולים.'
+      front: '🔸 חיה את הודו\n🟣 Lives in India',
+      back: 'לא מדריכה שמגיעה לביקור – אני גרה פה כבר 15 שנה.\nNot just visiting – I\'ve lived here for 15 years.'
     },
     {
-      front: 'מדריכה דוברת עברית',
-      back: 'הדרכה מקצועית בעברית עם הבנה עמוקה של הצרכים הישראליים והתרבות המקומית.'
+      front: '🔸 מסלול אישי שנבנה באהבה\n🟢 Handcrafted Itinerary',
+      back: 'תכננתי את המסלול בעצמי, מתוך היכרות עמוקה עם השטח והלב של המטיילים.\nPersonally designed route, from deep knowledge and care.'
     },
     {
-      front: 'קבוצות קטנות',
-      back: 'עד 12 משתתפים בלבד לחוויה אישית ומותאמת לכל אחד מהמשתתפים.'
+      front: '🔸 קבוצה קטנה – קשר גדול\n🔴 Small Group, Big Bond',
+      back: 'טיול אינטימי, בלי ללכת לאיבוד בין 40 איש.\nJust real connection.'
     },
     {
-      front: 'מלונות נבחרים',
-      back: 'מלכה בודקת כל מלון בעצמה ובוחרת רק את המלונות הטובים ביותר עבורכם.'
+      front: '🔸 חוגגים את חג ההולי מקרוב\n🟡 Celebrate Holi from Within',
+      back: 'צובעים את היום בחוויה אמיתית – מבפנים, לא כצופים מבחוץ.\nFeel the colors like a local – not just watching.'
     },
     {
-      front: 'תמיכה 24/7',
-      back: 'זמינות מלאה לאורך כל הטיול לכל שאלה, בעיה או צורך שיעלה.'
+      front: '🔸 שפה, תרבות וקשרים מקומיים\n🔵 Local Language & Connections',
+      back: 'אני מדברת עם המקומיים, מבינה אותם – והם פותחים לנו דלתות.\nI speak their language – they open doors tourists never see.'
     },
     {
-      front: 'מחירים שקופים',
-      back: 'ללא עלויות נסתרות - כל המחירים ברורים ושקופים מראש.'
+      front: '🔸 מקומות שאף סוכן לא מכיר\n🟤 Off the Map, Into the Heart',
+      back: 'המקומות האמיתיים מגיעים דרך קשרים – לא דרך טריפאדוויזור.\nReal places come from real connections – not TripAdvisor.'
     },
     {
-      front: 'חוויות אותנטיות',
-      back: 'לא רק אתרים תיירותיים - חוויות אמיתיות של התרבות וההיסטוריה ההודית.'
+      front: '🔸 חוויה רב-חושית\n🟠 Multi-Sensory India',
+      back: 'לא רק לראות – להריח, לטעום, להרגיש את הודו מכל החושים.\nNot just sightseeing – tasting, smelling, feeling India fully.'
     }
   ];
 
