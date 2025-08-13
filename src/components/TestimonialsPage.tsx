@@ -167,7 +167,6 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
       platform: 'Google Reviews',
       gradient: 'from-blue-100 to-cyan-100'
     },
-    },
     {
       id: 10,
       name: 'אדם מגן',
