@@ -218,6 +218,19 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
       externalLink: 'https://www.google.com/review20',
       platform: 'Google Reviews',
       gradient: 'from-cyan-100 to-blue-100'
+    },
+    {
+      id: 14,
+      name: 'ניסים רוהקר, רוני אהרון וחנניה אטדגי',
+      location: 'ישראל',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
+      rating: 5,
+      date: '2015',
+      tour: 'את פשוט תותחית בכל הקשור להודו',
+      text: 'מלכה שלום, תודה על הכל, היה מאוד כיף הטיול לדלהי שסגרת לי ולחברים שלי. היינו שמחים ומרוצים מכל הבחינות – ידע, אמינות, יושר ומקצועיות. אני ממליץ בחום לכל המטיילים והמעוניינים. את פשוט תותחית בכל הקשור להודו. תמשיכי ותצליחי בכל מעשי ידייך.',
+      externalLink: 'https://www.google.com/review21',
+      platform: 'Google Reviews',
+      gradient: 'from-orange-100 to-red-100'
     }
   ];
 
