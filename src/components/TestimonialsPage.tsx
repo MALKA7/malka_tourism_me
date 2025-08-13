@@ -52,7 +52,7 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
   const writtenTestimonials = [
     {
       id: 1,
-      name: 'רונית ואבי כהן',
+      name: 'מורן מינה',
       location: 'תל אביב',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
       rating: 5,
