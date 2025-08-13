@@ -594,231 +594,44 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
       title: 'לינה',
       content: (
         <div className="space-y-6">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">מלונות נבחרים ומאושרים</h3>
-            <p className="text-gray-600 hebrew-text">כל המלונות נבדקו אישית על ידי מלכה ומאושרים לאיכות גבוהה</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Mumbai */}
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-blue-900 hebrew-text">מומבאי</h4>
-                  <p className="text-blue-700 hebrew-text text-sm">3 לילות</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">Taj Vivanta by President</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">מלון 5 כוכבים במרכז העיר</span>
-                </div>
-              </div>
+          <div className="space-y-4">
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>מומבאי</strong> – Taj Vivanta by President (03 Nights)</p>
             </div>
-
-            {/* Bangalore */}
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-green-900 hebrew-text">בנגלור</h4>
-                  <p className="text-green-700 hebrew-text text-sm">לילה אחד</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">Taj Vivanta by MG Road</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">מלון 5 כוכבים בלב העיר</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>בנגלור</strong> – Taj Vivanta by MG Road (01 Night)</p>
             </div>
-
-            {/* Mysore */}
-            <div className="bg-gradient-to-r from-purple-50 to-violet-50 p-6 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-purple-900 hebrew-text">מייסור</h4>
-                  <p className="text-purple-700 hebrew-text text-sm">לילה אחד</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">Radisson Blu</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">מלון 4 כוכבים יוקרתי</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>מייסור</strong> – Radisson Blu (01 Night)</p>
             </div>
-
-            {/* Kabini */}
-            <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-xl border border-orange-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-orange-900 hebrew-text">קביני</h4>
-                  <p className="text-orange-700 hebrew-text text-sm">לילה אחד</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">The Serai</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">לודג' יוקרה בשמורת טבע</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>קביני</strong> – The Serai (01 Night)</p>
             </div>
-
-            {/* Wayanad */}
-            <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-6 rounded-xl border border-teal-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-teal-900 hebrew-text">וויאנאד</h4>
-                  <p className="text-teal-700 hebrew-text text-sm">2 לילות</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">Wayanadu Wild by CGH</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">אקו-רזורט בלב הטבע</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>וויאנאד</strong> – Wayanadu Wild by CGH (02 Nights)</p>
             </div>
-
-            {/* Trissur */}
-            <div className="bg-gradient-to-r from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-rose-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-rose-900 hebrew-text">טריסור</h4>
-                  <p className="text-rose-700 hebrew-text text-sm">לילה אחד</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">Hyatt</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">מלון 5 כוכבים מודרני</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>טריסור</strong> – Hyatt (01 Night)</p>
             </div>
-
-            {/* Cochin */}
-            <div className="bg-gradient-to-r from-cyan-50 to-blue-50 p-6 rounded-xl border border-cyan-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-cyan-900 hebrew-text">קוצ'ין</h4>
-                  <p className="text-cyan-700 hebrew-text text-sm">לילה אחד</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">Fragrant Nature</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">רזורט יוקרה על החוף</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>קוצ'ין</strong> – Fragrant Nature (01 Night)</p>
             </div>
-
-            {/* Periyar */}
-            <div className="bg-gradient-to-r from-emerald-50 to-green-50 p-6 rounded-xl border border-emerald-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-emerald-900 hebrew-text">פריאר</h4>
-                  <p className="text-emerald-700 hebrew-text text-sm">2 לילות</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">Spice Village</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">כפר תבלינים אותנטי</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>פריאר</strong> – Spice Village (02 Nights)</p>
             </div>
-
-            {/* Alleppy */}
-            <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-xl border border-indigo-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Waves className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-indigo-900 hebrew-text">אלפי</h4>
-                  <p className="text-indigo-700 hebrew-text text-sm">לילה אחד</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">BJ Luxury Houseboat</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">סירת בית יוקרתית על התעלות</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>אלפי</strong> – BJ Luxury Houseboat (01 Night)</p>
             </div>
-
-            {/* Cochin Final */}
-            <div className="bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-xl border border-amber-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold text-lg ml-4">
-                  <Hotel className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-amber-900 hebrew-text">קוצ'ין</h4>
-                  <p className="text-amber-700 hebrew-text text-sm">לילה אחד</p>
-                </div>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h5 className="font-bold text-gray-900 hebrew-text mb-2">Flora</h5>
-                <div className="flex items-center text-sm text-gray-600">
-                  <Star className="w-4 h-4 text-yellow-500 fill-current ml-1" />
-                  <span className="hebrew-text">מלון בוטיק מקסים</span>
-                </div>
-              </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="text-gray-800 hebrew-text"><strong>קוצ'ין</strong> – Flora (01 Night)</p>
             </div>
           </div>
           
-          <div className="bg-blue-50 p-6 rounded-xl border border-blue-200 mt-8">
-            <div className="flex items-center mb-4">
-              <CheckCircle className="w-6 h-6 text-green-600 ml-3" />
-              <h4 className="font-bold text-blue-900 hebrew-text">מה כלול בלינה?</h4>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                  <span className="hebrew-text text-gray-700">ארוחת בוקר יומית</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                  <span className="hebrew-text text-gray-700">חדרים זוגיים מפוארים</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-600 ml-2" />
-                  <span className="hebrew-text text-gray-700">WiFi חינם</span>
+          <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <p className="text-gray-700 hebrew-text text-center font-medium">
+              מלונות אלו או דומיהם משמשים אותנו בטיולים
+            </p>
+          </div>
                 </div>
               </div>
               <div className="space-y-2">
