@@ -640,6 +640,132 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
     included: {
       title: 'כלול במחיר',
       content: (
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Airplane Card */}
+            <div className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Plane className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">טיסות</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  טיסות פנים בהודו<br/>
+                  <span className="text-red-600 font-medium">שימו לב!</span> המשקל המותר למזוודה בטיסות פנימיות בהודו הוא 15 ק"ג בלבד ותיק יד במשקל של 7 ק"ג (טיסות פנים בלבד)
+                </p>
+              </div>
+            </div>
+
+            {/* Hotel Card */}
+            <div className="bg-gradient-to-br from-white to-amber-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Hotel className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">בתי מלון</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  בתי מלון ברמת 5 כוכבים או דומה בהתאם למסלול
+                </p>
+              </div>
+            </div>
+
+            {/* Meals Card */}
+            <div className="bg-gradient-to-br from-white to-teal-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-teal-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-utensils text-white text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">ארוחות</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  ארוחות בוקר וערב + כל הארוחות בבית הסירה
+                </p>
+              </div>
+            </div>
+
+            {/* Transportation Card */}
+            <div className="bg-gradient-to-br from-white to-green-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Car className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">תחבורה</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  רכב תיירים ממוזג עם נהג מקצועי לאורך כל הטיול
+                </p>
+              </div>
+            </div>
+
+            {/* Entry Tickets Card */}
+            <div className="bg-gradient-to-br from-white to-purple-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-purple-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-ticket-alt text-white text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">כניסות</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  כל הכניסות לאתרים ואטרקציות
+                </p>
+              </div>
+            </div>
+
+            {/* Guidance Card */}
+            <div className="bg-gradient-to-br from-white to-indigo-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-indigo-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">הדרכה</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  הדרכה של מלכה אירני לאורך כל המסע עם מדריך מקומי נוסף
+                </p>
+              </div>
+            </div>
+
+            {/* Online Meeting Card */}
+            <div className="bg-gradient-to-br from-white to-cyan-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-cyan-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-video text-white text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">מפגש קבוצה</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  מפגש קבוצה באון ליין לפני היציאה לטיול
+                </p>
+              </div>
+            </div>
+
+            {/* Houseboat Card */}
+            <div className="bg-gradient-to-br from-white to-emerald-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-ship text-white text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">בית סירה</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  שייט בבית סירה מפנק עם כל הארוחות
+                </p>
+              </div>
+            </div>
+
+            {/* Safari Card */}
+            <div className="bg-gradient-to-br from-white to-orange-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
+              <div className="text-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-binoculars text-white text-2xl"></i>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">ספארי</h3>
+                <p className="text-gray-700 hebrew-text text-sm leading-relaxed">
+                  2 טיולי ספארי
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    included: {
+      title: 'כלול במחיר',
+      content: (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-3">
             <div className="flex items-center">
