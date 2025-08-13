@@ -58,8 +58,6 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
       rating: 5,
       date: 'ינואר 2025',
       tour: 'טיול מאורגן לקרלה',
-      duration: '14 ימים',
-      groupSize: '4 אנשים',
       text: 'מלכה חד משמעית עשתה לנו את הטיול במומבי! הגענו לעיר קצת מפוחדים מכל הסיפורים על ערים גדולות בהודו ופחדנו לאבד את עצמינו ולהיכנס לשוק. מלכה הנגישה לנו הכל בצורה הכי אותנטית ונחמדה שיש, עיצבה את הסיור לפי מה שרצינו וגם לחצה על דברים שחשבנו שפחות מעניינים והתגלו כמדהימים ושווים אפילו לשום ב-5 בבוקר. נהנו איתה כלכך שבסוף היום הראשון אמרנו לה שאנחנו רוצים עוד יום למרות שלא תיכננו! מומלצת בחום! מלכה המדריכה הכי טובה!',
       externalLink: 'https://www.lmt.co.il/example-link',
       platform: 'למטייל',
@@ -73,8 +71,6 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
       rating: 5,
       date: 'פברואר 2024',
       tour: 'סיור פרטי במומבאי',
-      duration: '8 שעות',
-      groupSize: '5 אנשים',
       text: 'הסיור הפרטי במומבאי עם מלכה היה הדבר הכי טוב בטיול שלנו להודו. היא מכירה כל פינה בעיר ויודעת לספר סיפורים מרתקים על כל מקום. הילדים שלנו נהנו מאוד והיא ידעה בדיוק איך לעניין אותם. השירות היה ברמה הכי גבוהה!',
       externalLink: 'https://www.google.com/review2',
       platform: 'Google Reviews',
@@ -88,8 +84,6 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
       rating: 5,
       date: 'ינואר 2024',
       tour: 'תכנון טיול מותאם אישית',
-      duration: '21 ימים',
-      groupSize: '2 אנשים',
       text: 'מלכה תכננה לנו טיול מושלם בהודו! כל המלונות היו מעולים, ההסעות נוחות והמסלול היה בדיוק מה שחלמנו עליו. היא זמינה 24/7 ועזרה לנו בכל שאלה. התכנון המקצועי שלה חסך לנו הרבה זמן וכסף. ממליצים בחום!',
       externalLink: 'https://www.facebook.com/review3',
       platform: 'Facebook',
@@ -103,8 +97,6 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
       rating: 5,
       date: 'דצמבר 2023',
       tour: 'אירוח אישי בבנגלור',
-      duration: '3 לילות',
-      groupSize: '2 אנשים',
       text: 'האירוח אצל מלכה בווילה הפרטית שלה היה חוויה מיוחדת! הרגשנו כמו בבית, האוכל היה טעים והאווירה משפחתית. מלכה וביהרם קיבלו אותנו בחום רב והראו לנו את הודו מזווית אחרת לגמרי. זה היה הדבר הכי אותנטי בטיול!',
       externalLink: 'https://www.booking.com/review4',
       platform: 'Booking.com',
@@ -118,8 +110,6 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
       rating: 5,
       date: 'נובמבר 2023',
       tour: 'טיול לקולקטה',
-      duration: '12 ימים',
-      groupSize: '4 אנשים',
       text: 'הטיול לקולקטה עם מלכה היה הרפתקה אמיתית! היא הובילה אותנו למקומות שאף תייר לא מגיע אליהם והראתה לנו את התרבות הבנגלית המדהימה. הספארי בסונדרבן היה מרהיב והכל היה מאורגן בצורה מושלמת. מלכה היא מדריכה ברמה עולמית!',
       externalLink: 'https://www.tripadvisor.com/review5',
       platform: 'TripAdvisor',
@@ -133,8 +123,6 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
       rating: 5,
       date: 'אוקטובר 2023',
       tour: 'שירותי הסעות',
-      duration: '10 ימים',
-      groupSize: '3 אנשים',
       text: 'השירותי הסעות של מלכה הם ברמה הכי גבוהה! הנהגים מקצועיים, הרכבים נוחים ונקיים, והשירות אמין לחלוטין. נסענו איתם מבנגלור לגואה ובחזרה - הכל עבר חלק ובזמן. מלכה דאגה לכל הפרטים ואפילו התקשרה לוודא שהכל בסדר. שירות מעולה!',
       externalLink: 'https://www.google.com/review6',
       platform: 'Google Reviews',
@@ -321,14 +309,6 @@ const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onPageChange }) => 
                       <Calendar className="w-3 h-3 ml-1" />
                       <span className="hebrew-text">{testimonial.date}</span>
                     </div>
-                    <div className="flex items-center">
-                      <Users className="w-3 h-3 ml-1" />
-                      <span className="hebrew-text">{testimonial.groupSize}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="text-xs text-gray-500 hebrew-text">
-                    משך הטיול: {testimonial.duration}
                   </div>
                 </div>
                 
