@@ -11,17 +11,17 @@ import PersonalHostingPage from './components/PersonalHostingPage';
 import TransportServicesPage from './components/TransportServicesPage';
 import VisaAssistancePage from './components/VisaAssistancePage';
 
-// Day Tours Pages (5)
+// Day Tours Pages (3)
 import MumbaiSharedTourPage from './components/MumbaiSharedTourPage';
 import MumbaiPrivateTourPage from './components/MumbaiPrivateTourPage';
-import BangaloreToursPage from './components/BangaloreToursPage';
-import GoaToursPage from './components/GoaToursPage';
-import KochiToursPage from './components/KochiToursPage';
+import AdditionalCitiesPage from './components/AdditionalCitiesPage';
 
 // Organized Tours Pages (2)
 import KeralaOrganizedTourPage from './components/KeralaOrganizedTourPage';
 import KolkataOrganizedTourPage from './components/KolkataOrganizedTourPage';
 
+// New Pages
+import WeddingsPage from './components/WeddingsPage';
 // Main Pages
 import TestimonialsPage from './components/TestimonialsPage';
 import BlogPage from './components/BlogPage';

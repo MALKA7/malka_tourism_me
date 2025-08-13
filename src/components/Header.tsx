@@ -42,11 +42,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       label: 'סיורי יום',
       hasSubmenu: true,
       submenu: [
-        { id: 'mumbai-shared', label: 'מומבאי - סיור משותף' },
-        { id: 'mumbai-private', label: 'מומבאי - סיור פרטי' },
-        { id: 'bangalore-tours', label: 'בנגלור - סיורי יום' },
-        { id: 'goa-tours', label: 'גואה - סיורי יום' },
-        { id: 'kochi-tours', label: 'קוצ\'י - סיורי יום' }
+        { id: 'mumbai-private', label: 'מומבאי – טיול פרטי' },
+        { id: 'mumbai-shared', label: 'מומבאי – טיול משותף' },
+        { id: 'additional-cities', label: 'ערים נוספות' }
       ]
     },
     {
@@ -64,13 +62,13 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       hasSubmenu: false
     },
     {
-      id: 'testimonials',
-      label: 'המלצות לקוחות',
+      id: 'testimonials', 
+      label: 'המלצות',
       hasSubmenu: false
     },
     {
       id: 'blog',
-      label: 'בלוג הודו',
+      label: 'בלוג',
       hasSubmenu: false
     },
     {
@@ -81,10 +79,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   ];
 
   const allPages = [
-    'home', 'about', 'services', 'day-tours', 'organized-tours', 'weddings', 'testimonials', 'blog', 'contact',
+    'home', 'about', 'services', 'day-tours', 'organized-tours', 'weddings', 'testimonials', 'blog', 'contact', 'additional-cities',
     'trip-planning', 'trip-execution', 'hebrew-guiding', 'personal-hosting', 
-    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 
-    'bangalore-tours', 'goa-tours', 'kochi-tours', 'west-south-tour', 'west-east-tour'
+    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 'west-south-tour', 'west-east-tour'
   ];
 
   const getPageTitle = (pageId: string): string => {
@@ -103,13 +100,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       'visa-assistance': 'סיוע בויזה והכנות',
       'mumbai-shared': 'מומבאי - סיור משותף',
       'mumbai-private': 'מומבאי - סיור פרטי',
-      'bangalore-tours': 'בנגלור - סיורי יום',
-      'goa-tours': 'גואה - סיורי יום',
-      'kochi-tours': 'קוצ\'י - סיורי יום',
+      'additional-cities': 'ערים נוספות',
       'west-south-tour': 'טיול ממערב לדרום הודו',
       'west-east-tour': 'טיול ממערב למזרח הודו',
-      'testimonials': 'המלצות לקוחות',
-      'blog': 'בלוג הודו',
+      'testimonials': 'המלצות',
+      'blog': 'בלוג',
       'contact': 'צור קשר'
     };
     return pageTitles[pageId] || pageId;
