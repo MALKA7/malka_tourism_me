@@ -19,6 +19,8 @@ import AdditionalCitiesPage from './components/AdditionalCitiesPage';
 // Organized Tours Pages (2)
 import KeralaOrganizedTourPage from './components/KeralaOrganizedTourPage';
 import KolkataOrganizedTourPage from './components/KolkataOrganizedTourPage';
+import WestSouthTourPage from './components/WestSouthTourPage';
+import WestEastTourPage from './components/WestEastTourPage';
 
 // New Pages
 import WeddingsPage from './components/WeddingsPage';
