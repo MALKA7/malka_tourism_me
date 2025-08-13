@@ -103,6 +103,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       'additional-cities': 'ערים נוספות',
       'west-south-tour': 'טיול ממערב לדרום הודו',
       'west-east-tour': 'טיול ממערב למזרח הודו',
+      'west-south-tour': 'טיול ממערב לדרום הודו',
+      'west-east-tour': 'טיול ממערב למזרח הודו',
       'testimonials': 'המלצות',
       'blog': 'בלוג',
       'contact': 'צור קשר'
