@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Search, Phone, ChevronDown } from 'lucide-react';
+import { Menu, X, Search, Phone, ChevronDown, Mail } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 
 interface HeaderProps {
