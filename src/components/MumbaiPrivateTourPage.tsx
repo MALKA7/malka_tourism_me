@@ -10,178 +10,183 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
 
   const mumbaiPhotos = [
     {
-      title: 'שער הכניסה להודו',
-      description: 'האנדרטה המפורסמת ביותר במומבאי, שנבנתה לכבוד ביקור המלך ג\'ורג\' החמישי. מקום מושלם לתמונות זיכרון.',
+      title: 'מכבסה',
+      description: 'המכבסה הפתוחה הגדולה בעולם, בה מאות כובסים עובדים בשיטות מסורתיות. המקום הפך לאתר תיירותי ייחודי המדגים את חיי היום-יום של מומבאי.',
       image: '/mumbai gateway.jpg'
     },
     {
-      title: 'מלון טאג\' מהאל פאלאס',
-      description: 'מלון היוקרה המפורסם של מומבאי, סמל של אלגנטיות ויוקרה. אחד המלונות הטובים בעולם.',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
-      title: 'מרין דרייב - המחרוזת של המלכה',
-      description: 'הטיילת המפורסמת של מומבאי, המכונה "המחרוזת של המלכה". מקום מושלם לצפייה בשקיעה.',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
-    },
-    {
-      title: 'חוף ג\'והו',
-      description: 'החוף הפופולרי ביותר במומבאי, מקום מפגש של מקומיים ותיירים. מפורסם באוכל הרחוב הטעים.',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
-      title: 'סלאם דהרבי',
-      description: 'אחד השכונות העניות הגדולות בעולם, אך גם מקום של חיים ותוססות. סיור מרתק ומעורר השראה.',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
-    },
-    {
-      title: 'תחנת רכבת ויקטוריה טרמינוס',
-      description: 'תחנת הרכבת ההיסטורית והמרשימה ביותר במומבאי. אתר מורשת עולמי של אונסק"ו.',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
-      title: 'שוק קרופורד',
-      description: 'השוק הצבעוני והסואן של מומבאי. מקום מושלם לקניות ולחוויית התרבות המקומית.',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
-    },
-    {
-      title: 'מקדש סידהיווינאיאק',
-      description: 'מקדש הינדי מפורסם המוקדש לאל גנש. מקום של תפילה ורוחניות בלב העיר הסואנת.',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
-      title: 'גני הנגינג',
-      description: 'הגנים התלויים המפורסמים של מומבאי, מקום שקט ויפה בלב העיר. נוף מדהים על הים.',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
-    },
-    {
-      title: 'מוזיאון הנסיך מויילס',
-      description: 'מוזיאון אמנות ותרבות עשיר, המציג את ההיסטוריה והתרבות של מערב הודו.',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
-      title: 'בית הכנסת קנסת אליהו',
-      description: 'בית הכנסת הגדול והיפה ביותר במומבאי, מקום של קהילה יהודית עתיקה ופעילה.',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
-    },
-    {
-      title: 'מחוז הכותנה',
-      description: 'האזור העסקי והפיננסי של מומבאי, מקום של גורדי שחקים ועסקים בינלאומיים.',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
-      title: 'איי אלפנטה',
-      description: 'מערות עתיקות עם פסלים הינדיים מרהיבים. אתר מורשת עולמי של אונסק"ו.',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
-    },
-    {
-      title: 'שוק זאווארי בזאר',
-      description: 'שוק התכשיטים המפורסם של מומבאי. מקום מושלם לקניית תכשיטים מסורתיים הודיים.',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
-      title: 'גשר בנדרה-וורלי',
-      description: 'הגשר המודרני והמרשים של מומבאי, סמל של הפיתוח והמודרניזציה של העיר.',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
-    },
-    {
-      title: 'פארק שיווג\'י',
-      description: 'הפארק הגדול והירוק של מומבאי, מקום מושלם למנוחה ולפיקניק בלב העיר.',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
       title: 'מקדש מהלקשמי',
-      description: 'מקדש הינדי יפהפה המוקדש לאלת העושר והשגשוג. מקום של ברכה ותפילה.',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
-    },
-    {
-      title: 'רציף ששון',
-      description: 'הרציף ההיסטורי של מומבאי, מקום של פעילות ימית ונוף יפה על המפרץ.',
+      description: 'אחד המקדשים הפופולריים ביותר בעיר, המוקדש לאלה מהלקשמי. מושך אליו המונים בעיקר בתקופת הפסטיבלים ההינדואיים.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'שוק קולאבה קוזווי',
-      description: 'שוק רחוב צבעוני ותוסס, מקום מושלם לקניות זולות וחוויה אותנטית.',
+      title: 'מסגד חאג\'י עלי',
+      description: 'מסגד ציורי הבנוי בלב הים, אליו מגיעים בהליכה על סוללה. מקום עלייה לרגל ומבנה איקוני של מומבאי.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
-      title: 'מוזיאון ד"ר בהאו דאג\'י לאד',
-      description: 'המוזיאון הוותיק ביותר במומבאי, המציג אוספים עשירים של אמנות ותרבות הודית.',
+      title: 'פארק קמלה נרו וגנים תלויים',
+      description: 'גנים יפים על גבעה עם נוף פנורמי אל העיר ומפרץ מומבאי. מקום פופולרי לטיול ולמנוחה.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'גן החיות של מומבאי',
-      description: 'גן החיות הגדול והמגוון של מומבאי, מקום מושלם למשפחות ולאוהבי טבע.',
+      title: 'מוזיאון של גנדי',
+      description: 'מוזיאון המוקדש למהטמה גנדי, מציג את חייו ופועלו ההיסטורי. כולל מכתבים, תמונות וחפצים אישיים.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
-      title: 'מקדש בבולנאת',
-      description: 'מקדש שיווה עתיק ומקודש, אחד המקדשים החשובים ביותר במומבאי.',
+      title: 'שכונה פרסית בדאדר',
+      description: 'קהילה פרסית ותיקה במרכז העיר. מדגימה את הרב-תרבותיות הייחודית של מומבאי.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'חוף ורסובה',
-      description: 'חוף שקט ויפה בצפון מומבאי, מקום מושלם לבריחה מההמולה של העיר.',
+      title: 'שליחי ארוחת צהריים',
+      description: 'רשת שליחים אגדית שמעבירה מדי יום מאות אלפי ארוחות לעובדים בעיר. נחשבת לפלא לוגיסטי עולמי.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
-      title: 'פארק סנג\'אי גנדהי',
-      description: 'פארק לאומי בלב מומבאי, מקום של טבע פראי ושקט בתוך העיר הגדולה.',
+      title: 'שער הכניסה להודו',
+      description: 'מבנה מונומנטלי על קו החוף, סמל היסטורי של העיר. דרכו נכנסו הבריטים והיום הוא אתר חובה לתיירים.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'שוק לינקינג רוד',
-      description: 'רחוב הקניות המפורסם של מומבאי, מקום של אופנה, מסעדות ובידור.',
+      title: 'ספריית דיוויד ששון',
+      description: 'ספרייה היסטורית שנבנתה על ידי הסוחר היהודי דיוויד ששון. משמשת עד היום מרכז תרבותי חשוב.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'רציפי ששון',
+      description: 'אזור נמל מסחרי שהוקם במימון משפחת ששון. שימש מרכז מסחר חשוב בתקופת הקולוניאליזם.',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+    },
+    {
+      title: 'אזור האורות האדומים',
+      description: 'אחד מרובעי הזנות הגדולים והוותיקים בהודו. משקף צדדים חברתיים מורכבים של מומבאי.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'שוק קלבדבי',
+      description: 'שוק צבעוני ותוסס המציע בגדים, תכשיטים ומוצרי פולחן. מקום מעניין להכיר את חיי הרחוב של מומבאי.',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+    },
+    {
+      title: 'מוזיאון הפרסים',
+      description: 'מוקדש להיסטוריה ולתרבות של הקהילה הפרסית בעיר. מדגים את תרומתה לפיתוח כלכלי וחברתי.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'מוזיאון הנסיך מווילס',
+      description: 'אחד המוזיאונים הגדולים בהודו. כולל אוספי אמנות, פסלים ועתיקות.',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+    },
+    {
+      title: 'פארק סנג\'י גנדי ומערות קנרי',
+      description: 'שמורת טבע גדולה עם גן חיות, וגם מערות חצובות בנות אלפי שנים. אתר שמחבר בין טבע להיסטוריה.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
       title: 'מקדש איסקון',
-      description: 'מקדש הרה קרישנה המודרני והיפה, מקום של רוחניות ושלווה.',
+      description: 'מקדש מודרני לתנועת ההרקרישנה. מבוקש בקרב תיירים ומקומיים כאחד.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'חוף אקסה',
-      description: 'חוף פראי ושקט בצפון מומבאי, מקום מושלם לשקיעות רומנטיות.',
+      title: 'מוזיאון אלברט וויקטוריה',
+      description: 'מוזיאון לאומנויות שימושיות והיסטוריה של מומבאי. ידוע באוספים ייחודיים ומוצגים מרהיבים.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
-      title: 'מוזיאון מני בהוון',
-      description: 'מוזיאון מיניאטורות מרתק, המציג את ההיסטוריה של הודו בצורה ייחודית.',
+      title: 'ארוחה בבית משפחה בהורי',
+      description: 'חוויה קולינרית אותנטית של קהילת הבהורים. מאפשרת להכיר מקרוב תרבות ואירוח מקומי.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'גלובל ויפאסנה פגודה',
-      description: 'פגודה בודהיסטית מרשימה, מקום של מדיטציה ושלווה רוחנית.',
+      title: 'מלון טאג\' מהאל פאלאס',
+      description: 'מלון מפואר ואייקוני ליד שער הודו. סמל של יוקרה והיסטוריה בעיר.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
-      title: 'שוק פלורה פאונטיין',
-      description: 'שוק הפרחים הצבעוני של מומבאי, מקום של ריחות וצבעים מדהימים.',
+      title: 'תחנת ויקטוריה',
+      description: 'תחנת רכבת מונומנטלית בסגנון גותי ויקטוריאני. אתר מורשת עולמית של אונסק"ו.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'מקדש סידהי ווינאיאק',
-      description: 'מקדש גנש מפורסם ומקודש, יעד עלייה לרגל חשוב עבור הינדים.',
+      title: 'שוק קרופורד',
+      description: 'שוק סיטונאי ותיק שבו נמכרים פירות, ירקות, תבלינים ובדים. מרכז מסחר חי ותוסס.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
-      title: 'נמל התעופה צ\'טרפטי שיווג\'י',
-      description: 'נמל התעופה הבינלאומי של מומבאי, שער הכניסה לעיר ולהודו עבור מיליוני תיירים.',
+      title: 'מקדש מומבה דוי',
+      description: 'מקדש המוקדש לאלת מומבה, שעל שמה נקראת העיר מומבאי. אתר דתי חשוב במיוחד לתושבים מקומיים.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'רחוב מוחמד עלי',
-      description: 'רחוב מסחרי תוסס בלב מומבאי, מקום של קניות, אוכל ותרבות מקומית.',
+      title: 'כפר דייגים קולי',
+      description: 'הכפרים העתיקים של קהילת הקולי, דייגים המקוריים של העיר. מציגים אורח חיים מסורתי בלב הכרך.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
-      title: 'מקדש מומבאדווי',
-      description: 'מקדש הינדי עתיק המוקדש לאלת מומבאי, מקום של מסורת ואמונה עמוקה.',
+      title: 'בית כנסת אליהו',
+      description: 'אחד מבתי הכנסת המפורסמים של יהדות מומבאי. מעיד על נוכחות קהילה יהודית בעיר.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
-      title: 'פארק אובאי',
-      description: 'פארק ירוק ושקט בלב מומבאי, מקום מושלם למנוחה ולפעילות ספורטיבית.',
+      title: 'שכונת סלאם דהרבי',
+      description: 'השכונה הצפופה ביותר באסיה, המשלבת עוני עם יזמות מרשימה. מפורסמת מסרטים ותיירות חברתית.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'חוף צ\'ופטי',
+      description: 'חוף פופולרי לבילוי ערב, טיולים וחגיגות פסטיבלים. מרכזי במיוחד בחג הגנש צ\'טורטי.',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+    },
+    {
+      title: 'אי אלפנטה',
+      description: 'אי סמוך למומבאי עם מערות חצובות מהמאה ה-5. אתר מורשת עולמית של אונסק"ו.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'גלריה לאמנויות',
+      description: 'גלריה ידועה המציגה אמנות מודרנית ועכשווית. מקום מפגש לאמנים ולמבקרים.',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+    },
+    {
+      title: 'שוק הגנבים',
+      description: 'שוק פשפשים מפורסם שבו ניתן למצוא עתיקות, חפצים ישנים ופריטים ייחודיים.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'גן החיות',
+      description: 'גן החיות המרכזי של העיר. משלב שמירת טבע עם בילוי למשפחות.',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+    },
+    {
+      title: 'פלנטריום נרו',
+      description: 'מרכז אסטרונומיה מודרני המוקדש לג\'ווהרלל נרו. פופולרי בקרב ילדים ומבוגרים.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'קידזניה לילדים',
+      description: 'מתחם חווייתי שבו ילדים מתנסים בעבודות ומקצועות שונים. מציע חינוך דרך משחק.',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+    },
+    {
+      title: 'מקדש סידיוינייקה',
+      description: 'מקדש פופולרי לאל גנש, אליו מגיעים מדי יום אלפי מתפללים. נחשב למקום קדוש במיוחד.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'מרוץ סוסים במהלקשמי',
+      description: 'מרוצי סוסים ידועים הנערכים במרכז העיר. אירוע חברתי ובידורי חשוב.',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+    },
+    {
+      title: 'תופעת סריסים הודים',
+      description: 'קהילת היג\'רות, בעלת נוכחות תרבותית וחברתית בעיר. מהווה חלק בלתי נפרד מהחברה ההודית.',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+    },
+    {
+      title: 'סיור ברכבת מקומית',
+      description: 'חוויה עוצמתית להכיר את חיי היום-יום של מיליוני נוסעים במומבאי. נחשבת ללב הפועם של העיר.',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     }
   ];
