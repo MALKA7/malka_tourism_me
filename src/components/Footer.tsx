@@ -21,13 +21,13 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <a href="https://wa.me/919980601979" className="social-icon whatsapp hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-whatsapp"></i>
               </a>
-              <a href="#" className="social-icon facebook hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/groups/680827564461843" className="social-icon facebook hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="social-icon instagram hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/indiabymalka" className="social-icon instagram hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="social-icon youtube hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@INDIABYMALKA" className="social-icon youtube hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>

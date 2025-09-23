@@ -238,6 +238,17 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                 )}
               </div>
 
+              {/* Facebook Icon */}
+              <a 
+                href="https://www.facebook.com/groups/680827564461843"
+                className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
+                title="הצטרפו לקבוצת הפייסבוק שלנו"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+              </a>
+
               {/* Email Icon */}
               <a 
                 href="mailto:malka@shalom-india.com?subject=Ref:%20Indiabymalka%20website"
@@ -302,6 +313,15 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
           
           {/* Mobile Email and WhatsApp */}
           <div className="flex items-center justify-center space-x-4 space-x-reverse mt-4">
+            <a 
+              href="https://www.facebook.com/groups/680827564461843"
+              className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg"
+              title="הצטרפו לקבוצת הפייסבוק שלנו"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="w-6 h-6" />
+            </a>
             <a 
               href="mailto:malka@shalom-india.com?subject=Ref:%20Indiabymalka%20website"
               className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg"
