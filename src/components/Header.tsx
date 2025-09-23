@@ -154,17 +154,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                 onClick={() => onPageChange('home')}
                 className="flex items-center space-x-3 space-x-reverse hover:opacity-80 transition-opacity"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">מ</span>
-                </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent hebrew-text">
-                    הודו עם מלכה
-                  </div>
-                  <div className="text-sm text-gray-600 hebrew-text">
-                    מדריכה ישראלית מקצועית
-                  </div>
-                </div>
+                <img 
+                  src="/Logo.png" 
+                  alt="India by Malka Logo"
+                  className="h-16 w-auto object-contain"
+                />
               </button>
             </div>
 
