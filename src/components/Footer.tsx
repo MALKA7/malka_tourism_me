@@ -176,12 +176,6 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               מזרח הודו
             </button>
             <button 
-              onClick={() => onPageChange('weddings')}
-              className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
-            >
-              חתונות
-            </button>
-            <button 
               onClick={() => onPageChange('testimonials')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
