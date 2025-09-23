@@ -554,52 +554,84 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative">
-                <img 
-                  src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg"
-                  alt="סרטון מומבאי 1"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <Play className="w-16 h-16 text-white" />
-                </div>
+                <a 
+                  href="https://www.youtube.com/watch?v=xSoGgmTdpKA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src="https://img.youtube.com/vi/xSoGgmTdpKA/maxresdefault.jpg"
+                    alt="חוויה בלתי נשכחת במומבאי עם מלכה אירני"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                    <Play className="w-16 h-16 text-white" />
+                  </div>
+                </a>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold hebrew-text">סיור במומבאי - חלק 1</h3>
-                <p className="text-gray-600 hebrew-text text-sm">שער הכניסה להודו ומרין דרייב</p>
+                <h3 className="text-lg font-bold hebrew-text mb-2">חוויה בלתי נשכחת במומבאי עם מלכה אירני!</h3>
+                <p className="text-gray-600 hebrew-text text-sm leading-relaxed mb-3">
+                  בואו איתי למסע חווייתי שייקח אתכם אל לב העיר התוססת! נרוץ לרכבת כמו המקומיים במשחק "המירוץ לרכבת", נגלה איך שליחי המזון האגדיים של מומבאי מתפקדים ללא טעויות, נטייל בשווקים הצבעוניים ונחווה את העיר דרך העיניים של מי שחי בה באמת!
+                </p>
+                <p className="text-blue-600 hebrew-text text-sm font-medium">
+                  📍 בואו לחוות את מומבאי בצורה מרגשת, מצחיקה ומלאת אנרגיה!<br/>
+                  👀 צפו בסרטון עכשיו ותנו לייק אם גם אתם רוצים להצטרף להרפתקה הבאה!
+                </p>
               </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative">
-                <img 
-                  src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg"
-                  alt="סרטון מומבאי 2"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <Play className="w-16 h-16 text-white" />
-                </div>
+                <a 
+                  href="https://www.youtube.com/watch?v=EFyEt2Jo1DQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src="https://img.youtube.com/vi/EFyEt2Jo1DQ/maxresdefault.jpg"
+                    alt="10 Facts of Mumbai"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                    <Play className="w-16 h-16 text-white" />
+                  </div>
+                </a>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold hebrew-text">סיור במומבאי - חלק 2</h3>
-                <p className="text-gray-600 hebrew-text text-sm">סלאם דהרבי ושווקים מקומיים</p>
+                <h3 className="text-lg font-bold hebrew-text mb-2">10 Facts of Mumbai</h3>
+                <p className="text-gray-600 hebrew-text text-sm leading-relaxed">
+                  Welcome to Mumbai — India's financial powerhouse, Bollywood capital, and the city that never sleeps! 
+                  In this short video, discover 10 fascinating facts about Mumbai that reveal its charm.
+                </p>
               </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative">
-                <img 
-                  src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg"
-                  alt="סרטון מומבאי 3"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <Play className="w-16 h-16 text-white" />
-                </div>
+                <a 
+                  href="https://www.youtube.com/watch?v=UucnPiiA7C8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img 
+                    src="https://img.youtube.com/vi/UucnPiiA7C8/maxresdefault.jpg"
+                    alt="הפרסיים זורשתריאנים של מומבאי מאת מלכה אירני"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center hover:bg-opacity-30 transition-all duration-300">
+                    <Play className="w-16 h-16 text-white" />
+                  </div>
+                </a>
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold hebrew-text">סיור במומבאי - חלק 3</h3>
-                <p className="text-gray-600 hebrew-text text-sm">איי אלפנטא ואתרים היסטוריים</p>
+                <h3 className="text-lg font-bold hebrew-text mb-2">הפרסיים זורשתריאנים של מומבאי מאת מלכה אירני</h3>
+                <p className="text-gray-600 hebrew-text text-sm leading-relaxed">
+                  הפרסים של מומבאי הם צאצאי קהילה זורואסטרית שהיגרה מאיראן להודו לפני מאות שנים. הם ידועים בשם "פרסים" ושמרו על תרבותם, דתם ושפתם הייחודית. הקהילה תרמה רבות לפיתוח מומבאי בתחומים כמו עסקים, תעשייה, אמנות וחינוך. בתי התפילה שלהם, אטש-בהרם (מקדשי האש), משמרים את מסורת האש הקדושה. היום, הם ממשיכים לשמור על זהותם הייחודית תוך השתלבות בחברה ההודית הרב-תרבותית.
+                </p>
               </div>
             </div>
           </div>
