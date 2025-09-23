@@ -418,7 +418,11 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
               בחר סיור במומבאי
             </h2>
             <p className="text-xl text-gray-600 hebrew-text">
-              שלושה סוגי סיורים פרטיים לבחירתכם
+              סוגי סיורים פרטיים לבחירתכם
+            </p>
+            <p className="text-lg text-gray-700 hebrew-text mt-4 max-w-4xl mx-auto leading-relaxed">
+              כל הסיורים שלנו פתוחים למשתתפים נוספים – וככל שמצטרפים יותר משתתפים, המחיר לכל אחד יורד. 
+              אם אתם מעוניינים בחוויה פרטית ואינטימית, ניתן לשריין את הסיור רק עבורכם בתוספת תשלום.
             </p>
           </div>
 
