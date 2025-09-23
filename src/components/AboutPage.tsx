@@ -79,7 +79,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
+                src="/Malka.jpg" 
                 alt="מלכה אירני"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
