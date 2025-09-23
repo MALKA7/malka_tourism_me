@@ -59,18 +59,7 @@ function App() {
       case 'mumbai-shared':
         return <MumbaiSharedTourPage onPageChange={setCurrentPage} />;
       case 'mumbai-private':
-        return <div className="min-h-screen py-12 flex items-center justify-center fade-in">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4 hebrew-text">עמוד בבנייה</h1>
-            <p className="text-xl text-gray-600 mb-8 hebrew-text">העמוד שביקשתם עדיין בפיתוח</p>
-            <button 
-              onClick={() => setCurrentPage('home')}
-              className="btn-primary"
-            >
-              חזרה לעמוד הבית
-            </button>
-          </div>
-        </div>;
+        return <MumbaiPrivateTourPage onPageChange={setCurrentPage} />;
       case 'additional-cities':
         return <AdditionalCitiesPage onPageChange={setCurrentPage} />;
       
