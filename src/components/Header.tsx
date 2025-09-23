@@ -57,11 +57,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       ]
     },
     {
-      id: 'weddings',
-      label: 'חתונות בהודו',
-      hasSubmenu: false
-    },
-    {
       id: 'testimonials', 
       label: 'המלצות',
       hasSubmenu: false
@@ -79,7 +74,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
   ];
 
   const allPages = [
-    'home', 'about', 'services', 'day-tours', 'organized-tours', 'weddings', 'testimonials', 'blog', 'contact', 'additional-cities',
+    'home', 'about', 'services', 'day-tours', 'organized-tours', 'testimonials', 'blog', 'contact', 'additional-cities',
     'trip-planning', 'trip-execution', 'hebrew-guiding', 'personal-hosting', 
     'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 
     'west-south-tour', 'west-east-tour', 'additional-cities'
@@ -103,7 +98,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       'mumbai-private': 'מומבאי - סיור פרטי',
       'west-south-tour': 'טיול ממערב לדרום הודו',
       'west-east-tour': 'טיול ממערב למזרח הודו',
-      'organized-tours': 'טיולים מאורגנים',
       'additional-cities': 'ערים נוספות',
       'testimonials': 'המלצות',
       'blog': 'בלוג',
