@@ -336,13 +336,13 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             </a>
             <a 
               href="https://wa.me/919980601979"
-              className="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 shadow-lg"
+              className="flex items-center justify-center w-10 h-10 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
               target="_blank"
               rel="noopener noreferrer"
               title="WhatsApp למלכה"
+              title="WhatsApp למלכה"
             >
-              <i className="fab fa-whatsapp text-lg"></i>
-            </a>
+              <i className="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform duration-200"></i>
           </div>
         </div>
       </header>
