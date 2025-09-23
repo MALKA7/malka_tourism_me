@@ -248,7 +248,7 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
       suitable: ''
     },
     {
-      name: 'סוויפט דזיירה',
+      name: 'סוויפט דזייר',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
       capacity: '1-2 נוסעים',
       aircon: 'רכב ממוזג',
@@ -523,12 +523,6 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
                     )}
                   </div>
 
-                  <button 
-                    onClick={() => onPageChange('contact')}
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    בחר רכב זה
-                  </button>
                 </div>
               </div>
             ))}
