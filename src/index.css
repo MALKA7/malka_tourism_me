@@ -210,6 +210,7 @@ input:focus, textarea:focus, select:focus {
 .social-icon.facebook { background-color: #1877F2; }
 .social-icon.instagram { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
 .social-icon.youtube { background-color: #FF0000; }
+.social-icon.email { background-color: #FF6600; }
 
 /* Search functionality */
 .search-container {

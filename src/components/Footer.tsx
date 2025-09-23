@@ -21,6 +21,9 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               <a href="https://wa.me/919980601979" className="social-icon whatsapp hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-whatsapp"></i>
               </a>
+              <a href="mailto:malka@shalom-india.com?subject=Ref:%20IndiabyMalka%20Website" className="social-icon email hover:scale-110 transition-transform shadow-lg" title="שלחו אימייל למלכה">
+                <Mail className="w-5 h-5" />
+              </a>
               <a href="https://www.facebook.com/groups/680827564461843" className="social-icon facebook hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-5 h-5" />
               </a>
