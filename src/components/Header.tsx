@@ -70,6 +70,11 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       id: 'contact',
       label: 'צור קשר',
       hasSubmenu: false
+    },
+    {
+      id: 'english',
+      label: 'English',
+      hasSubmenu: false
     }
   ];
 

@@ -22,6 +22,9 @@ import KolkataOrganizedTourPage from './components/KolkataOrganizedTourPage';
 import WestSouthTourPage from './components/WestSouthTourPage';
 import WestEastTourPage from './components/WestEastTourPage';
 
+// English Page
+import EnglishPage from './components/EnglishPage';
+
 // New Pages
 import WeddingsPage from './components/WeddingsPage';
 // Main Pages
@@ -76,6 +79,8 @@ function App() {
         return <BlogPage onPageChange={setCurrentPage} />;
       case 'contact':
         return <ContactPage onPageChange={setCurrentPage} />;
+      case 'english':
+        return <EnglishPage onPageChange={setCurrentPage} />;
       default:
         return (
           <div className="min-h-screen py-12 flex items-center justify-center fade-in">

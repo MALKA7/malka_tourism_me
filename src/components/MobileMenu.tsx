@@ -104,6 +104,20 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
               ))}
             </div>
           )}
+          
+          {/* English Page Link */}
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <button
+              onClick={() => {
+                onPageChange('english');
+                onClose();
+              }}
+              className="w-full flex items-center justify-center p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+            >
+              <Globe className="w-5 h-5 mr-3" />
+              <span className="font-medium">English</span>
+            </button>
+          </div>
         </div>
 
         {/* Menu Items */}
