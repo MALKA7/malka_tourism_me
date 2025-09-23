@@ -458,6 +458,76 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
                 </div>
               </div>
             </div>
+
+            {/* Photo 16 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/ASIF.png"
+                alt="מלכה בהודו"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">אוהבת לצלם רגעים מיוחדים</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 17 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/DSC_0156.JPG"
+                alt="חיי מלכה בהודו"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">מתרגלת יוגה כל בוקר</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 18 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/DSC_0283.JPG"
+                alt="מלכה והתרבות ההודית"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">אוהבת לבשל אוכל הודי מסורתי</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 19 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/DSC_0554.JPG"
+                alt="מלכה בטיולים"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">קוראת ספרים בהינדית</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Photo 20 */}
+            <div className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer">
+              <img 
+                src="/DSC_0763.JPG"
+                alt="מלכה והמשפחה"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-end">
+                <div className="w-full p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium hebrew-text text-center">חוגגת חגים הודיים עם המשפחה</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
