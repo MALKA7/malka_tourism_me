@@ -340,9 +340,9 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
               target="_blank"
               rel="noopener noreferrer"
               title="WhatsApp למלכה"
-              title="WhatsApp למלכה"
             >
               <i className="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform duration-200"></i>
+            </a>
           </div>
         </div>
       </header>
