@@ -232,28 +232,28 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
 
   const vehicles = [
     {
-      name: 'אוטובוס',
+      name: 'מיניבוס',
       image: '/transport bus.png',
-      capacity: '25-35 נוסעים',
-      aircon: 'מזגן מלא',
+      capacity: '5-11 נוסעים',
+      aircon: 'רכב ממוזג',
       driver: 'נהג מקצועי',
-      suitable: 'קבוצות גדולות'
+      suitable: ''
     },
     {
       name: 'טויוטה אינובה',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
-      capacity: '6-7 נוסעים',
-      aircon: 'מזגן מלא',
+      capacity: '3-4 נוסעים',
+      aircon: 'רכב ממוזג',
       driver: 'נהג מקצועי',
-      suitable: 'משפחות קטנות'
+      suitable: ''
     },
     {
       name: 'סוויפט דזיירה',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      capacity: '4 נוסעים',
-      aircon: 'מזגן מלא',
+      capacity: '1-2 נוסעים',
+      aircon: 'רכב ממוזג',
       driver: 'נהג מקצועי',
-      suitable: 'זוגות'
+      suitable: ''
     }
   ];
 
@@ -484,10 +484,10 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              הסעות במומבאי
+              רכבים לסיור במומבאי
             </h2>
             <p className="text-xl text-gray-600 hebrew-text">
-              בחרו את הרכב המתאים לקבוצה שלכם
+              הרכב המתאים לסיור שלכם נקבע לפי מספר המשתתפים ויהיה אחד מהרכבים המופיעים מטה
             </p>
           </div>
 
@@ -515,10 +515,12 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
                       <Award className="w-5 h-5 text-purple-600 ml-3" />
                       <span className="hebrew-text">{vehicle.driver}</span>
                     </div>
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-orange-600 ml-3" />
-                      <span className="hebrew-text">מתאים ל{vehicle.suitable}</span>
-                    </div>
+                    {vehicle.suitable && (
+                      <div className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-orange-600 ml-3" />
+                        <span className="hebrew-text">מתאים ל{vehicle.suitable}</span>
+                      </div>
+                    )}
                   </div>
 
                   <button 
