@@ -115,8 +115,8 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
     },
     {
-      title: 'מקדש מומבה דוי',
-      description: 'מקדש המוקדש לאלת מומבה, שעל שמה נקראת העיר מומבאי. אתר דתי חשוב במיוחד לתושבים מקומיים.',
+      title: 'מקדש מומבא דוי',
+      description: 'מקדש המוקדש לאלת מומבא, שעל שמה נקראת העיר מומבאי. אתר דתי חשוב במיוחד לתושבים מקומיים.',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
     },
     {
@@ -422,7 +422,7 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {tourOptions.map((tour, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <img 
