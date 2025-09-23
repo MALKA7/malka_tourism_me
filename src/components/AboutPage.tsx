@@ -79,7 +79,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="/Malka.jpg" 
+                src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWk3L3dFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--477f1f67f364254b58dea2e0495d6cf84ae5f0ef//Malka.jpg" 
                 alt="מלכה אירני"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
@@ -406,7 +406,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                 <div className="flex-shrink-0">
                   <img 
-                    src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
+                    src="https://stackblitz.com/storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCRWk3L3dFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--477f1f67f364254b58dea2e0495d6cf84ae5f0ef//Malka.jpg" 
                     alt="מלכה אירני"
                     className="w-32 h-32 rounded-full object-cover border-4 border-blue-300"
                   />
