@@ -196,28 +196,37 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
       title: 'סיור בוקר',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
       startTime: '06:00',
-      endTime: '12:00',
-      transport: 'רכב פרטי מזוגן',
+      endTime: '14:00',
+      transport: 'רכב ממוזג',
       guide: 'מדריך דובר עברית ואנגלית',
-      highlights: ['שער הכניסה להודו', 'מרין דרייב', 'סלאם דהרבי', 'שוק קרופורד']
+      highlights: ['רציפי ששון ושוק הפרחים בדאדר', 'נסיעה ברכבת']
     },
     {
-      title: 'סיור יום מלא',
+      title: 'סיור יום',
       image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
-      startTime: '09:00',
-      endTime: '18:00',
-      transport: 'רכב פרטי מזוגן',
+      startTime: '08:00',
+      endTime: '16:00',
+      transport: 'רכב ממוזג',
       guide: 'מדריך דובר עברית ואנגלית',
-      highlights: ['כל האתרים העיקריים', 'ארוחת צהריים', 'איי אלפנטא', 'קניות']
+      highlights: ['שכונת סלאם', 'שכונה פרסית', 'שליחי מזון', 'מכבסה וסיור ברכבת']
     },
     {
       title: 'סיור לילה',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      startTime: '17:00',
-      endTime: '23:00',
-      transport: 'רכב פרטי מזוגן',
+      startTime: '11:00',
+      endTime: '19:00',
+      transport: 'רכב ממוזג',
       guide: 'מדריך דובר עברית ואנגלית',
-      highlights: ['מרין דרייב בלילה', 'שווקי לילה', 'מסעדות מקומיות', 'חיי לילה']
+      highlights: ['תחנת ויקטוריה', 'בניין העיריה', 'אזור האורות האדומים', 'סיור ברכבת']
+    },
+    {
+      title: 'טיול מותאם אישית',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
+      startTime: 'בהתאם ללוח זמנים שלך',
+      endTime: '',
+      transport: 'רכב ממוזג',
+      guide: 'מדריך דובר עברית ואנגלית',
+      highlights: ['מותאם לבחירתך מרשימת אתרים']
     }
   ];
 
@@ -427,7 +436,7 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center">
                       <Clock className="w-5 h-5 text-blue-600 ml-3" />
-                      <span className="hebrew-text">{tour.startTime} - {tour.endTime}</span>
+                      <span className="hebrew-text">{tour.endTime ? `${tour.startTime} - ${tour.endTime}` : tour.startTime}</span>
                     </div>
                     <div className="flex items-center">
                       <Car className="w-5 h-5 text-green-600 ml-3" />
@@ -450,13 +459,6 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
                       ))}
                     </ul>
                   </div>
-
-                  <button 
-                    onClick={() => onPageChange('contact')}
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                  >
-                    בחר סיור זה
-                  </button>
                 </div>
               </div>
             ))}
