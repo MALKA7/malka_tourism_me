@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Search, Phone, ChevronDown } from 'lucide-react';
+import { X, Search, Phone, ChevronDown, Mail } from 'lucide-react';
 
 interface MenuItem {
   id: string;
@@ -156,6 +156,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
         <div className="p-4 border-t border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
           <h3 className="font-bold text-gray-900 mb-3 hebrew-text">צור קשר מהיר</h3>
           <div className="space-y-3">
+            <a 
+              href="mailto:Malka@shalom-india.com?subject=Ref:%20IndiabyMalka%20website"
+              className="flex items-center justify-center p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+              title="שלחו אימייל למלכה"
+            >
+              <Mail className="w-5 h-5 ml-3" />
+              <span className="font-medium hebrew-text">אימייל</span>
+            </a>
             <a 
               href="https://wa.me/919980601979"
               className="flex items-center justify-center p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors shadow-lg"
