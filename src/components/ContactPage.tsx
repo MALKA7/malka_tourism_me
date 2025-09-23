@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Globe, Star, CheckCircle, User, Calendar, Shield, Award, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Globe, Star, CheckCircle, User, Calendar, Shield, Award, Users, Facebook, Instagram, Youtube } from 'lucide-react';
 
 interface ContactPageProps {
   onPageChange: (page: string) => void;
@@ -199,6 +199,70 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* Social Media Section */}
+          <div className="mt-20 text-center">
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 hebrew-text">
+              עקבו אחרינו ברשתות החברתיות
+            </h3>
+            <p className="text-lg text-gray-600 hebrew-text mb-8">
+              הצטרפו לקהילה שלנו ותקבלו עדכונים על טיולים חדשים וטיפים מהודו
+            </p>
+            
+            <div className="flex justify-center space-x-6 space-x-reverse">
+              <a 
+                href="https://www.facebook.com/groups/680827564461843"
+                className="social-icon facebook hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="הצטרפו לקבוצת הפייסבוק שלנו"
+              >
+                <Facebook className="w-8 h-8" />
+              </a>
+              
+              <a 
+                href="https://www.instagram.com/indiabymalka/"
+                className="social-icon instagram hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="עקבו אחרינו באינסטגרם"
+              >
+                <Instagram className="w-8 h-8" />
+              </a>
+              
+              <a 
+                href="https://www.youtube.com/@INDIABYMALKA"
+                className="social-icon youtube hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="צפו בסרטונים שלנו ביוטיוב"
+              >
+                <Youtube className="w-8 h-8" />
+              </a>
+              
+              <a 
+                href="mailto:malka@shalom-india.com?subject=Ref:%20IndiabyMalka%20Website"
+                className="social-icon email hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                title="שלחו לנו אימייל"
+              >
+                <Mail className="w-8 h-8" />
+              </a>
+              
+              <a 
+                href="https://wa.me/919980601979"
+                className="social-icon whatsapp hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="שלחו הודעה בוואטסאפ"
+              >
+                <i className="fab fa-whatsapp text-2xl"></i>
+              </a>
+            </div>
+            
+            <p className="text-sm text-gray-500 hebrew-text mt-6">
+              לעדכונים שוטפים, טיפים לטיולים והצצות לחיי היום-יום בהודו
+            </p>
           </div>
         </div>
       </section>
