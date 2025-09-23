@@ -133,7 +133,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
               למה לבחור בנו?
             </h2>
             <p className="text-xl text-blue-700 max-w-3xl mx-auto hebrew-text font-medium">
-              אנחנו מתמחים בטיולים להודו עבור ישראלים ומספקים שירות אישי ומקצועי
+              אנחנו מתמחים בטיולים להודו ומספקים שירות אישי ומקצועי
             </p>
           </div>
 
