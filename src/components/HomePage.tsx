@@ -402,7 +402,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
 
             <div 
               className="relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl group cursor-pointer transition-all duration-300 transform hover:-translate-y-2 border border-blue-100"
-              onClick={() => onPageChange('bangalore-tours')}
+              onClick={() => onPageChange('delhi-tours')}
             >
               <img 
                 src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg" 
