@@ -238,34 +238,6 @@ const PersonalHostingPage: React.FC<PersonalHostingPageProps> = ({ onPageChange 
                 </button>
               </div>
 
-              {/* Pricing Card */}
-              <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי אירוח</h3>
-                
-                <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">לילה אחד</span>
-                      <span className="font-bold text-blue-600 text-xl">$60</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">כולל חדר, ארוחות והסעה</p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">שבוע מלא</span>
-                      <span className="font-bold text-green-600 text-xl">$350</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">הנחה מיוחדת לשהייה ארוכה</p>
-                  </div>
-                </div>
-                
-                <div className="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                  <p className="text-sm text-gray-700 hebrew-text text-center">
-                    כולל ארוחות ביתיות והסעות לנמל התעופה
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
