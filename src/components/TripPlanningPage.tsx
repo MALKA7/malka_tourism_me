@@ -58,7 +58,7 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
             <div className="lg:col-span-2">
               <div className="prose prose-lg max-w-none">
                 <h2 className="text-4xl font-bold text-gray-900 mb-8 hebrew-text">
-                  למה לבחור בתכנון טיול מקצועי להודו?
+                  תכנון טיול מקצועי להודו
                 </h2>
                 
                 <div className="bg-blue-50 p-8 rounded-xl mb-8 border border-blue-200">
@@ -81,103 +81,6 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                   </div>
                 </div>
 
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  מה כולל שירות התכנון המקצועי?
-                </h3>
-
-                <div className="planning-services text-center mb-8">
-                  <div className="services-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">🗺️</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">מפות הודו</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">📅</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">ימי מסלול וטיסות פנים</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">📏</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">מרחקים משוערים</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">🏞️</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">מסלולים יומיים עם אטרקציות מקומיות</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">📖</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">מידע עיוני על היעדים</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">📡</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">מידע שימושי כמו תקשורת וציוד מומלץ</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">🚆</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">הצעות לטיסות פנים, רכבות ואוטובוסים</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">✏️</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">השירות כולל עד שני שינויים במסלול</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">🏨</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">לא ניתנות המלצות למלונות – הבחירה עצמאית</p>
-                    </div>
-                    
-                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-                      <span className="icon text-3xl block mb-2">🚗</span>
-                      <p className="text-sm hebrew-text font-medium text-gray-800">לא ניתנות המלצות לנהגים או מדריכים</p>
-                    </div>
-                    
-                  </div>
-                </div>
-
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  איך זה עובד?
-                </h3>
-
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
-                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">1</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">יצירת קשר ראשונית</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">צרו קשר ונקבע שיחת ייעוץ ראשונית חינם</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
-                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">2</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שיחת ייעוץ מפורטת</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">נכיר, נבין את הרצונות שלכם ונתחיל לתכנן</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
-                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">3</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">הכנת תכנית מפורטת</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">תקבלו תכנית טיול מפורטת עם כל הפרטים</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-                    <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">4</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">ליווי והתאמות</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">נעשה התאמות לפי הצורך ונלווה אתכם עד היציאה</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -223,64 +126,6 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                 </button>
               </div>
 
-              {/* Malka Advantages Section */}
-              <section className="py-20 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-                      למה לבחור במלכה לתכנון הטיול שלכם?
-                    </h2>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">📚</span>
-                      <p className="text-gray-800 hebrew-text text-sm">ידע מעמיק על תרבות, היסטוריה ואתרי חובה בהודו</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">💡</span>
-                      <p className="text-gray-800 hebrew-text text-sm">טיפים והמלצות שמגיעים רק ממי שחיה ומכירה את הודו מקרוב</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">📝</span>
-                      <p className="text-gray-800 hebrew-text text-sm">מסלולים מותאמים אישית לפי תחומי העניין והעדפותיכם</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">🛎️</span>
-                      <p className="text-gray-800 hebrew-text text-sm">תכנון מקצועי של כל שלב בטיול – לוגיסטיקה, מלונות, תחבורה ואטרקציות</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">🔍</span>
-                      <p className="text-gray-800 hebrew-text text-sm">דאגה לכל הפרטים הקטנים, כדי שהטיול יהיה חלק ומהנה</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">💰</span>
-                      <p className="text-gray-800 hebrew-text text-sm">חיסכון בזמן ובכסף בזכות הידע המקומי והקשרים עם ספקים מהימנים</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">🌏</span>
-                      <p className="text-gray-800 hebrew-text text-sm">שילוב חוויות אותנטיות וייחודיות שאינן נפוצות במדריכים רגילים</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">🤝</span>
-                      <p className="text-gray-800 hebrew-text text-sm">תמיכה לאורך כל תהליך התכנון – מהרעיונות הראשוניים ועד לאישור הסופי של המסלול</p>
-                    </div>
-
-                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-                      <span className="text-4xl block mb-3">💖</span>
-                      <p className="text-gray-800 hebrew-text text-sm">מלכה היא מקצועית רגישה שמכבדת כל טיול וכל מטייל</p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
               {/* Pricing Card */}
               <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי שירות התכנון</h3>
@@ -303,6 +148,174 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Malka Advantages Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              למה לבחור במלכה לתכנון הטיול שלכם?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">📚</span>
+              <p className="text-gray-800 hebrew-text text-sm">ידע מעמיק על תרבות, היסטוריה ואתרי חובה בהודו</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">💡</span>
+              <p className="text-gray-800 hebrew-text text-sm">טיפים והמלצות שמגיעים רק ממי שחיה ומכירה את הודו מקרוב</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">📝</span>
+              <p className="text-gray-800 hebrew-text text-sm">מסלולים מותאמים אישית לפי תחומי העניין והעדפותיכם</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">🛎️</span>
+              <p className="text-gray-800 hebrew-text text-sm">תכנון מקצועי של כל שלב בטיול – לוגיסטיקה, מלונות, תחבורה ואטרקציות</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">🔍</span>
+              <p className="text-gray-800 hebrew-text text-sm">דאגה לכל הפרטים הקטנים, כדי שהטיול יהיה חלק ומהנה</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">💰</span>
+              <p className="text-gray-800 hebrew-text text-sm">חיסכון בזמן ובכסף בזכות הידע המקומי והקשרים עם ספקים מהימנים</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">🌏</span>
+              <p className="text-gray-800 hebrew-text text-sm">שילוב חוויות אותנטיות וייחודיות שאינן נפוצות במדריכים רגילים</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">🤝</span>
+              <p className="text-gray-800 hebrew-text text-sm">תמיכה לאורך כל תהליך התכנון – מהרעיונות הראשוניים ועד לאישור הסופי של המסלול</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">💖</span>
+              <p className="text-gray-800 hebrew-text text-sm">מלכה היא מקצועית רגישה שמכבדת כל טיול וכל מטייל</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              מה כולל שירות התכנון המקצועי?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">🗺️</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">מפות הודו</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">📅</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">ימי מסלול וטיסות פנים</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">📏</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">מרחקים משוערים</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">🏞️</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">מסלולים יומיים עם אטרקציות מקומיות</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">📖</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">מידע עיוני על היעדים</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">📡</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">מידע שימושי כמו תקשורת וציוד מומלץ</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">🚆</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">הצעות לטיסות פנים, רכבות ואוטובוסים</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">✏️</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">השירות כולל עד שני שינויים במסלול</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">🏨</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">לא ניתנות המלצות למלונות – הבחירה עצמאית</p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-3xl block mb-2">🚗</span>
+              <p className="text-sm hebrew-text font-medium text-gray-800">לא ניתנות המלצות לנהגים או מדריכים</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg max-w-none">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
+                  איך זה עובד?
+                </h3>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">1</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">יצירת קשר ראשונית</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">צרו קשר ונקבע שיחת ייעוץ ראשונית חינם</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
+                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">2</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שיחת ייעוץ מפורטת</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">נכיר, נבין את הרצונות שלכם ונתחיל לתכנן</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
+                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">3</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">הכנת תכנית מפורטת</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">תקבלו תכנית טיול מפורטת עם כל הפרטים</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">4</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">ליווי והתאמות</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">נעשה התאמות לפי הצורך ונלווה אתכם עד היציאה</p>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
