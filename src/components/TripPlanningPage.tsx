@@ -228,18 +228,10 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי שירות התכנון</h3>
                 
                 <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">ייעוץ ראשוני</span>
-                      <span className="font-bold text-green-600 text-xl">חינם</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">שיחת היכרות וייעוץ ראשוני</p>
-                  </div>
-                  
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-200">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-800 hebrew-text font-bold">טיול עד 10 ימים</span>
-                      <span className="font-bold text-blue-600 text-xl">$200</span>
+                      <span className="font-bold text-blue-600 text-xl">$350</span>
                     </div>
                     <p className="text-sm text-gray-600 hebrew-text">תכנון מקיף לטיול קצר</p>
                   </div>
@@ -247,16 +239,10 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-purple-200">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-800 hebrew-text font-bold">טיול מעל 10 ימים</span>
-                      <span className="font-bold text-purple-600 text-xl">$350</span>
+                      <span className="font-bold text-purple-600 text-xl">$500</span>
                     </div>
                     <p className="text-sm text-gray-600 hebrew-text">תכנון מקיף לטיול ארוך</p>
                   </div>
-                </div>
-                
-                <div className="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                  <p className="text-sm text-gray-700 hebrew-text text-center">
-                    כולל ליווי מלא לאורך כל הטיול ותמיכה 24/7
-                  </p>
                 </div>
               </div>
             </div>
