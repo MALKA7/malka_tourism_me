@@ -53,78 +53,69 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
       {/* Main Content Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Main Content */}
-            <div className="lg:col-span-2">
-              {/* Content will go here */}
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              {/* Contact Card */}
-              <div className="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-200">
-                <div className="text-center mb-6">
-                  <img 
-                    src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
-                    alt="מלכה"
-                    className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300"
-                  />
-                  <h3 className="text-2xl font-bold text-gray-900 hebrew-text">מלכה איראני</h3>
-                  <p className="text-gray-700 hebrew-text">מתכננת טיולים בהודו</p>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                    ))}
+          {/* Malka Details Section */}
+          <section className="malka-details">
+            <div className="details-container flex flex-wrap gap-8 items-start">
+              
+              {/* Left Column: Pricing Table */}
+              <div className="left-column flex-1 min-w-[280px]">
+                <div className="pricing-table bg-blue-50 p-6 rounded-xl shadow-lg border border-blue-200">
+                  <h3 className="text-center mb-5 text-blue-900 text-xl font-bold hebrew-text">מחירי שירות התכנון</h3>
+                  <div className="price-item border border-blue-200 p-4 rounded-lg mb-3 bg-white">
+                    <div className="text-2xl font-bold text-blue-600 mb-2">$350</div>
+                    <p className="text-sm text-gray-700 hebrew-text m-0">טיול עד 10 ימים – תכנון מקיף לטיול קצר</p>
                   </div>
-                </div>
-
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
-                    <Phone className="w-5 h-5 text-blue-600 ml-3" />
-                    <span className="text-gray-800">+91-9980601979</span>
-                  </div>
-                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
-                    <Mail className="w-5 h-5 text-blue-600 ml-3" />
-                    <span className="text-gray-800">Malka@shalom-india.com</span>
-                  </div>
-                  <div className="flex items-start bg-gray-50 p-3 rounded-lg">
-                    <MapPin className="w-5 h-5 text-blue-600 ml-3 mt-1" />
-                    <span className="text-gray-800">בנגלור, הודו</span>
-                  </div>
-                </div>
-
-                <button 
-                  onClick={() => onPageChange('contact')}
-                  className="w-full btn-primary py-4 text-lg"
-                >
-                  בואו נתכנן טיול
-                </button>
-              </div>
-
-              {/* Pricing Card */}
-              <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי שירות התכנון</h3>
-                
-                <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">טיול עד 10 ימים</span>
-                      <span className="font-bold text-blue-600 text-xl">$350</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">תכנון מקיף לטיול קצר</p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">טיול מעל 11 ימים</span>
-                      <span className="font-bold text-green-600 text-xl">$500</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">תכנון מקיף לטיול ארוך</p>
+                  <div className="price-item border border-green-200 p-4 rounded-lg bg-white">
+                    <div className="text-2xl font-bold text-green-600 mb-2">$500</div>
+                    <p className="text-sm text-gray-700 hebrew-text m-0">טיול מעל 11 ימים – תכנון מקיף לטיול ארוך</p>
                   </div>
                 </div>
               </div>
+
+              {/* Right Column: How It Works Steps */}
+              <div className="right-column flex-[1.5] min-w-[320px]">
+                <div className="steps bg-white p-6 rounded-xl shadow-lg border border-blue-100">
+                  <h3 className="text-center mb-5 text-blue-900 text-xl font-bold hebrew-text">איך זה עובד?</h3>
+                  <div className="steps-grid flex flex-col gap-4">
+                    
+                    <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
+                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                      <div className="step-content">
+                        <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">יצירת קשר ראשונית</h4>
+                        <p className="m-0 text-sm leading-relaxed hebrew-text">צרו קשר ונקבע שיחת ייעוץ ראשונית חינם</p>
+                      </div>
+                    </div>
+
+                    <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
+                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                      <div className="step-content">
+                        <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">שיחת ייעוץ מפורטת</h4>
+                        <p className="m-0 text-sm leading-relaxed hebrew-text">נכיר, נבין את הרצונות שלכם ונתחיל לתכנן</p>
+                      </div>
+                    </div>
+
+                    <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
+                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                      <div className="step-content">
+                        <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">הכנת תכנית מפורטת</h4>
+                        <p className="m-0 text-sm leading-relaxed hebrew-text">תקבלו תכנית טיול מפורטת עם כל הפרטים</p>
+                      </div>
+                    </div>
+
+                    <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
+                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+                      <div className="step-content">
+                        <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">ליווי והתאמות</h4>
+                        <p className="m-0 text-sm leading-relaxed hebrew-text">נעשה התאמות לפי הצורך ונלווה אתכם עד היציאה</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
-          </div>
+          </section>
         </div>
       </section>
 
@@ -244,51 +235,6 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
             <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
               <span className="text-4xl block mb-3">💖</span>
               <p className="text-gray-800 hebrew-text text-sm">מלכה היא מקצועית רגישה שמכבדת כל טיול וכל מטייל</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              איך זה עובד?
-            </h2>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
-              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">1</div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">יצירת קשר ראשונית</h4>
-                <p className="text-gray-700 hebrew-text text-lg">צרו קשר ונקבע שיחת ייעוץ ראשונית חינם</p>
-              </div>
-            </div>
-
-            <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
-              <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">2</div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שיחת ייעוץ מפורטת</h4>
-                <p className="text-gray-700 hebrew-text text-lg">נכיר, נבין את הרצונות שלכם ונתחיל לתכנן</p>
-              </div>
-            </div>
-
-            <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
-              <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">3</div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">הכנת תכנית מפורטת</h4>
-                <p className="text-gray-700 hebrew-text text-lg">תקבלו תכנית טיול מפורטת עם כל הפרטים</p>
-              </div>
-            </div>
-
-            <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-              <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">4</div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">ליווי והתאמות</h4>
-                <p className="text-gray-700 hebrew-text text-lg">נעשה התאמות לפי הצורך ונלווה אתכם עד היציאה</p>
-              </div>
             </div>
           </div>
         </div>
