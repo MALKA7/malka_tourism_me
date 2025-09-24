@@ -1,11 +1,13 @@
 import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, ArrowLeft, Calendar, Award, Map, User, Globe } from 'lucide-react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, ArrowLeft, Calendar, Award, Map, User, Globe, X } from 'lucide-react';
 
 interface HebrewGuidingPageProps {
   onPageChange: (page: string) => void;
 }
 
 const HebrewGuidingPage: React.FC<HebrewGuidingPageProps> = ({ onPageChange }) => {
+  const [activeTab, setActiveTab] = React.useState('included');
+
   return (
     <div className="min-h-screen fade-in">
       {/* Hero Section */}
@@ -59,92 +61,141 @@ const HebrewGuidingPage: React.FC<HebrewGuidingPageProps> = ({ onPageChange }) =
             <div className="lg:col-span-2">
               <div className="prose prose-lg max-w-none">
                 <h2 className="text-4xl font-bold text-gray-900 mb-8 hebrew-text">
-                  הכר את מומבאי הפרטית
+                  הדרכה בעברית בהודו
                 </h2>
                 
+                {/* Three Photos Side by Side */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <div className="relative overflow-hidden rounded-xl shadow-lg">
+                    <img 
+                      src="/mumbai gateway.jpg"
+                      alt="מטייל יחיד בודק יעד"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                      <p className="text-white text-sm font-medium hebrew-text text-center">מטיילים יחידים ביעד אחד</p>
+                    </div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-xl shadow-lg">
+                    <img 
+                      src="/tours w malka.png"
+                      alt="קבוצה עם מדריכה באתר היסטורי"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                      <p className="text-white text-sm font-medium hebrew-text text-center">קבוצות ביעד אחד עם הדרכה</p>
+                    </div>
+                  </div>
+                  
+                  <div className="relative overflow-hidden rounded-xl shadow-lg">
+                    <img 
+                      src="/organised tours.png"
+                      alt="קבוצה פרטית בטיול רב-יומי"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                      <p className="text-white text-sm font-medium hebrew-text text-center">קבוצות פרטיות בטיול רב-יומי</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Detailed Text Section */}
                 <div className="bg-blue-50 p-8 rounded-xl mb-8 border border-blue-200">
-                  <div className="flex items-start">
-                    <div className="text-4xl ml-4">
-                      <User className="w-12 h-12 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-4">
-                        סיור מודרך מלא (8 שעות) במומבאי, נאווי מומבאי, ת'אנה והסביבה – 
-                        עם מדריכה ישראלית מקצועית ודוברת עברית.
-                      </p>
-                      <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
-                        <strong>מלכה מדריכה בעברית לאחר שחיה בהודו ובזמן שהיא עדיין כאן ומעודכנת על המדינה.</strong> 
-                        חוויה אותנטית עם הבנה עמוקה של התרבות המקומית והצרכים הישראליים.
-                      </p>
-                    </div>
-                  </div>
+                  <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-6">
+                    מלכה מדריכה בעברית בהודו מאז 2010, ומציעה חוויות אותנטיות עם הבנה עמוקה של התרבות המקומית והצרכים של מטיילים ישראלים. מלכה אינה מגיעה מישראל להדרכה אלא חיה ומדריכה מתוך הודו. היא גרה 5 שנים במערב הודו, 8 שנים בדרום הודו ושנתיים בצפון הודו, מה שמעניק לה הבנה מקיפה על הודו, תרבותה ותושביה. היא מכירה את המקומות הייחודיים במדינה, כולל כאלה שתיירים רגילים אינם מגיעים אליהם, ומספקת הדרכה מקצועית ומותאמת אישית.
+                  </p>
+                  
+                  <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-6">
+                    מלכה היא ישראלית, בעלת תואר שני בפסיכולוגיה, וגידלה את ילדיה בהודו, מה שמעניק לה הבנה מלאה של הצרכים של משפחות וילדים המטיילים בארץ. בעלה מקומי, והיא עצמה נוהגת ברחבי הודו, מבשלת מאכלים הודיים, וכל חבריה הם הודיים, מה שמעמיק את היכרותה עם התרבות המקומית והחיים האמיתיים במדינה.
+                  </p>
+                  
+                  <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-6">
+                    ההדרכות של מלכה יכולות להתבצע בכל יעד בהודו, והיא מגיעה בטיסה ממקום למקום כדי להדריך את המטיילים. ההדרכות יכולות להיות <strong>יום אחד בלבד עבור מטייל אחד או יותר</strong>, <strong>יום אחד עבור קבוצת מטיילים שהגיעה יחד ורוצה הדרכה ביעד אחד בלבד</strong>, או <strong>למשך כל הטיול בהודו</strong>, בהתאם לצרכי המטיילים.
+                  </p>
+                  
+                  <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
+                    מלכה יכולה גם לעזור בהזמנת רכבים ליום ההדרכה, כדי להבטיח נוחות וניידות מקסימלית במהלך הטיול.
+                  </p>
                 </div>
 
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  מה כולל הסיור?
-                </h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">תחבורה נוחה</h4>
-                      <p className="text-gray-700 hebrew-text">רכב מוזמן עם נהג מקצועי לכל משך הסיור</p>
-                    </div>
+                {/* Tab Section */}
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+                  {/* Tab Headers */}
+                  <div className="flex border-b border-gray-200">
+                    <button
+                      onClick={() => setActiveTab('included')}
+                      className={`flex-1 px-6 py-4 font-medium hebrew-text transition-all duration-300 ${
+                        activeTab === 'included'
+                          ? 'bg-blue-600 text-white border-b-2 border-blue-600'
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      }`}
+                    >
+                      כלול
+                    </button>
+                    <button
+                      onClick={() => setActiveTab('notIncluded')}
+                      className={`flex-1 px-6 py-4 font-medium hebrew-text transition-all duration-300 ${
+                        activeTab === 'notIncluded'
+                          ? 'bg-blue-600 text-white border-b-2 border-blue-600'
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      }`}
+                    >
+                      לא כלול
+                    </button>
                   </div>
-
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-green-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">כניסות לאתרים</h4>
-                      <p className="text-gray-700 hebrew-text">כל דמי הכניסה לאתרים והמוזיאונים כלולים במחיר</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-purple-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">הדרכה מקיפה</h4>
-                      <p className="text-gray-700 hebrew-text">הדרכה מקצועית בעברית עם הסברים מפורטים על ההיסטוריה והתרבות</p>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  איך זה עובד?
-                </h3>
-
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
-                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">1</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">יצירת קשר ותיאום</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">צרו קשר לתיאום מועד הסיור והעדפות אישיות</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
-                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">2</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">איסוף ממלון</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">איסוף נוח מהמלון שלכם בשעה מוסכמת</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
-                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">3</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">סיור מודרך מלא</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">8 שעות של סיור מקיף עם הדרכה בעברית</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-                    <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">4</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">החזרה למלון</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">החזרה נוחה למלון בסיום הסיור</p>
-                    </div>
+                  
+                  {/* Tab Content */}
+                  <div className="p-8">
+                    {activeTab === 'included' && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="flex items-center">
+                          <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+                          <span className="hebrew-text">תחבורה</span>
+                        </div>
+                        <div className="flex items-center">
+                          <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+                          <span className="hebrew-text">הדרכה בעברית</span>
+                        </div>
+                        <div className="flex items-center">
+                          <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+                          <span className="hebrew-text">בניית מסלול יומי</span>
+                        </div>
+                        <div className="flex items-center">
+                          <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+                          <span className="hebrew-text">8 שעות סיור</span>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {activeTab === 'notIncluded' && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="flex items-center">
+                          <X className="w-5 h-5 text-red-600 ml-2" />
+                          <span className="hebrew-text">ארוחות ושתייה</span>
+                        </div>
+                        <div className="flex items-center">
+                          <X className="w-5 h-5 text-red-600 ml-2" />
+                          <span className="hebrew-text">כניסות לאתרים</span>
+                        </div>
+                        <div className="flex items-center">
+                          <X className="w-5 h-5 text-red-600 ml-2" />
+                          <span className="hebrew-text">תשלום על מצלמות</span>
+                        </div>
+                        <div className="flex items-center">
+                          <X className="w-5 h-5 text-red-600 ml-2" />
+                          <span className="hebrew-text">ביטוחים שונים</span>
+                        </div>
+                        <div className="flex items-center">
+                          <X className="w-5 h-5 text-red-600 ml-2" />
+                          <span className="hebrew-text">טיפים לנותני שירות</span>
+                        </div>
+                        <div className="flex items-center">
+                          <X className="w-5 h-5 text-red-600 ml-2" />
+                          <span className="hebrew-text">קניות אישיות</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
