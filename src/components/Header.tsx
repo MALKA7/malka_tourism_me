@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
         { id: 'hebrew-guiding', label: 'הדרכה בעברית' },
         { id: 'personal-hosting', label: 'אירוח אישי בווילה' },
         { id: 'transport-services', label: 'שירותי הסעות ונהג' },
-        { id: 'visa-assistance', label: 'סיוע בויזה והכנות' }
+        { id: 'visa-assistance', label: 'סיורים מאורגנים' }
       ]
     },
     {

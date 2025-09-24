@@ -56,7 +56,7 @@ function App() {
       case 'transport-services':
         return <TransportServicesPage onPageChange={setCurrentPage} />;
       case 'visa-assistance':
-        return <VisaAssistancePage onPageChange={setCurrentPage} />;
+        return <OrganizedToursPage onPageChange={setCurrentPage} />;
       
       // Day Tours Pages (5)
       case 'mumbai-shared':
