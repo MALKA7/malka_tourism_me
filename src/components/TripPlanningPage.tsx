@@ -85,10 +85,60 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                   מה כולל שירות התכנון המקצועי?
                 </h3>
 
-                <div className="bg-blue-50 p-8 rounded-xl mb-8 border border-blue-200">
-                  <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
-                    מפות הודו, ימי מסלול וטיסות פנים, מרחקים משוערים, מסלולים יומיים עם אטרקציות מקומיות, מידע עיוני על היעדים, מידע שימושי כמו תקשורת וציוד מומלץ, הצעות לטיסות פנים או לרכבות ואוטובוסים. השירות כולל עד שני שינויים במסלול. בשלב זה אינני ממליצה על מלונות, שכן יש שפע של מלונות טובים בכל יעד ואת הבחירה ניתן לבצע באופן עצמאי. כמו כן אינני ממליצה על נהגים או מדריכים.
-                  </p>
+                <div className="planning-services text-center mb-8">
+                  <div className="services-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">🗺️</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">מפות הודו</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">📅</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">ימי מסלול וטיסות פנים</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">📏</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">מרחקים משוערים</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">🏞️</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">מסלולים יומיים עם אטרקציות מקומיות</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">📖</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">מידע עיוני על היעדים</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">📡</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">מידע שימושי כמו תקשורת וציוד מומלץ</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">🚆</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">הצעות לטיסות פנים, רכבות ואוטובוסים</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">✏️</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">השירות כולל עד שני שינויים במסלול</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">🏨</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">לא ניתנות המלצות למלונות – הבחירה עצמאית</p>
+                    </div>
+                    
+                    <div className="service-item bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <span className="icon text-3xl block mb-2">🚗</span>
+                      <p className="text-sm hebrew-text font-medium text-gray-800">לא ניתנות המלצות לנהגים או מדריכים</p>
+                    </div>
+                    
+                  </div>
                 </div>
 
                 <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
