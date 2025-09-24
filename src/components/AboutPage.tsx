@@ -590,7 +590,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
                 className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
               />
               <h3 className="text-xl font-semibold mb-3 hebrew-text text-slate-800">אירוח אישי בהודו</h3>
-              <p className="text-slate-600 hebrew-text">לינה אותנטית אצל משפחות</p>
+              <p className="text-slate-600 hebrew-text">לינה בוילת האירוח של מלכה בבנגלור</p>
             </div>
 
             <div 
