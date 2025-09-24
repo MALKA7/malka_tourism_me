@@ -314,11 +314,10 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                 ))}
               </div>
               <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
-                "מלכה תכננה לנו טיול מושלם! כל פרט היה מדויק והמלצותיה היו פשוט מעולות. 
-                חזרנו עם זיכרונות לכל החיים מהודו המדהימה."
+                "מלכה תכננה לנו טיול בדרום הודו למשך 3 חודשים, במקצועיות רבה. ענתה בסבלנות לכל שאלה ומלווה אותנו לאורך כל הדרך."
               </p>
-              <div className="testimonial-author hebrew-text font-bold text-gray-900">דני ושרה כהן</div>
-              <div className="testimonial-location text-gray-600">תל אביב</div>
+              <div className="testimonial-author hebrew-text font-bold text-gray-900">מלי</div>
+              <div className="testimonial-location text-gray-600">ישראל</div>
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg">
