@@ -392,24 +392,68 @@ const PersonalHostingPage: React.FC<PersonalHostingPageProps> = ({ onPageChange 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              מה מייחד את האירוח?
+              בנגלור מחוץ לשביל החומוס
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-bold mb-3 hebrew-text">בית ישראלי בהודו</h3>
-              <p className="text-gray-600 hebrew-text">חוויה אותנטית של בית ישראלי בלב הודו</p>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text">דוונהלי – Devanahalli</h3>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-xl font-bold text-blue-900 mb-3 hebrew-text">משמעות השם:</h4>
+                  <p className="text-gray-700 hebrew-text leading-relaxed">
+                    השם "דוונהלי" מורכב מהמילים בסנסקריט: "Deva" – אל, ו-"Nahalli" – כפר או מקום מגורים, כלומר "כפר של האלים" או "מקום מגורים של האלוהים".
+                  </p>
+                </div>
 
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-bold mb-3 hebrew-text">כל השירותים</h3>
-              <p className="text-gray-600 hebrew-text">WiFi, מזגן, מים חמים וכל הנוחות</p>
-            </div>
+                <div>
+                  <h4 className="text-xl font-bold text-blue-900 mb-3 hebrew-text">מיקום גאוגרפי:</h4>
+                  <p className="text-gray-700 hebrew-text leading-relaxed">
+                    דוונהלי ממוקמת במדינת קארנאטא, כ-35 ק"מ מצפון לבנגלור, ליד נמל התעופה הבינלאומי של בנגלור (Kempegowda International Airport). היא נמצאת באזור גבעות ירוקות ונוף כפרי טיפוסי, קרובה גם לננדי הילס (Nandi Hills) ולמוסד איסה (Isha Foundation).
+                  </p>
+                </div>
 
-            <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-bold mb-3 hebrew-text">חוויות מקומיות</h3>
-              <p className="text-gray-600 hebrew-text">גישה לחוויות ייחודיות באזור</p>
+                <div>
+                  <h4 className="text-xl font-bold text-blue-900 mb-3 hebrew-text">אוכלוסייה:</h4>
+                  <p className="text-gray-700 hebrew-text leading-relaxed">
+                    העיר היא עיירה קטנה עם כ-28,000–30,000 תושבים, רובם עוסקים בחקלאות, מסחר קטן ותיירות.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-blue-900 mb-3 hebrew-text">מה יש בעיר ומה אפשר לעשות:</h4>
+                  <div className="space-y-4">
+                    <p className="text-gray-700 hebrew-text leading-relaxed">
+                      <strong>מבצר דוונהלי (Devanahalli Fort):</strong> מבצר עתיק מהמאה ה-16–17, ששימש מרכז מונרכי הודי, פתוח למבקרים עם סיורים במבנה ההיסטורי.
+                    </p>
+                    
+                    <p className="text-gray-700 hebrew-text leading-relaxed">
+                      <strong>מקדשים עתיקים:</strong> מספר מקדשים עם ארכיטקטורה מסורתית יפה.
+                    </p>
+                    
+                    <p className="text-gray-700 hebrew-text leading-relaxed">
+                      <strong>קרבה לננדי הילס ולמוסד איסה:</strong> ניתן לשלב ביקור בעיר עם טיולים בטבע, חוויות רוחניות ומדיטציה, והשתתפות בפעילויות במרכז איסה.
+                    </p>
+                    
+                    <p className="text-gray-700 hebrew-text leading-relaxed">
+                      <strong>פעילויות לתיירים בסביבה:</strong> מסלולי הליכה בטבע, טרקים קלים, סיורים בכפרים, שווקים מקומיים וחוויית כפר הודית אותנטית.
+                    </p>
+                    
+                    <p className="text-gray-700 hebrew-text leading-relaxed">
+                      <strong>גישה נוחה:</strong> בזכות הקרבה לנמל התעופה והכבישים הראשיים, העיר מהווה נקודת עצירה נוחה למטיילים.
+                    </p>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-blue-900 mb-3 hebrew-text">סיכום:</h4>
+                  <p className="text-gray-700 hebrew-text leading-relaxed">
+                    דוונהלי מציעה שילוב של היסטוריה, תרבות, טבע וחוויות רוחניות. היא מקום אידיאלי לעצירה קצרה או בסיס לטיולים בסביבה – לננדי הילס, למוסד איסה או לחוות חיי הכפר ההודי.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
