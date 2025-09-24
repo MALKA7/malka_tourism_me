@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, ArrowLeft, Calendar, Award, Map, User, Globe, X } from 'lucide-react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, ArrowLeft, Calendar, Award, Map, User, Globe, X, Car, Plane, Hotel, Info } from 'lucide-react';
 
 interface HebrewGuidingPageProps {
   onPageChange: (page: string) => void;
@@ -245,30 +245,45 @@ const HebrewGuidingPage: React.FC<HebrewGuidingPageProps> = ({ onPageChange }) =
 
               {/* Pricing Card */}
               <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי הדרכה</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מה חשוב לדעת על מחיר ההדרכה</h3>
                 
                 <div className="space-y-4">
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">סיור יום מלא (8 שעות)</span>
-                      <span className="font-bold text-blue-600 text-xl">$150</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">כולל תחבורה, כניסות והדרכה</p>
+                    <h4 className="text-gray-800 hebrew-text font-bold mb-2">סיור יום מלא (8 שעות)</h4>
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">סיור חצי יום (4 שעות)</span>
-                      <span className="font-bold text-green-600 text-xl">$80</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">כולל תחבורה, כניסות והדרכה</p>
+                    <h4 className="text-gray-800 hebrew-text font-bold mb-2">סיור חצי יום (4 שעות)</h4>
+                    <p className="text-sm text-gray-600 hebrew-text">מחיר משתנה בהתאם למספר המשתתפים</p>
                   </div>
                 </div>
                 
-                <div className="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                  <p className="text-sm text-gray-700 hebrew-text text-center">
-                    כולל הדרכה מקצועית בעברית ותמיכה מלאה
-                  </p>
+                {/* Additional Information */}
+                <div className="mt-6 space-y-3">
+                  <div className="flex items-center p-3 bg-white rounded-lg border border-gray-200">
+                    <Car className="w-5 h-5 text-blue-600 ml-3 flex-shrink-0" />
+                    <span className="text-sm text-gray-700 hebrew-text">כולל רכב ממוזג ונהג</span>
+                  </div>
+                  
+                  <div className="flex items-center p-3 bg-white rounded-lg border border-gray-200">
+                    <Plane className="w-5 h-5 text-green-600 ml-3 flex-shrink-0" />
+                    <span className="text-sm text-gray-700 hebrew-text">המחיר כולל טיסות של מלכה ליעד</span>
+                  </div>
+                  
+                  <div className="flex items-center p-3 bg-white rounded-lg border border-gray-200">
+                    <Hotel className="w-5 h-5 text-purple-600 ml-3 flex-shrink-0" />
+                    <span className="text-sm text-gray-700 hebrew-text">הוצאות מחיה, לינה ונסיעה</span>
+                  </div>
+                  
+                  <div className="flex items-center p-3 bg-white rounded-lg border border-gray-200">
+                    <Calendar className="w-5 h-5 text-orange-600 ml-3 flex-shrink-0" />
+                    <span className="text-sm text-gray-700 hebrew-text">מלכה מגיעה בטיסה לילה לפני הסיור</span>
+                  </div>
+                  
+                  <div className="flex items-center p-3 bg-yellow-50 rounded-lg border border-yellow-200">
+                    <Info className="w-5 h-5 text-yellow-600 ml-3 flex-shrink-0" />
+                    <span className="text-sm text-gray-700 hebrew-text font-medium">יש לסגור את הסיור מבעוד מועד ובתיאום מראש</span>
+                  </div>
                 </div>
               </div>
             </div>
