@@ -53,6 +53,78 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
       {/* Main Content Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Main Content */}
+            <div className="lg:col-span-2">
+              {/* Content will go here */}
+            </div>
+
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              {/* Contact Card */}
+              <div className="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-200">
+                <div className="text-center mb-6">
+                  <img 
+                    src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
+                    alt="מלכה"
+                    className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300"
+                  />
+                  <h3 className="text-2xl font-bold text-gray-900 hebrew-text">מלכה איראני</h3>
+                  <p className="text-gray-700 hebrew-text">מתכננת טיולים בהודו</p>
+                  <div className="flex justify-center mt-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
+                    <Phone className="w-5 h-5 text-blue-600 ml-3" />
+                    <span className="text-gray-800">+91-9980601979</span>
+                  </div>
+                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
+                    <Mail className="w-5 h-5 text-blue-600 ml-3" />
+                    <span className="text-gray-800">Malka@shalom-india.com</span>
+                  </div>
+                  <div className="flex items-start bg-gray-50 p-3 rounded-lg">
+                    <MapPin className="w-5 h-5 text-blue-600 ml-3 mt-1" />
+                    <span className="text-gray-800">בנגלור, הודו</span>
+                  </div>
+                </div>
+
+                <button 
+                  onClick={() => onPageChange('contact')}
+                  className="w-full btn-primary py-4 text-lg"
+                >
+                  בואו נתכנן טיול
+                </button>
+              </div>
+
+              {/* Pricing Card */}
+              <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי שירות התכנון</h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-200">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-800 hebrew-text font-bold">טיול עד 10 ימים</span>
+                      <span className="font-bold text-blue-600 text-xl">$350</span>
+                    </div>
+                    <p className="text-sm text-gray-600 hebrew-text">תכנון מקיף לטיול קצר</p>
+                  </div>
+                  
+                  <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-800 hebrew-text font-bold">טיול מעל 11 ימים</span>
+                      <span className="font-bold text-green-600 text-xl">$500</span>
+                    </div>
+                    <p className="text-sm text-gray-600 hebrew-text">תכנון מקיף לטיול ארוך</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
