@@ -223,6 +223,64 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                 </button>
               </div>
 
+              {/* Malka Advantages Section */}
+              <section className="py-20 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+                      למה לבחור במלכה לתכנון הטיול שלכם?
+                    </h2>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">📚</span>
+                      <p className="text-gray-800 hebrew-text text-sm">ידע מעמיק על תרבות, היסטוריה ואתרי חובה בהודו</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">💡</span>
+                      <p className="text-gray-800 hebrew-text text-sm">טיפים והמלצות שמגיעים רק ממי שחיה ומכירה את הודו מקרוב</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">📝</span>
+                      <p className="text-gray-800 hebrew-text text-sm">מסלולים מותאמים אישית לפי תחומי העניין והעדפותיכם</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">🛎️</span>
+                      <p className="text-gray-800 hebrew-text text-sm">תכנון מקצועי של כל שלב בטיול – לוגיסטיקה, מלונות, תחבורה ואטרקציות</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">🔍</span>
+                      <p className="text-gray-800 hebrew-text text-sm">דאגה לכל הפרטים הקטנים, כדי שהטיול יהיה חלק ומהנה</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">💰</span>
+                      <p className="text-gray-800 hebrew-text text-sm">חיסכון בזמן ובכסף בזכות הידע המקומי והקשרים עם ספקים מהימנים</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">🌏</span>
+                      <p className="text-gray-800 hebrew-text text-sm">שילוב חוויות אותנטיות וייחודיות שאינן נפוצות במדריכים רגילים</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">🤝</span>
+                      <p className="text-gray-800 hebrew-text text-sm">תמיכה לאורך כל תהליך התכנון – מהרעיונות הראשוניים ועד לאישור הסופי של המסלול</p>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+                      <span className="text-4xl block mb-3">💖</span>
+                      <p className="text-gray-800 hebrew-text text-sm">מלכה היא מקצועית רגישה שמכבדת כל טיול וכל מטייל</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
               {/* Pricing Card */}
               <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי שירות התכנון</h3>
