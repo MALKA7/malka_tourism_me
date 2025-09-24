@@ -134,26 +134,6 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                       </div>
                       <div className="step-content">
                         <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">הפקת הטיול</h4>
-                        <p className="m-0 text-sm leading-relaxed hebrew-text">המטייל יפיק את הטיול עצמאית או יבקש את שירותי הפקת הטיול של מלכה</p>
-                      </div>
-                    </div>
-
-                    <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
-                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">5</div>
-                      <div className="step-content">
-                        <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">שליחת התוכנית</h4>
-                        <p className="m-0 text-sm leading-relaxed hebrew-text">לאחר אישור התוכנית שליחתה למטייל</p>
-                      </div>
-                    </div>
-
-                    <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
-                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">6</div>
-                      <div className="step-content">
-                        <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">הפקת הטיול</h4>
-                        <p className="m-0 text-sm leading-relaxed hebrew-text">המטייל יפיק את הטיול עצמאית או יבקש את שירותי הפקת הטיול של מלכה</p>
-                      </div>
-                    </div>
-
                   </div>
                 </div>
               </div>
