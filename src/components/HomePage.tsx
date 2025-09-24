@@ -406,13 +406,13 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
             >
               <img 
                 src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg" 
-                alt="בנגלור"
+                alt="דלהי"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-600/40 to-transparent"></div>
               <div className="absolute bottom-4 right-4 text-white">
-                <h3 className="text-2xl font-bold hebrew-text shadow-lg">בנגלור</h3>
-                <p className="text-sm hebrew-text shadow-lg">בירת הטכנולוגיה</p>
+                <h3 className="text-2xl font-bold hebrew-text shadow-lg">דלהי</h3>
+                <p className="text-sm hebrew-text shadow-lg">הבירה ההיסטורית</p>
               </div>
             </div>
           </div>
