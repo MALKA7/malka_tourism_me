@@ -326,7 +326,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
 
             <div 
               className="professional-card p-6 rounded-xl card-hover cursor-pointer group"
-              onClick={() => onPageChange('organised-tours')}
+              onClick={() => onPageChange('visa-assistance')}
             >
               <img 
                 src="/organised tours.png" 
@@ -459,6 +459,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
             </button>
             <button 
               onClick={() => onPageChange('organised-tours')}
+              onClick={() => onPageChange('visa-assistance')}
               className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-2"
             >
               טיולים מאורגנים
