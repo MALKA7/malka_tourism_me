@@ -116,22 +116,6 @@ const PersonalHostingPage: React.FC<PersonalHostingPageProps> = ({ onPageChange 
                       <p className="text-gray-700 hebrew-text">חוויה אותנטית עם משפחה ישראלית</p>
                     </div>
                   </div>
-
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-orange-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">ארוחות ביתיות</h4>
-                      <p className="text-gray-700 hebrew-text">אוכל ביתי טעים ובריא</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-indigo-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">הסעות לנמל</h4>
-                      <p className="text-gray-700 hebrew-text">הסעה נוחה לנמל התעופה ומהנמל</p>
-                    </div>
-                  </div>
                 </div>
 
                 <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
