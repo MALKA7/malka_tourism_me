@@ -168,39 +168,67 @@ const TripExecutionPage: React.FC<TripExecutionPageProps> = ({ onPageChange }) =
                 </div>
 
                 <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  איך זה עובד?
+                  שלבי הפקת טיול בהודו עם מלכה
                 </h3>
 
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
-                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">1</div>
+                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">
+                      <FileText className="w-6 h-6" />
+                    </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">קבלת תכנית הטיול</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">לאחר שתכננו את הטיול, מתחילה ההפקה המקצועית</p>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שלב 1 – מסירת תוכנית טיול</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">לאחר שתוכנית הטיול תועבר בכתב, מתחילה הפקה בפועל של המסלול.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
-                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">2</div>
+                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">
+                      <CreditCard className="w-6 h-6" />
+                    </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">בדיקת מלונות אישית</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">מלכה נוסעת למלונות, בודקת אותם ומספקת המלצות מדויקות</p>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שלב 2 – תנאי תשלום ותשלום ראשוני</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">הבנת תנאי התשלום וביצוע תשלום ראשוני בסך 400 דולר להבטחת התחלת התהליך.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
-                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">3</div>
+                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">
+                      <Hotel className="w-6 h-6" />
+                    </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">הזמנות והסדרים</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">הזמנת מלונות, הסעות ושירותים נוספים עם מחירים מיוחדים</p>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שלב 3 – הצגת תמחור ומלונות</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">מלכה מספקת תמחור מפורט יחד עם רשימת המלונות שבהם היא בדקה והתנסתה, לרבות עלות רכבים ולפי בקשה גם מדריכים וכניסות לאתרים.</p>
                     </div>
                   </div>
 
                   <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-                    <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">4</div>
+                    <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">
+                      <CheckCircle className="w-6 h-6" />
+                    </div>
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">ליווי במהלך הטיול</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">תמיכה יומית בטלפון עד שתיכנסו לחדר ותהיו מרוצים</p>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שלב 4 – שינויים והתאמות</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">במידת הצורך, מבוצעים שינויים והתאמות עד לאישור הסופי של המטייל.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-orange-50 p-6 rounded-lg border border-orange-200">
+                    <div className="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">
+                      <Calendar className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שלב 5 – תשלום סופי והזמנות</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">לאחר אישור התוכנית הסופי, מתבצע תשלום מלא והזמנת החדרים, רכבים ושירותים נלווים.</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-indigo-50 p-6 rounded-lg border border-indigo-200">
+                    <div className="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שלב 6 – ליווי בהודו</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">במהלך הטיול, מתקיים ליווי יומי אישי והנכונות לסייע בכל בקשה או צורך שצץ במהלך המסע.</p>
                     </div>
                   </div>
                 </div>
