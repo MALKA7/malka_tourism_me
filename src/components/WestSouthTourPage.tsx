@@ -846,49 +846,6 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
                 </p>
               </div>
             </div>
-
-            {/* Online Meeting Card */}
-            <div className="bg-gradient-to-br from-white to-cyan-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-cyan-100">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <i className="fas fa-video text-white text-2xl"></i>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">מפגש קבוצה</h3>
-                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
-                  מפגש קבוצה באון ליין לפני היציאה לטיול
-                </p>
-              </div>
-            </div>
-
-            {/* Houseboat Card */}
-            <div className="bg-gradient-to-br from-white to-emerald-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-emerald-100">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <i className="fas fa-ship text-white text-2xl"></i>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">בית סירה</h3>
-                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
-                  שייט בבית סירה מפנק עם כל הארוחות
-                </p>
-              </div>
-            </div>
-
-            {/* Safari Card */}
-            <div className="bg-gradient-to-br from-white to-orange-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
-              <div className="text-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <i className="fas fa-binoculars text-white text-2xl"></i>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 hebrew-text mb-2">ספארי</h3>
-                <p className="text-gray-700 hebrew-text text-sm leading-relaxed text-right">
-                  2 טיולי ספארי
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    },
     notIncluded: {
       title: 'לא כלול',
       content: (
