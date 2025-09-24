@@ -134,6 +134,10 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                       </div>
                       <div className="step-content">
                         <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">הפקת הטיול</h4>
+                        <p className="m-0 text-sm leading-relaxed hebrew-text">הפקת הטיול בפועל</p>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
