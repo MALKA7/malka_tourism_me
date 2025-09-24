@@ -85,60 +85,9 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                   מה כולל שירות התכנון המקצועי?
                 </h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="flex items-start bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">מפה מפורטת של הודו ומסלול מותאם אישית</h4>
-                      <p className="text-gray-700 hebrew-text">תכנון מפורט להבנת הרצונות והצרכים שלכם</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-gray-50 p-4 rounded-lg border-l-4 border-green-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">הצעות לטיסות פנים</h4>
-                      <p className="text-gray-700 hebrew-text">המלצות על טיסות פנימיות בהודו</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-gray-50 p-4 rounded-lg border-l-4 border-purple-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">המלצות מלונות מבדוקים</h4>
-                      <p className="text-gray-700 hebrew-text">אני עובדת עם מלונות שביקרתי בהם ואירחתי בהם בעצמי, על מנת להבטיח סטנדרט גבוה של שירות. כמובן, אם יש לכם העדפה למלון ספציפי, ניתן לשלב אותו בתכנון.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">אטרקציות ויעדים מרכזיים</h4>
-                      <p className="text-gray-700 hebrew-text">המלצות על האתרים החשובים ביותר</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-gray-50 p-4 rounded-lg border-l-4 border-red-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">עד שתי אפשרויות לשינוי במסלול</h4>
-                      <p className="text-gray-700 hebrew-text">גמישות בתכנון לפי הצרכים שלכם</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-gray-50 p-4 rounded-lg border-l-4 border-indigo-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">תמיכה לאורך הטיול</h4>
-                      <p className="text-gray-700 hebrew-text">זמינות לשאלות ועזרה במהלך הטיול</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200 mb-8">
-                  <p className="text-gray-800 hebrew-text font-medium">
-                    <strong>הערה חשובה:</strong> בשלב זה אינני ממליצה על מלונות, שכן יש שפע של מלונות טובים בכל יעד, 
-                    אלא אם כן יש לכם בקשה ספציפית.
+                <div className="bg-blue-50 p-8 rounded-xl mb-8 border border-blue-200">
+                  <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
+                    מפות הודו, ימי מסלול וטיסות פנים, מרחקים משוערים, מסלולים יומיים עם אטרקציות מקומיות, מידע עיוני על היעדים, מידע שימושי כמו תקשורת וציוד מומלץ, הצעות לטיסות פנים או לרכבות ואוטובוסים. השירות כולל עד שני שינויים במסלול. בשלב זה אינני ממליצה על מלונות, שכן יש שפע של מלונות טובים בכל יעד ואת הבחירה ניתן לבצע באופן עצמאי. כמו כן אינני ממליצה על נהגים או מדריכים.
                   </p>
                 </div>
 
