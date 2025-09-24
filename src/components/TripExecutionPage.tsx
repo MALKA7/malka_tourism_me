@@ -84,8 +84,11 @@ const TripExecutionPage: React.FC<TripExecutionPageProps> = ({ onPageChange }) =
                 {/* Video Section */}
                 <div className="mb-8">
                   <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                    צפו בסרטון על ההפקה המקצועית
+                    איך נבחרים המלונות לטיול שלכם
                   </h3>
+                  <p className="text-lg text-gray-700 leading-relaxed hebrew-text mb-6">
+                    בסרטון הזה אני לוקחת אתכם איתי לעולם שבו אני חיה כבר שנים – הודו. כאן אני חושפת איך אני בוחרת את המלונות עבור הטיולים שאני מתכננת – לא סתם לפי המלצות באינטרנט, אלא מתוך ביקורים אישיים, היכרות עם הספקים והתנסות אמיתית.
+                  </p>
                   <div className="max-w-4xl mx-auto">
                     <div className="relative bg-black rounded-xl overflow-hidden shadow-xl">
                       <div className="aspect-video">
@@ -102,40 +105,66 @@ const TripExecutionPage: React.FC<TripExecutionPageProps> = ({ onPageChange }) =
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">ליווי וייעוץ בהתאמה אישית</h4>
-                      <p className="text-gray-700 hebrew-text">כולל המלצה למלונות ברמה גבוהה שמתאימים לפרופיל שלכם – מבחינת תקציב, סגנון ואופי הטיול.</p>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
+                  למה לבחור בשירותי התכנון שלי
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Hotel className="w-6 h-6 text-white" />
                     </div>
+                    <h4 className="font-bold text-gray-900 mb-3 hebrew-text text-center">עבודה ישירה עם המלונות</h4>
+                    <p className="text-gray-700 hebrew-text text-center text-sm leading-relaxed">ביקור אישי בחדרים והיכרות עם הצוות</p>
                   </div>
 
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-green-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">גישה למלונות לא זמינים אונליין</h4>
-                      <p className="text-gray-700 hebrew-text">ייעוץ גם בנוגע למלונות שלא מופיעים אונליין – גישה למלונות טובים, מוכרים ומנוסים, שהרבה פעמים לא זמינים באתרים הרגילים.</p>
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Award className="w-6 h-6 text-white" />
                     </div>
+                    <h4 className="font-bold text-gray-900 mb-3 hebrew-text text-center">שמירה על סטנדרט גבוה וגמישות</h4>
+                    <p className="text-gray-700 hebrew-text text-center text-sm leading-relaxed">התאמת המלונות לצרכים של המטיילים ושינויים לפי הצורך</p>
                   </div>
 
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-purple-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">ייעוץ מקצועי ברמה הפנימית</h4>
-                      <p className="text-gray-700 hebrew-text">כולל עיצוב, נוחות, מיקום, ארוחת בוקר ועוד.</p>
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CreditCard className="w-6 h-6 text-white" />
                     </div>
+                    <h4 className="font-bold text-gray-900 mb-3 hebrew-text text-center">הנחות והטבות</h4>
+                    <p className="text-gray-700 hebrew-text text-center text-sm leading-relaxed">עד 15% הנחה מהמחירים באתרי המלונות, כך שתשלום העמלה מתקזז ואתם מקבלים את החבילה באותו מחיר</p>
                   </div>
-                </div>
 
-                <div className="bg-yellow-50 p-8 rounded-lg border border-yellow-200 mb-8">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4 hebrew-text">💬 למה איתי?</h4>
-                  <p className="text-gray-800 hebrew-text font-medium mb-4">
-                    אני עובדת עם המלונות בעצמי, מכירה את הצוות, בדקתי את החדרים – ואני בוחרת רק את אלה שאני מוכנה לשלוח אליהם את האנשים הכי קרובים לי.
-                  </p>
-                  <p className="text-gray-800 hebrew-text font-medium">
-                    אני מקפידה על סטנדרט גבוה, עם אפשרות לשינויים לפי הצרכים שלכם, ומציעה גם הנחות של עד 15% ומעלה ממחיר האתר – כולל שירות ליווי יומי בטלפון, עד שתיכנסו לחדר ותהיו מרוצים.
-                  </p>
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-gray-900 mb-3 hebrew-text text-center">הכרות עם מסלולים ואטרקציות</h4>
+                    <p className="text-gray-700 hebrew-text text-center text-sm leading-relaxed">המלצות על מסעדות, מדריכים ועזרה עם כניסה לאתרים</p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Car className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-gray-900 mb-3 hebrew-text text-center">קשר רציף עם הנהג</h4>
+                    <p className="text-gray-700 hebrew-text text-center text-sm leading-relaxed">הדרכה על מסלול הסיור, שעות נסיעה ופרטים לוגיסטיים לחוויה חלקה</p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-gray-900 mb-3 hebrew-text text-center">ליווי יומי ושירות אישי</h4>
+                    <p className="text-gray-700 hebrew-text text-center text-sm leading-relaxed">הדרכה לגבי טיפים, טיפים מעשיים ושירות ליווי בטלפון עד הכניסה לחדר</p>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                    <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Shield className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-gray-900 mb-3 hebrew-text text-center">ליווי מקצועי ומומחיות בהודו</h4>
+                    <p className="text-gray-700 hebrew-text text-center text-sm leading-relaxed">ליווי לאורך כל הטיול וסיוע עם בקשות שונות לחוויה מותאמת אישית</p>
+                  </div>
                 </div>
 
                 <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
