@@ -139,7 +139,7 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
   const testimonials = [
     {
       name: 'תומר כנעני',
-      location: 'נהג אגד',
+      location: 'קבוצת חברים של נהגי אגד',
       rating: 5,
       text: 'היינו קבוצה של 14 מטיילים והכל התנהל בצורה טובה במשך יומיים למדנו המון על מומבאי בפרט והודו בכלל יש לציין את הידע הרב של מלכה וצורת ההדרכה כולנו מודים לה מאוד על ההדרכה והשרות הנלווה.'
     },
