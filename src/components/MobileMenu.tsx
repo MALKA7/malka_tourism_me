@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Search, Phone, ChevronDown, Mail } from 'lucide-react';
+import { X, Search, Phone, ChevronDown, Mail, Globe } from 'lucide-react';
 
 interface MenuItem {
   id: string;
