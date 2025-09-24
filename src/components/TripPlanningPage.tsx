@@ -24,7 +24,7 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
               תכנון טיול בהודו המופלאה
             </h1>
             <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
-              גלו את קסמי הודו עם מלכה - המדריכה הישראלית המנוסה. תכנון מקצועי ומותאם אישית 
+              תכנון מקצועי ומותאם אישית 
               לטיול החלומות שלכם בארץ הצבעים והריחות
             </p>
             <button 
