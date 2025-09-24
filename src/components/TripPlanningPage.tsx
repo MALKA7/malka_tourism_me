@@ -50,37 +50,34 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Main Content Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <div className="prose prose-lg max-w-none">
-                <h2 className="text-4xl font-bold text-gray-900 mb-8 hebrew-text">
-                  תכנון טיול מקצועי להודו
-                </h2>
-                
-                <div className="bg-blue-50 p-8 rounded-xl mb-8 border border-blue-200">
-                  <div className="flex items-start">
-                    <div className="text-4xl ml-4">
-                      <Map className="w-12 h-12 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-4">
-                        הודו היא מדינה מורכבת ומרתקת עם אינסוף אפשרויות. תכנון טיול נכון יכול להפוך את החוויה שלכם 
-                        מטיול רגיל לחוויה בלתי נשכחת. עם 15 שנות ניסיון בהודו, אני יודעת בדיוק איך לתכנן עבורכם 
-                        את הטיול המושלם בארץ הקסומה הזו.
-                      </p>
-                      <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
-                        <strong>מלכה מתכננת את הטיולים לאחר שחיה בהודו ובזמן שהיא עדיין כאן ומעודכנת על המדינה.</strong> 
-                        מהמקדשים העתיקים של ורנאסי ועד לחופי גואה הטרופיים, מהרי ההימלאיה המושלגים ועד למדבריות רג'סטאן - 
-                        אני אעזור לכם לגלות את הודו האמיתית.
-                      </p>
-                    </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8 hebrew-text">
+                תכנון טיול מקצועי להודו
+              </h2>
+              
+              <div className="bg-blue-50 p-8 rounded-xl mb-8 border border-blue-200">
+                <div className="flex items-start">
+                  <div className="text-4xl ml-4">
+                    <Map className="w-12 h-12 text-blue-600" />
+                  </div>
+                  <div>
+                    <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-4">
+                      הודו היא מדינה מורכבת ומרתקת עם אינסוף אפשרויות. תכנון טיול נכון יכול להפוך את החוויה שלכם 
+                      מטיול רגיל לחוויה בלתי נשכחת. עם 15 שנות ניסיון בהודו, אני יודעת בדיוק איך לתכנן עבורכם 
+                      את הטיול המושלם בארץ הקסומה הזו.
+                    </p>
+                    <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
+                      <strong>מלכה מתכננת את הטיולים לאחר שחיה בהודו ובזמן שהיא עדיין כאן ומעודכנת על המדינה.</strong> 
+                      מהמקדשים העתיקים של ורנאסי ועד לחופי גואה הטרופיים, מהרי ההימלאיה המושלגים ועד למדבריות רג'סטאן - 
+                      אני אעזור לכם לגלות את הודו האמיתית.
+                    </p>
                   </div>
                 </div>
-
               </div>
             </div>
 
@@ -153,66 +150,8 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
         </div>
       </section>
 
-      {/* Malka Advantages Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              למה לבחור במלכה לתכנון הטיול שלכם?
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">📚</span>
-              <p className="text-gray-800 hebrew-text text-sm">ידע מעמיק על תרבות, היסטוריה ואתרי חובה בהודו</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">💡</span>
-              <p className="text-gray-800 hebrew-text text-sm">טיפים והמלצות שמגיעים רק ממי שחיה ומכירה את הודו מקרוב</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">📝</span>
-              <p className="text-gray-800 hebrew-text text-sm">מסלולים מותאמים אישית לפי תחומי העניין והעדפותיכם</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">🛎️</span>
-              <p className="text-gray-800 hebrew-text text-sm">תכנון מקצועי של כל שלב בטיול – לוגיסטיקה, מלונות, תחבורה ואטרקציות</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">🔍</span>
-              <p className="text-gray-800 hebrew-text text-sm">דאגה לכל הפרטים הקטנים, כדי שהטיול יהיה חלק ומהנה</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">💰</span>
-              <p className="text-gray-800 hebrew-text text-sm">חיסכון בזמן ובכסף בזכות הידע המקומי והקשרים עם ספקים מהימנים</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">🌏</span>
-              <p className="text-gray-800 hebrew-text text-sm">שילוב חוויות אותנטיות וייחודיות שאינן נפוצות במדריכים רגילים</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">🤝</span>
-              <p className="text-gray-800 hebrew-text text-sm">תמיכה לאורך כל תהליך התכנון – מהרעיונות הראשוניים ועד לאישור הסופי של המסלול</p>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
-              <span className="text-4xl block mb-3">💖</span>
-              <p className="text-gray-800 hebrew-text text-sm">מלכה היא מקצועית רגישה שמכבדת כל טיול וכל מטייל</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* What's Included Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
@@ -274,48 +213,104 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* Malka Advantages Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none">
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  איך זה עובד?
-                </h3>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              למה לבחור במלכה לתכנון הטיול שלכם?
+            </h2>
+          </div>
 
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
-                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">1</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">יצירת קשר ראשונית</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">צרו קשר ונקבע שיחת ייעוץ ראשונית חינם</p>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">📚</span>
+              <p className="text-gray-800 hebrew-text text-sm">ידע מעמיק על תרבות, היסטוריה ואתרי חובה בהודו</p>
+            </div>
 
-                  <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
-                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">2</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שיחת ייעוץ מפורטת</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">נכיר, נבין את הרצונות שלכם ונתחיל לתכנן</p>
-                    </div>
-                  </div>
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">💡</span>
+              <p className="text-gray-800 hebrew-text text-sm">טיפים והמלצות שמגיעים רק ממי שחיה ומכירה את הודו מקרוב</p>
+            </div>
 
-                  <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
-                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">3</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">הכנת תכנית מפורטת</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">תקבלו תכנית טיול מפורטת עם כל הפרטים</p>
-                    </div>
-                  </div>
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">📝</span>
+              <p className="text-gray-800 hebrew-text text-sm">מסלולים מותאמים אישית לפי תחומי העניין והעדפותיכם</p>
+            </div>
 
-                  <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-                    <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">4</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">ליווי והתאמות</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">נעשה התאמות לפי הצורך ונלווה אתכם עד היציאה</p>
-                    </div>
-                  </div>
-                </div>
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">🛎️</span>
+              <p className="text-gray-800 hebrew-text text-sm">תכנון מקצועי של כל שלב בטיול – לוגיסטיקה, מלונות, תחבורה ואטרקציות</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">🔍</span>
+              <p className="text-gray-800 hebrew-text text-sm">דאגה לכל הפרטים הקטנים, כדי שהטיול יהיה חלק ומהנה</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">💰</span>
+              <p className="text-gray-800 hebrew-text text-sm">חיסכון בזמן ובכסף בזכות הידע המקומי והקשרים עם ספקים מהימנים</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">🌏</span>
+              <p className="text-gray-800 hebrew-text text-sm">שילוב חוויות אותנטיות וייחודיות שאינן נפוצות במדריכים רגילים</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">🤝</span>
+              <p className="text-gray-800 hebrew-text text-sm">תמיכה לאורך כל תהליך התכנון – מהרעיונות הראשוניים ועד לאישור הסופי של המסלול</p>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center text-center">
+              <span className="text-4xl block mb-3">💖</span>
+              <p className="text-gray-800 hebrew-text text-sm">מלכה היא מקצועית רגישה שמכבדת כל טיול וכל מטייל</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              איך זה עובד?
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
+              <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">1</div>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">יצירת קשר ראשונית</h4>
+                <p className="text-gray-700 hebrew-text text-lg">צרו קשר ונקבע שיחת ייעוץ ראשונית חינם</p>
+              </div>
+            </div>
+
+            <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
+              <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">2</div>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">שיחת ייעוץ מפורטת</h4>
+                <p className="text-gray-700 hebrew-text text-lg">נכיר, נבין את הרצונות שלכם ונתחיל לתכנן</p>
+              </div>
+            </div>
+
+            <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
+              <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">3</div>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">הכנת תכנית מפורטת</h4>
+                <p className="text-gray-700 hebrew-text text-lg">תקבלו תכנית טיול מפורטת עם כל הפרטים</p>
+              </div>
+            </div>
+
+            <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+              <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">4</div>
+              <div>
+                <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">ליווי והתאמות</h4>
+                <p className="text-gray-700 hebrew-text text-lg">נעשה התאמות לפי הצורך ונלווה אתכם עד היציאה</p>
+              </div>
             </div>
           </div>
         </div>
