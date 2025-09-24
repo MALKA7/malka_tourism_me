@@ -602,7 +602,14 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
                 alt="טיולים מאורגנים בהודו"
                 className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
               />
-              <h3 className="text-xl font-semibold mb-3 hebrew-text text-slate-800">טיולים מאורגנים בהודו</h3>
+              <h3 className="text-xl font-semibold mb-3 hebrew-text text-slate-800">
+                <button 
+                  onClick={() => onPageChange('visa-assistance')}
+                  className="hover:text-blue-600 transition-colors duration-300"
+                >
+                  טיולים מאורגנים בהודו
+                </button>
+              </h3>
               <p className="text-slate-600 hebrew-text">טיולים קבוצתיים מאורגנים</p>
             </div>
           </div>
