@@ -143,7 +143,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 hebrew-text text-blue-900">מדריכה דוברת עברית</h3>
-              <p className="text-blue-700 hebrew-text leading-relaxed">מדריכה ישראלית מנוסה שמכירה את הודו כמו כף ידה</p>
+              <p className="text-blue-700 hebrew-text leading-relaxed">מדריכה ישראלית המתגוררת בהודו משנת 2010</p>
             </div>
 
             <div className="text-center p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-orange-100">
