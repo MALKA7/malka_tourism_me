@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, ArrowLeft, Calendar, Award, Map, Hotel, Car, Shield, CreditCard } from 'lucide-react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, ArrowLeft, Calendar, Award, Map, Hotel, Car, Shield, CreditCard, FileText } from 'lucide-react';
 
 interface TripExecutionPageProps {
   onPageChange: (page: string) => void;
