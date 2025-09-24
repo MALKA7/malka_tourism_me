@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, ArrowLeft, Calendar, Award, Home, Wifi, Car } from 'lucide-react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, ArrowLeft, Calendar, Award, Home, Wifi, Car, X } from 'lucide-react';
 
 interface PersonalHostingPageProps {
   onPageChange: (page: string) => void;
@@ -116,6 +116,22 @@ const PersonalHostingPage: React.FC<PersonalHostingPageProps> = ({ onPageChange 
                       <p className="text-gray-700 hebrew-text">חוויה אותנטית עם משפחה ישראלית</p>
                     </div>
                   </div>
+
+                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-orange-500">
+                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">ארוחות ביתיות</h4>
+                      <p className="text-gray-700 hebrew-text">אוכל ביתי טעים ובריא</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-indigo-500">
+                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">הסעות לנמל</h4>
+                      <p className="text-gray-700 hebrew-text">הסעה נוחה לנמל התעופה ומהנמל</p>
+                    </div>
+                  </div>
                 </div>
 
                 <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
@@ -138,6 +154,116 @@ const PersonalHostingPage: React.FC<PersonalHostingPageProps> = ({ onPageChange 
                       <p className="text-gray-700 hebrew-text">ארוחות לא כלולות במחיר האירוח</p>
                     </div>
                   </div>
+                </div>
+
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
+                  למי מתאים?
+                </h3>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
+                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">✈️</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">לפני הטיסה</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">רגעי שלווה אחרונים לפני החזרה לישראל</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
+                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">🛬</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">אחרי הטיסה</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">נחיתה רכה והתאקלמות הדרגתית להודו</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
+                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">🌿</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">חוויה כפרית</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">למי שרוצה לחוות את הודו הכפרית והשקטה</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                    <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">👨‍👩‍👧‍👦</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">משפחות</h4>
+                      <p className="text-gray-700 hebrew-text text-lg">סביבה בטוחה ונוחה למשפחות עם ילדים</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              {/* Contact Card */}
+              <div className="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-200">
+                <div className="text-center mb-6">
+                  <img 
+                    src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
+                    alt="מלכה"
+                    className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300"
+                  />
+                  <h3 className="text-2xl font-bold text-gray-900 hebrew-text">מלכה איראני</h3>
+                  <p className="text-gray-700 hebrew-text">מארחת ישראלית בהודו</p>
+                  <div className="flex justify-center mt-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
+                    <Phone className="w-5 h-5 text-blue-600 ml-3" />
+                    <span className="text-gray-800">+91-9980601979</span>
+                  </div>
+                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
+                    <Mail className="w-5 h-5 text-blue-600 ml-3" />
+                    <span className="text-gray-800">Malka@shalom-india.com</span>
+                  </div>
+                  <div className="flex items-start bg-gray-50 p-3 rounded-lg">
+                    <MapPin className="w-5 h-5 text-blue-600 ml-3 mt-1" />
+                    <span className="text-gray-800">צפון בנגלור, הודו</span>
+                  </div>
+                </div>
+
+                <button 
+                  onClick={() => onPageChange('contact')}
+                  className="w-full btn-primary py-4 text-lg"
+                >
+                  הזמינו אירוח
+                </button>
+              </div>
+
+              {/* Pricing Card */}
+              <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי אירוח</h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-200">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-800 hebrew-text font-bold">לילה אחד</span>
+                      <span className="font-bold text-blue-600 text-xl">$60</span>
+                    </div>
+                    <p className="text-sm text-gray-600 hebrew-text">כולל חדר, ארוחות והסעה</p>
+                  </div>
+                  
+                  <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-800 hebrew-text font-bold">שבוע מלא</span>
+                      <span className="font-bold text-green-600 text-xl">$350</span>
+                    </div>
+                    <p className="text-sm text-gray-600 hebrew-text">הנחה מיוחדת לשהייה ארוכה</p>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                  <p className="text-sm text-gray-700 hebrew-text text-center">
+                    כולל ארוחות ביתיות והסעות לנמל התעופה
+                  </p>
                 </div>
               </div>
             </div>
@@ -328,228 +454,6 @@ const PersonalHostingPage: React.FC<PersonalHostingPageProps> = ({ onPageChange 
             <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-bold mb-3 hebrew-text">חוויות מקומיות</h3>
               <p className="text-gray-600 hebrew-text">גישה לחוויות ייחודיות באזור</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Removed Features Section and Pricing Card from sidebar */}
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6 hebrew-text">
-            מוכנים לחוויית אירוח אישית?
-          </h2>
-          <p className="text-xl mb-8 hebrew-text leading-relaxed">
-            צרו קשר עוד היום להזמנת אירוח אישי בווילה הפרטית של מלכה 
-            בצפון בנגלור - החוויה הכי אותנטית בהודו
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => onPageChange('contact')}
-              className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300"
-            >
-              הזמינו אירוח
-            </button>
-            <a 
-              href="https://wa.me/919980601979"
-              className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 inline-block"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              מה אומרים האורחים
-            </h2>
-            <p className="text-xl text-gray-600 hebrew-text">חוויות אמיתיות של ישראלים שהתארחו אצל מלכה</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="testimonial-stars mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
-                "האירוח אצל מלכה היה מושלם! הווילה שקטה ונוחה, האוכל טעים והאווירה ביתית. 
-                בדיוק מה שהיינו צריכים לפני הטיסה חזרה."
-              </p>
-              <div className="testimonial-author hebrew-text font-bold text-gray-900">שרה ודוד גולן</div>
-              <div className="testimonial-location text-gray-600">רמת השרון</div>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="testimonial-stars mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
-                "חוויה מדהימה! מלכה קיבלה אותנו כמו משפחה. הילדים נהנו מהחצר והשקט, 
-                ואנחנו מהאווירה הביתית הישראלית."
-              </p>
-              <div className="testimonial-author hebrew-text font-bold text-gray-900">משפחת כהן</div>
-              <div className="testimonial-location text-gray-600">פתח תקווה</div>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="testimonial-stars mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
-                "המיקום מושלם - קרוב לנמל אבל רחוק מהרעש. האירוח של מלכה עשה את כל ההבדל 
-                בטיול שלנו להודו."
-              </p>
-              <div className="testimonial-author hebrew-text font-bold text-gray-900">אבי ומירי לוי</div>
-              <div className="testimonial-location text-gray-600">הרצליה</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default PersonalHostingPage;
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">ארוחות ביתיות</h4>
-                      <p className="text-gray-700 hebrew-text">אוכל ביתי טעים ובריא</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-gray-50 p-6 rounded-lg border-l-4 border-indigo-500">
-                    <CheckCircle className="w-6 h-6 text-green-600 ml-3 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text">הסעות לנמל</h4>
-                      <p className="text-gray-700 hebrew-text">הסעה נוחה לנמל התעופה ומהנמל</p>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  למי מתאים?
-                </h3>
-
-                <div className="space-y-6 mb-8">
-                  <div className="flex items-start bg-blue-50 p-6 rounded-lg border border-blue-200">
-                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">✈️</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">לפני הטיסה</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">רגעי שלווה אחרונים לפני החזרה לישראל</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-green-50 p-6 rounded-lg border border-green-200">
-                    <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">🛬</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">אחרי הטיסה</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">נחיתה רכה והתאקלמות הדרגתית להודו</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-purple-50 p-6 rounded-lg border border-purple-200">
-                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">🌿</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">חוויה כפרית</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">למי שרוצה לחוות את הודו הכפרית והשקטה</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start bg-yellow-50 p-6 rounded-lg border border-yellow-200">
-                    <div className="w-12 h-12 bg-yellow-600 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg">👨‍👩‍👧‍👦</div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-2 hebrew-text text-xl">משפחות</h4>
-                      <p className="text-gray-700 hebrew-text text-lg">סביבה בטוחה ונוחה למשפחות עם ילדים</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              {/* Contact Card */}
-              <div className="bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-200">
-                <div className="text-center mb-6">
-                  <img 
-                    src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
-                    alt="מלכה"
-                    className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300"
-                  />
-                  <h3 className="text-2xl font-bold text-gray-900 hebrew-text">מלכה איראני</h3>
-                  <p className="text-gray-700 hebrew-text">מארחת ישראלית בהודו</p>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
-                    <Phone className="w-5 h-5 text-blue-600 ml-3" />
-                    <span className="text-gray-800">+91-9980601979</span>
-                  </div>
-                  <div className="flex items-center bg-gray-50 p-3 rounded-lg">
-                    <Mail className="w-5 h-5 text-blue-600 ml-3" />
-                    <span className="text-gray-800">Malka@shalom-india.com</span>
-                  </div>
-                  <div className="flex items-start bg-gray-50 p-3 rounded-lg">
-                    <MapPin className="w-5 h-5 text-blue-600 ml-3 mt-1" />
-                    <span className="text-gray-800">צפון בנגלור, הודו</span>
-                  </div>
-                </div>
-
-                <button 
-                  onClick={() => onPageChange('contact')}
-                  className="w-full btn-primary py-4 text-lg"
-                >
-                  הזמינו אירוח
-                </button>
-              </div>
-
-              {/* Pricing Card */}
-              <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מחירי אירוח</h3>
-                
-                <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">לילה אחד</span>
-                      <span className="font-bold text-blue-600 text-xl">$60</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">כולל חדר, ארוחות והסעה</p>
-                  </div>
-                  
-                  <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 hebrew-text font-bold">שבוע מלא</span>
-                      <span className="font-bold text-green-600 text-xl">$350</span>
-                    </div>
-                    <p className="text-sm text-gray-600 hebrew-text">הנחה מיוחדة לשהייה ארוכה</p>
-                  </div>
-                </div>
-                
-                <div className="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
-                  <p className="text-sm text-gray-700 hebrew-text text-center">
-                    כולל ארוחות ביתיות והסעות לנמל התעופה
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
