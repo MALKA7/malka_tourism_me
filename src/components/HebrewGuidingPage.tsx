@@ -253,7 +253,6 @@ const HebrewGuidingPage: React.FC<HebrewGuidingPageProps> = ({ onPageChange }) =
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-green-200">
-                    <h4 className="text-gray-800 hebrew-text font-bold mb-2">סיור חצי יום (4 שעות)</h4>
                     <p className="text-sm text-gray-600 hebrew-text">מחיר משתנה בהתאם למספר המשתתפים</p>
                   </div>
                 </div>
