@@ -79,7 +79,9 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                   <div className="steps-grid flex flex-col gap-4">
                     
                     <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
-                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+                      <div className="step-number bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        <MessageCircle className="w-4 h-4" />
+                      </div>
                       <div className="step-content">
                         <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">יצירת קשר ראשוני</h4>
                         <p className="m-0 text-sm leading-relaxed hebrew-text">יצירת קשר ראשוני בוואטס אפ לשיחה קצרה של 15 דקות</p>
@@ -87,7 +89,9 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                     </div>
 
                     <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
-                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+                      <div className="step-number bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        <CreditCard className="w-4 h-4" />
+                      </div>
                       <div className="step-content">
                         <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">תשלום</h4>
                         <p className="m-0 text-sm leading-relaxed hebrew-text">הבנת תנאי תשלום וביצוע תשלום</p>
@@ -95,7 +99,9 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                     </div>
 
                     <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
-                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+                      <div className="step-number bg-purple-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        <Phone className="w-4 h-4" />
+                      </div>
                       <div className="step-content">
                         <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">שיחת ייעוץ מפורטת</h4>
                         <p className="m-0 text-sm leading-relaxed hebrew-text">שיחת וואטס אפ להבנת אילוצים, זמני הגעה, תחומי עניין וכדומה בשיחה ארוכה</p>
@@ -103,10 +109,32 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                     </div>
 
                     <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
-                      <div className="step-number bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+                      <div className="step-number bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        <FileText className="w-4 h-4" />
+                      </div>
                       <div className="step-content">
                         <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">הכנת תוכנית כתובה</h4>
                         <p className="m-0 text-sm leading-relaxed hebrew-text">הכנת תוכנית כתובה והצגתה בשיחות זום</p>
+                      </div>
+                    </div>
+
+                    <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
+                      <div className="step-number bg-indigo-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        <Send className="w-4 h-4" />
+                      </div>
+                      <div className="step-content">
+                        <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">שליחת התוכנית</h4>
+                        <p className="m-0 text-sm leading-relaxed hebrew-text">לאחר אישור התוכנית שליחתה למטייל</p>
+                      </div>
+                    </div>
+
+                    <div className="step-item flex items-start gap-3 p-3 bg-blue-50 rounded-lg border-r-4 border-blue-500">
+                      <div className="step-number bg-teal-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        <Briefcase className="w-4 h-4" />
+                      </div>
+                      <div className="step-content">
+                        <h4 className="m-0 mb-1 text-base text-blue-900 font-bold hebrew-text">הפקת הטיול</h4>
+                        <p className="m-0 text-sm leading-relaxed hebrew-text">המטייל יפיק את הטיול עצמאית או יבקש את שירותי הפקת הטיול של מלכה</p>
                       </div>
                     </div>
 
