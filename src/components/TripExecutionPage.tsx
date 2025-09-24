@@ -69,26 +69,37 @@ const TripExecutionPage: React.FC<TripExecutionPageProps> = ({ onPageChange }) =
                     </div>
                     <div>
                       <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-4">
-                        לאחר שתכננו את הטיול יחד, מגיע השלב החשוב - ההפקה המקצועית. כאן מלכה נכנסת לפעולה 
-                        ומספקת פרטי מלונות מדויקים לאחר שהיא נוסעת למלונות, חווה אותם בעצמה וממליצה עליהם.
+                        כאשר אתם מטיילים בהודו, אני רוצה שאתם תהנו מהחוויה המלאה – בלי הפתעות או אתגרים שניתן למנוע מראש. אני נוסעת בעצמי למלונות, מתרשמת מהשהות במקום ומבינה אילו חדרים, שירותים ומתקנים יתאימו לכם באמת. לפעמים מלון נראה נפלא בתמונות, אך בפועל צריך להשתמש בשרפרף כדי להגיע למיטה או לרדת במדרגות כדי להגיע לספא – כל פרט כזה אני מתעדת ומדייקת כדי שתיהנו ממלון שמתאים בדיוק לכם.
                       </p>
                       <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
-                        <strong>מלכה מספקת פרטי מלונות בשלב זה לאחר שהיא נוסעת למלונות, חווה אותם וממליצה.</strong> 
-                        אותו הדבר עם שירותי נהגים - היא אוספת 15% מההזמנות של מלונות והסעות עם מינימום תשלום.
+                        גם חברות הנהגים וההסעות נבדקות בקפידה – אני פוגשת אותן בכנסים, בוחנת את השירות שלהן ומקיימת קשר רציף לאורך כל הטיול. אני תמיד מאחורי הקלעים, דואגת שהכל יתנהל בצורה חלקה, כדי שאתם תוכלו להתרכז בליהנות מהתרבות, מהטעמים ומהנופים של הודו.
+                       </p>
+                       <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
+                        עם התכנון וההפקה שלי, כל מסלול מותאם אישית, כל המלון והנהג נבחרים בקפידה, וכל פרט קטן נבדק מראש – כך שהחוויה שלכם תהיה מותאמת, נוחה ובטוחה, ואתם רק צריכים להתרגש ולהתמלא בחוויות חדשות.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
-                  שירותי מלונאות בהתאמה אישית לישראלים בהודו
-                </h3>
-
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl mb-8 border border-blue-200">
-                  <p className="text-lg text-gray-800 leading-relaxed hebrew-text mb-4">
-                    אם אתם מחפשים מלון בהודו ומתלבטים – אני כאן לעזור!
-                    אני בודקת עבורכם 4–5 אופציות איכותיות, מתוך ניסיון, היכרות אישית עם המקומות, והבנה של מה שישראלים באמת צריכים.
-                  </p>
+                {/* Video Section */}
+                <div className="mb-8">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6 hebrew-text">
+                    צפו בסרטון על ההפקה המקצועית
+                  </h3>
+                  <div className="max-w-4xl mx-auto">
+                    <div className="relative bg-black rounded-xl overflow-hidden shadow-xl">
+                      <div className="aspect-video">
+                        <iframe
+                          className="w-full h-full"
+                          src="https://www.youtube.com/embed/FKf0AZp_-Mc"
+                          title="הפקת טיול בהודו עם מלכה"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
@@ -227,7 +238,7 @@ const TripExecutionPage: React.FC<TripExecutionPageProps> = ({ onPageChange }) =
                       <span className="text-gray-800 hebrew-text font-bold">מינימום הזמנה</span>
                       <span className="font-bold text-blue-600 text-xl">$400</span>
                     </div>
-                    <p className="text-sm text-gray-600 hebrew-text">כולל חיפוש, בדיקה וליווי</p>
+                    <p className="text-sm text-gray-600 hebrew-text">לכל חבילת טיול, התכנון מתחיל מ-400$, גם אם 15% מהחבילה יוצא פחות.</p>
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-purple-200">
