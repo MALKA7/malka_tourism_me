@@ -7,6 +7,108 @@ interface AboutPageProps {
 
 const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  const validateForm = () => {
+    const newErrors: {[key: string]: string} = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = 'שם מלא הוא שדה חובה';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'אימייל הוא שדה חובה';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'כתובת אימייל לא תקינה';
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'הודעה היא שדה חובה';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitError('');
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      // Send email using EmailJS or similar service
+      const emailData = {
+        to_email: 'malka@shalom-india.com',
+        subject: 'Ref IndiabyMalka website',
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'לא צוין',
+        message: formData.message,
+        reply_to: formData.email
+      };
+
+      // For now, we'll use a fetch request to a contact endpoint
+      // In a real implementation, you would set up EmailJS or a backend service
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emailData)
+      });
+
+      if (!response.ok) {
+        throw new Error('שליחת האימייל נכשלה');
+      }
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+      setErrors({});
+      
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitError('אירעה שגיאה בשליחת ההודעה. אנא נסו שוב או צרו קשר ישירות בוואטסאפ.');
+      console.error('Email sending error:', error);
+    }
+  };
 
   const galleryImages = [
     {
@@ -621,32 +723,81 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="form-label hebrew-text">שם מלא</label>
-                  <input type="text" className="form-input" placeholder="השם שלכם" />
+            {isSubmitted ? (
+              <div className="text-center py-8">
+                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 hebrew-text">תודה רבה!</h3>
+                <p className="text-gray-600 hebrew-text">ההודעה נשלחה בהצלחה. מלכה תחזור אליכם בהקדם.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="form-label hebrew-text">שם מלא *</label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.name ? 'border-red-500' : ''}`}
+                      placeholder="השם שלכם" 
+                    />
+                    {errors.name && <p className="text-red-500 text-sm mt-1 hebrew-text">{errors.name}</p>}
+                  </div>
+                  <div>
+                    <label className="form-label hebrew-text">אימייל *</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className={`form-input ${errors.email ? 'border-red-500' : ''}`}
+                      placeholder="example@email.com" 
+                    />
+                    {errors.email && <p className="text-red-500 text-sm mt-1 hebrew-text">{errors.email}</p>}
+                  </div>
                 </div>
+                
                 <div>
-                  <label className="form-label hebrew-text">אימייל</label>
-                  <input type="email" className="form-input" placeholder="example@email.com" />
+                  <label className="form-label hebrew-text">טלפון</label>
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="form-input" 
+                    placeholder="מספר הטלפון שלכם" 
+                  />
                 </div>
-              </div>
-              
-              <div>
-                <label className="form-label hebrew-text">נושא</label>
-                <input type="text" className="form-input" placeholder="נושא ההודעה" />
-              </div>
-              
-              <div>
-                <label className="form-label hebrew-text">הודעה</label>
-                <textarea rows={6} className="form-input" placeholder="ספרו לנו על הטיול שאתם מתכננים..."></textarea>
-              </div>
-              
-              <button type="submit" className="btn-primary w-full">
-                שלחו הודעה
-              </button>
-            </form>
+                
+                <div>
+                  <label className="form-label hebrew-text">הודעה *</label>
+                  <textarea 
+                    rows={6} 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className={`form-input ${errors.message ? 'border-red-500' : ''}`}
+                    placeholder="ספרו לנו על הטיול שאתם מתכננים..."
+                  ></textarea>
+                  {errors.message && <p className="text-red-500 text-sm mt-1 hebrew-text">{errors.message}</p>}
+                </div>
+                
+                {submitError && (
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <p className="text-red-700 hebrew-text">{submitError}</p>
+                  </div>
+                )}
+                
+                <button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'שולח...' : 'שלחו הודעה'}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </section>
