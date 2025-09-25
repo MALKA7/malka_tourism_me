@@ -64,13 +64,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
       {/* Menu Panel */}
       <div className="fixed right-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out overflow-y-auto">
         {/* Header */}
-        <div className="flex justify-between items-center p-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
-          <h2 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+        <div className="flex justify-between items-center p-6 border-b border-blue-600 bg-[#0A2540]">
+          <h2 className="text-xl font-bold text-white">
             תפריט ראשי
           </h2>
           <button
             onClick={onClose}
-            className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-all duration-200"
+            className="p-2 text-white hover:text-blue-300 hover:bg-blue-800 rounded-lg transition-all duration-200"
           >
             <X className="w-6 h-6" />
           </button>

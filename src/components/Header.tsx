@@ -151,7 +151,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
 
   return (
     <>
-      <header className="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-40">
+      <header className="bg-[#0A2540] shadow-lg border-b border-gray-700 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -176,8 +176,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                     onClick={() => handleMenuClick(item.id, item.hasSubmenu)}
                     className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                       currentPage === item.id || (item.submenu && item.submenu.some(sub => sub.id === currentPage))
-                        ? 'text-blue-700 bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-sm'
-                        : 'text-gray-700 hover:text-blue-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100'
+                        ? 'text-blue-300 bg-gradient-to-r from-blue-900 to-blue-800 border border-blue-600 shadow-sm'
+                        : 'text-white hover:text-blue-300 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700'
                     }`}
                   >
                     <span className="hebrew-text">{item.label}</span>
@@ -190,15 +190,15 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                   
                   {/* Desktop Submenu */}
                   {item.hasSubmenu && activeSubmenu === item.id && (
-                    <div className="absolute top-full right-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 py-2 z-50">
+                    <div className="absolute top-full right-0 mt-2 w-80 bg-[#0A2540] rounded-xl shadow-xl border border-blue-600 py-2 z-50">
                       {item.submenu?.map((subItem) => (
                         <button
                           key={subItem.id}
                           onClick={() => handleSubmenuClick(subItem.id)}
                           className={`flex items-center w-full text-right px-6 py-3 text-sm transition-all duration-200 ${
                             currentPage === subItem.id
-                              ? 'text-blue-700 bg-gradient-to-r from-blue-50 to-blue-100 border-r-4 border-blue-500'
-                              : 'text-gray-700 hover:text-blue-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100'
+                              ? 'text-blue-300 bg-gradient-to-r from-blue-800 to-blue-700 border-r-4 border-blue-400'
+                              : 'text-white hover:text-blue-300 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700'
                           }`}
                         >
                           <span className="font-medium hebrew-text">{subItem.label}</span>
@@ -220,21 +220,21 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                     placeholder="חיפוש..."
                     value={searchQuery}
                     onChange={(e) => handleSearch(e.target.value)}
-                    className="w-48 px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-right hebrew-text"
+                    className="w-48 px-4 py-2 pr-10 border border-blue-600 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-right hebrew-text"
                   />
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-blue-300" />
                 </div>
                 
                 {/* Search Results */}
                 {searchResults.length > 0 && (
-                  <div className="absolute top-full right-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 max-h-60 overflow-y-auto">
-                    <div className="px-4 py-2 text-xs text-gray-500 border-b border-gray-200 hebrew-text">
+                  <div className="absolute top-full right-0 mt-2 w-64 bg-[#0A2540] rounded-lg shadow-xl border border-blue-600 py-2 z-50 max-h-60 overflow-y-auto">
+                    <div className="px-4 py-2 text-xs text-blue-300 border-b border-blue-600 hebrew-text">
                       תוצאות חיפוש:
                     </div>
                     {searchResults.slice(0, 8).map((result) => (
                       <button
                         key={result}
-                        className="w-full text-right px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors hebrew-text"
+                        className="w-full text-right px-4 py-3 text-sm text-white hover:bg-blue-800 hover:text-blue-300 transition-colors hebrew-text"
                         onClick={() => handleSearchResultClick(result)}
                       >
                         {getPageTitle(result)}
@@ -244,25 +244,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                 )}
               </div>
 
-              {/* Facebook Icon */}
-              <a 
-                href="https://www.facebook.com/groups/680827564461843"
-                className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
-                title="הצטרפו לקבוצת הפייסבוק שלנו"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-              </a>
-
-              {/* Email Icon */}
-              <a 
-                href="mailto:malka@shalom-india.com?subject=Ref:%20Indiabymalka%20website"
-                className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
-                title="שלחו אימייל למלכה"
-              >
-                <Mail className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
-              </a>
 
               {/* Contact Button */}
               <a 
@@ -279,7 +260,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="lg:hidden p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200"
+              className="lg:hidden p-2 text-white hover:text-blue-300 hover:bg-blue-800 rounded-lg transition-all duration-200"
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -287,28 +268,28 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
         </div>
 
         {/* Mobile Search Bar */}
-        <div className="lg:hidden px-4 pb-4">
+        <div className="lg:hidden px-4 pb-4 bg-[#0A2540]">
           <div className="relative">
             <input
               type="text"
               placeholder="חיפוש באתר..."
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
-              className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-right hebrew-text"
+              className="w-full px-4 py-3 pr-10 border border-blue-600 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-right hebrew-text"
             />
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-blue-300" />
           </div>
           
           {/* Mobile Search Results */}
           {searchResults.length > 0 && (
-            <div className="mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 max-h-48 overflow-y-auto">
-              <div className="px-4 py-2 text-xs text-gray-500 border-b border-gray-200 hebrew-text">
+            <div className="mt-2 bg-[#0A2540] rounded-lg shadow-lg border border-blue-600 py-2 max-h-48 overflow-y-auto">
+              <div className="px-4 py-2 text-xs text-blue-300 border-b border-blue-600 hebrew-text">
                 תוצאות חיפוש:
               </div>
               {searchResults.slice(0, 6).map((result) => (
                 <button
                   key={result}
-                  className="w-full text-right px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 transition-colors hebrew-text"
+                  className="w-full text-right px-4 py-3 text-sm text-white hover:bg-blue-800 transition-colors hebrew-text"
                   onClick={() => handleSearchResultClick(result)}
                 >
                   {getPageTitle(result)}
@@ -317,24 +298,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             </div>
           )}
           
-          {/* Mobile Email and WhatsApp */}
-          <div className="flex items-center justify-center space-x-4 space-x-reverse mt-4">
-            <a 
-              href="https://www.facebook.com/groups/680827564461843"
-              className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg"
-              title="הצטרפו לקבוצת הפייסבוק שלנו"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Facebook className="w-6 h-6" />
-            </a>
-            <a 
-              href="mailto:malka@shalom-india.com?subject=Ref:%20Indiabymalka%20website"
-              className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg"
-              title="שלחו אימייל למלכה"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
+          {/* Mobile WhatsApp */}
+          <div className="flex items-center justify-center mt-4">
             <a 
               href="https://wa.me/919980601979"
               className="flex items-center justify-center w-10 h-10 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
@@ -348,6 +313,56 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
         </div>
       </header>
 
+      {/* Fixed Social Media Sidebar */}
+      <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-3">
+        <a 
+          href="https://www.facebook.com/groups/680827564461843"
+          className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          title="הצטרפו לקבוצת הפייסבוק שלנו"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+        </a>
+        
+        <a 
+          href="mailto:malka@shalom-india.com?subject=Ref:%20Indiabymalka%20website"
+          className="flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          title="שלחו אימייל למלכה"
+        >
+          <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+        </a>
+        
+        <a 
+          href="https://www.instagram.com/indiabymalka/"
+          className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          title="עקבו אחרינו באינסטגרם"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-instagram text-lg group-hover:scale-110 transition-transform duration-200"></i>
+        </a>
+        
+        <a 
+          href="https://www.youtube.com/@INDIABYMALKA"
+          className="flex items-center justify-center w-12 h-12 bg-red-600 text-white rounded-full hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          title="צפו בסרטונים שלנו ביוטיוב"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-youtube text-lg group-hover:scale-110 transition-transform duration-200"></i>
+        </a>
+        
+        <a 
+          href="https://wa.me/919980601979"
+          className="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="שלחו הודעה בוואטסאפ"
+        >
+          <i className="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform duration-200"></i>
+        </a>
+      </div>
       {/* Mobile Menu */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
