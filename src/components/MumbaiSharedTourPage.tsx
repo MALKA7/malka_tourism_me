@@ -300,4 +300,84 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
               מה אומרים הלקוחות
             </h2>
-            <p className="text-xl text-gray-600 hebrew-text">חוויות אמיתיות של קבוצות ישראלי
+            <p className="text-xl text-gray-600 hebrew-text">חוויות אמיתיות של קבוצות ישראליות שטיילו עם מלכה</p>
+          </div>
+
+          {/* Photos with Malka and Groups */}
+          {/* Running Banner */}
+          <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
+            <div className="running-banner whitespace-nowrap">
+              <span className="mx-8">ההרשמה נפתחה - מקומות מוגבלים</span>
+              <span className="mx-8">הרשמו לטיול המאורגן הקרוב לקרלה בהנחייתה של מלכה</span>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <img 
+                src="/tours w malka.png"
+                alt="מלכה עם קבוצה גדולה"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <img 
+                src="/tours w malka 2.png"
+                alt="מלכה עם קבוצה נוספת"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 hebrew-text leading-relaxed italic">"{testimonial.text}"</p>
+                <div className="text-center">
+                  <div className="font-bold text-gray-900 hebrew-text">{testimonial.name}</div>
+                  <div className="text-gray-600 text-sm hebrew-text">{testimonial.location}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6 hebrew-text">
+            צור קשר עם מלכה ותתחיל לתכנן את הטיול שלכם בהודו
+          </h2>
+          <p className="text-xl mb-8 hebrew-text leading-relaxed opacity-95">
+            מוכנים לחוויה בלתי נשכחת בהודו עם קבוצה שלכם? 
+            מלכה תדאג לכל הפרטים ותעניק לכם טיול מושלם
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => onPageChange('contact')}
+              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              תכננו את הטיול שלכם
+            </button>
+            <a 
+              href="https://wa.me/919980601979"
+              className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default OrganizedToursPage;
