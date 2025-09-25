@@ -158,11 +158,10 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             <div className="flex items-center">
               <button 
                 onClick={() => onPageChange('home')}
-                className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                className="hover:opacity-80 transition-opacity"
               >
-                <div className="text-2xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                  <div className="hebrew-text">הודו עם מלכה</div>
-                  <div className="text-lg">India By Malka</div>
+                <div className="text-2xl font-bold text-white hebrew-text">
+                  הודו עם מלכה
                 </div>
               </button>
             </div>
@@ -210,8 +209,10 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             </nav>
 
             {/* Search and Contact */}
-            <div className="hidden lg:flex items-center space-x-4 space-x-reverse">
-              {/* Contact Button */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <div className="text-xl font-bold text-white">
+                India by Malka
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
