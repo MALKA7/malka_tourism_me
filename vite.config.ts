@@ -12,8 +12,5 @@ export default defineConfig({
     hmr: {
       overlay: false
     }
-  },
-  define: {
-    global: 'globalThis',
   }
 });
