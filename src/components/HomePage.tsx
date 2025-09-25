@@ -424,27 +424,6 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
         </div>
       </section>
 
-      {/* Statistics */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 via-white to-green-600 text-white relative stats-section">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
-            <div>
-              <div className="text-6xl font-bold text-white mb-2 counter" data-target="3">0</div>
-              <p className="text-xl hebrew-text text-white">אזורים בהודו בהם מלכה חיה</p>
-            </div>
-            <div>
-              <div className="text-6xl font-bold text-white mb-2 counter" data-target="15">0</div>
-              <p className="text-xl hebrew-text text-white">שנים שמלכה חיה בהודו</p>
-            </div>
-            <div>
-              <div className="text-6xl font-bold text-white mb-2 counter" data-target="261">0</div>
-              <p className="text-xl hebrew-text text-white">נוסעים שקיבלו את עזרתה</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/30 to-indigo-800/30"></div>

@@ -651,34 +651,6 @@ const AboutPage: React.FC<AboutPageProps> = ({ onPageChange }) => {
         </div>
       </section>
 
-      {/* Statistics Banner */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 via-white to-green-600 text-white relative overflow-hidden">
-        {/* Indian Pattern Background */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='0' cy='30' r='4'/%3E%3Ccircle cx='60' cy='30' r='4'/%3E%3Ccircle cx='30' cy='0' r='4'/%3E%3Ccircle cx='30' cy='60' r='4'/%3E%3Ccircle cx='15' cy='15' r='2'/%3E%3Ccircle cx='45' cy='15' r='2'/%3E%3Ccircle cx='15' cy='45' r='2'/%3E%3Ccircle cx='45' cy='45' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '60px 60px'
-          }}>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
-            <div>
-              <div className="text-6xl font-bold text-white mb-2">3</div>
-              <p className="text-xl hebrew-text">אזורים בהודו בהם מלכה חיה</p>
-            </div>
-            <div>
-              <div className="text-6xl font-bold text-white mb-2">15</div>
-              <p className="text-xl hebrew-text">שנים שמלכה חיה בהודו</p>
-            </div>
-            <div>
-              <div className="text-6xl font-bold text-white mb-2">261</div>
-              <p className="text-xl hebrew-text">נוסעים שקיבלו את עזרתה</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
