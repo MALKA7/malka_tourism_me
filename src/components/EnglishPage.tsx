@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, MessageCircle, Globe, Award, Shield, Car, Camera, Building, Waves, Mountain, Facebook, Instagram, Youtube } from 'lucide-react';
+import { MapPin, Clock, Users, Star, Phone, Mail, MessageCircle, Globe, Award, Shield, Car, Camera, Building, Waves, Mountain, Facebook, Instagram, Youtube, CheckCircle } from 'lucide-react';
 
 interface EnglishPageProps {
   onPageChange: (page: string) => void;
@@ -259,6 +259,22 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <img 
                   src={service.image}
+                  alt={service.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
+                    <h3 className="text-lg font-bold text-gray-900 text-left">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-left">{service.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Destinations Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
