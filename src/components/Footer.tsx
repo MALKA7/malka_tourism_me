@@ -13,7 +13,10 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-1">
-            <div className="text-2xl font-bold mb-4 hebrew-text bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">הודו עם מלכה</div>
+            <div className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              <div className="hebrew-text">הודו עם מלכה</div>
+              <div className="text-lg">India By Malka</div>
+            </div>
             <p className="text-slate-300 hebrew-text mb-4">
               טיולים מותאמים אישית להודו עם מדריכה ישראלית מנוסה
             </p>
@@ -178,7 +181,10 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
       <div className="border-t border-slate-700 bg-gradient-to-r from-slate-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="text-center">
-            <div className="text-2xl font-bold mb-2 hebrew-text bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">הודו עם מלכה</div>
+            <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              <div className="hebrew-text">הודו עם מלכה</div>
+              <div className="text-lg">India By Malka</div>
+            </div>
             <p className="text-sm text-slate-400">© כל הזכויות שמורות למלכה איראני</p>
           </div>
         </div>

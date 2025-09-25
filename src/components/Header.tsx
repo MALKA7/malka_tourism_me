@@ -158,13 +158,12 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             <div className="flex items-center">
               <button 
                 onClick={() => onPageChange('home')}
-                className="flex items-center space-x-3 space-x-reverse hover:opacity-80 transition-opacity"
+                className="flex flex-col items-center hover:opacity-80 transition-opacity"
               >
-                <img 
-                  src="/Logo.png" 
-                  alt="India by Malka Logo"
-                  className="h-20 w-auto object-contain"
-                />
+                <div className="text-2xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                  <div className="hebrew-text">הודו עם מלכה</div>
+                  <div className="text-lg">India By Malka</div>
+                </div>
               </button>
             </div>
 
@@ -212,39 +211,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
 
             {/* Search and Contact */}
             <div className="hidden lg:flex items-center space-x-4 space-x-reverse">
-              {/* Search */}
-              <div className="relative">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="חיפוש..."
-                    value={searchQuery}
-                    onChange={(e) => handleSearch(e.target.value)}
-                    className="w-48 px-4 py-2 pr-10 border border-blue-600 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-right hebrew-text"
-                  />
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-blue-300" />
-                </div>
-                
-                {/* Search Results */}
-                {searchResults.length > 0 && (
-                  <div className="absolute top-full right-0 mt-2 w-64 bg-[#0A2540] rounded-lg shadow-xl border border-blue-600 py-2 z-50 max-h-60 overflow-y-auto">
-                    <div className="px-4 py-2 text-xs text-blue-300 border-b border-blue-600 hebrew-text">
-                      תוצאות חיפוש:
-                    </div>
-                    {searchResults.slice(0, 8).map((result) => (
-                      <button
-                        key={result}
-                        className="w-full text-right px-4 py-3 text-sm text-white hover:bg-blue-800 hover:text-blue-300 transition-colors hebrew-text"
-                        onClick={() => handleSearchResultClick(result)}
-                      >
-                        {getPageTitle(result)}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-
               {/* Contact Button */}
             </div>
 
