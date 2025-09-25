@@ -210,9 +210,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
 
             {/* Search and Contact */}
             <div className="hidden lg:flex items-center space-x-4">
-              <div className="text-xl font-bold text-white">
-                India by Malka
-              </div>
+              <div className="text-xl font-bold text-white">India by Malka</div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -241,9 +239,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
           {/* Mobile Search Results */}
           {searchResults.length > 0 && (
             <div className="mt-2 bg-[#0A2540] rounded-lg shadow-lg border border-blue-600 py-2 max-h-48 overflow-y-auto">
-              <div className="px-4 py-2 text-xs text-blue-300 border-b border-blue-600 hebrew-text">
-                תוצאות חיפוש:
-              </div>
+              <div className="text-2xl font-bold text-white hebrew-text">הודו עם מלכה</div>
               {searchResults.slice(0, 6).map((result) => (
                 <button
                   key={result}

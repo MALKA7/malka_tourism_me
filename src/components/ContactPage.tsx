@@ -416,6 +416,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
                     className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300 shadow-lg"
                   />
                   <h3 className="text-2xl font-bold text-gray-900 hebrew-text">מלכה אירני</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 hebrew-text">מלכה אירני</h3>
                   <p className="text-gray-700 hebrew-text font-medium">מדריכה ישראלית מקצועית בהודו</p>
                   <div className="flex justify-center mt-2">
                     {[...Array(5)].map((_, i) => (
