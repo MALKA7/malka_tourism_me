@@ -466,4 +466,10 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
                   
                   <a 
                     href="https://www.youtube.com/@INDIABYMALKA"
-                
+                    className="social-icon youtube hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Subscribe to our YouTube channel"
+                  >
+                    <Youtube className="w-6 h-6" />
+                  </a>
