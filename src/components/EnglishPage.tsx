@@ -473,3 +473,14 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
                   >
                     <Youtube className="w-6 h-6" />
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default EnglishPage;
