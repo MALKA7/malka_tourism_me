@@ -287,6 +287,16 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                 תוצאות חיפוש:
               </div>
               {searchResults.slice(0, 6).map((result) => (
+                <button
+                  key={result}
+                  className="w-full text-right px-4 py-3 text-sm text-white hover:bg-blue-800 hover:text-blue-300 transition-colors hebrew-text"
+                  onClick={() => handleSearchResultClick(result)}
+                >
+                  {getPageTitle(result)}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 
