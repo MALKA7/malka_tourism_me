@@ -186,4 +186,6 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
             </p>
             <button 
               onClick={() => onPageChange('contact')}
-              className="
+              className="btn-primary text-lg px-8 py-4"
+            >
+              צור קשר ל
