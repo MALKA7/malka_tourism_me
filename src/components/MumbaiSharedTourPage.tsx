@@ -192,6 +192,80 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
       )
     },
     included: {
+      title: 'כלול',
+      content: (
+        <div className="space-y-4">
+          <ul className="space-y-3 text-gray-700">
+            <li className="flex items-center hebrew-text">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              מדריכה בעברית
+            </li>
+            <li className="flex items-center hebrew-text">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              איסוף והחזרה לנקודת מפגש
+            </li>
+            <li className="flex items-center hebrew-text">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              רכב ממוזג
+            </li>
+            <li className="flex items-center hebrew-text">
+              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
+              מים
+            </li>
+          </ul>
+        </div>
+      )
+    },
+    notIncluded: {
+      title: 'לא כלול במחיר',
+      content: (
+        <div className="space-y-4">
+          <ul className="space-y-3 text-gray-700">
+            <li className="flex items-center hebrew-text">
+              <span className="w-5 h-5 text-red-600 ml-2">✗</span>
+              ארוחות
+            </li>
+            <li className="flex items-center hebrew-text">
+              <span className="w-5 h-5 text-red-600 ml-2">✗</span>
+              כניסות לאתרים
+            </li>
+            <li className="flex items-center hebrew-text">
+              <span className="w-5 h-5 text-red-600 ml-2">✗</span>
+              שעות נוספות
+            </li>
+          </ul>
+        </div>
+      )
+    },
+    price: {
+      title: 'מחיר',
+      content: (
+        <div className="space-y-6">
+          <div className="bg-blue-50 p-6 rounded-lg">
+            <h4 className="font-bold text-blue-900 mb-3 hebrew-text">מחיר לאדם בקבוצה של 10 אנשים 150 דולר</h4>
+          </div>
+          <div className="bg-orange-50 p-6 rounded-lg">
+            <h4 className="font-bold text-orange-900 mb-3 hebrew-text">מעל גיל 13</h4>
+            <p className="text-orange-800 hebrew-text">הטיול לא מתאים לילדים</p>
+          </div>
+        </div>
+      )
+    },
+    notes: {
+      title: 'הערות',
+      content: (
+        <div className="space-y-4">
+          <div className="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+            <ul className="space-y-3 text-gray-700">
+              <li className="hebrew-text">• נקודת איסוף משער הודו מול מלון טאג' בקולבה</li>
+              <li className="hebrew-text">• מומלץ להביא נעליים נוחות</li>
+              <li className="hebrew-text">• הטיול כולל הליכה רבה</li>
+            </ul>
+          </div>
+        </div>
+      )
+    }
+  };
 
   return (
     <div className="min-h-screen fade-in">
