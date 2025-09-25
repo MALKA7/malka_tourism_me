@@ -166,72 +166,30 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
   return (
     <div className="min-h-screen fade-in">
       {/* Hero Section */}
-          {/* Running Banner */}
-          <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
-            <div className="running-banner whitespace-nowrap">
-              <span className="mx-8">ההרשמה נפתחה - מקומות מוגבלים</span>
-              <span className="mx-8">הרשמו לטיול המאורגן הקרוב לקרלה בהנחייתה של מלכה</span>
-            </div>
-          </div>
-          
       <section className="relative h-96">
         <div className="absolute inset-0">
-              טיולים מאורגנים
+          <img 
             src="/organised tours.png" 
             alt="סיורים בעברית לקבוצות בהודו"
             className="w-full h-full object-cover"
-
-                src="/Kerala.png" 
-                alt="קרלה"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
-                  שם הטיול: הודו בשלושה טעמים
-                </h3>
-                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
-                  טיול שמתחיל בקצב המהיר של מומבאי, העיר הענקית והמרתקת שמציעה שילוב בלתי נגמר של המודרני והמסורתי. 
-                  תיהנו מהרחובות הסואנים, מהשווקים הצבעוניים ומתרבות עשירה, ותבינו את מהות העיר שתמיד במרוץ קדימה.
-                  לאחר מכן, תעברו לבנגלור, בירת הטכנולוגיה של הודו, מקום שבו היי-טק וחדשנות נפגשים עם קסם מקומי. 
-                  כאן תרגישו את האווירה המיוחדת של העיר, המשלבת בין עתיד לבין מסורת, בין תעשייה לבין טבע.
-                  החלק האחרון יוביל אתכם לקרלה – האזור הירוק, השקט והקסום של הודו. כאן תצללו לתוך חוויות טבע מרהיבות, 
-                  תיהנו מתעלות מים יפהפיות, תיהנו מהשקט ומהשלווה של האזור, ותתמלאו באנרגיה מחודשת מהסביבה המיוחדת הזו.
-                </p>
-                <button 
-                  onClick={() => onPageChange('west-south-tour')}
-                  className="btn-primary"
-                >
-                  קראו עוד
-                </button>
-              </div>
-            </div>
-
-            {/* Kolkata Tour */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-              <img 
-                src="/kolkata.png" 
-                alt="קולקטה"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
-                  שם הטיול: מהבירה הכלכלית לתרבותית – הודו בין קצוות
-                </h3>
-                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
-                  הצטרפו למסע נדיר ממערב למזרח הודו – טיול צבעוני מסעיר שיטיל אור על שני עולמות שונים כל כך באותה מדינה. 
-                  במומבאי, לב ההודו המודרנית – שווקים, קולנוע, גורדי שחקים ונשמה גדולה. משם נמשיך בטיסה ללב המזרח – 
-                  מדינת מערב בנגל. נגיע לכולכתא, העיר שמכונה "עיר האושר": בירתה התרבותית של הודו, מקום הולדתו של טאגור, 
-                  ושל תה חם בלב חם. ולסיום – הרפתקה ייחודית בטבע: שייט וספארי בשמורת הסונדרבן, אזור הדלתא הגדול בעולם, 
-                  ביתו של הטיגריס הבנגלי והקסם הפראי. הודו שונה. הודו עמוקה. הודו, שלא הכרתם.
-                </p>
-                <button 
-                  onClick={() => onPageChange('west-east-tour')}
-                  className="btn-primary"
-                >
-                  קראו עוד
-                </button>
-              </div>
-            </div>
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center text-center">
+          <div className="text-white max-w-4xl">
+            <h1 className="text-5xl font-bold mb-6 hebrew-text">
+              סיורים בעברית לקבוצות בהודו
+            </h1>
+            <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
+              טיולים מאורגנים מקצועיים לקבוצות עם הדרכה בעברית ותכנון מותאם אישית
+            </p>
+            <button 
+              onClick={() => onPageChange('contact')}
+              className="btn-primary text-lg px-8 py-4"
+            >
+              צור קשר לתכנון הטיול שלכם
+            </button>
           </div>
         </div>
       </section>
@@ -351,38 +309,20 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
               <img 
                 src="/tours w malka.png"
                 alt="מלכה עם קבוצה גדולה"
+          {/* Running Banner */}
+          <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
+            <div className="running-banner whitespace-nowrap">
+              <span className="mx-8">ההרשמה נפתחה - מקומות מוגבלים</span>
+              <span className="mx-8">הרשמו לטיול המאורגן הקרוב לקרלה בהנחייתה של מלכה</span>
+            </div>
+          </div>
+          
                 className="w-full h-64 object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              טיולים מאורגנים
                 <p className="text-white text-lg font-medium hebrew-text text-center">מלכה עם קבוצה בטיול מאורגן</p>
               </div>
             </div>
-            
-            <div className="relative overflow-hidden rounded-xl shadow-lg">
-              <img 
-                src="/organised tours.png"
-                alt="קבוצה גדולה בטיול"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <p className="text-white text-lg font-medium hebrew-text text-center">קבוצות ישראליות בהודו</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                  ))}
-                </div>
-                
-                <p className="text-gray-700 hebrew-text leading-relaxed italic mb-4 text-sm">
-                  "{testimonial.text}"
-                </p>
                 
                 <div className="text-center">
                   <div className="font-bold text-gray-900 hebrew-text">{testimonial.name}</div>
@@ -393,14 +333,15 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
           </div>
         </div>
       </section>
-
-      {/* Call to Action */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <Users className="w-8 h-8 text-blue-600" />
-            </div>
+          <img 
+            src="/organised tours.png" 
+            alt="סיורים בעברית לקבוצות בהודו"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <h1 className="text-5xl font-bold text-white hebrew-text text-center">
+              טיולים מאורגנים
+            </h1>
           </div>
           <h2 className="text-4xl font-bold mb-6 hebrew-text">
             צור קשר עם מלכה ותתחיל לתכנן את הטיול שלכם בהודו
@@ -424,6 +365,68 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
             >
               WhatsApp
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Tours Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Kerala Tour */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+              <img 
+                src="/Kerala.png" 
+                alt="קרלה"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
+                  שם הטיול: הודו בשלושה טעמים
+                </h3>
+                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
+                  טיול שמתחיל בקצב המהיר של מומבאי, העיר הענקית והמרתקת שמציעה שילוב בלתי נגמר של המודרני והמסורתי. 
+                  תיהנו מהרחובות הסואנים, מהשווקים הצבעוניים ומתרבות עשירה, ותבינו את מהות העיר שתמיד במרוץ קדימה.
+                  לאחר מכן, תעברו לבנגלור, בירת הטכנולוגיה של הודו, מקום שבו היי-טק וחדשנות נפגשים עם קסם מקומי. 
+                  כאן תרגישו את האווירה המיוחדת של העיר, המשלבת בין עתיד לבין מסורת, בין תעשייה לבין טבע.
+                  החלק האחרון יוביל אתכם לקרלה – האזור הירוק, השקט והקסום של הודו. כאן תצללו לתוך חוויות טבע מרהיבות, 
+                  תיהנו מתעלות מים יפהפיות, תיהנו מהשקט ומהשלווה של האזור, ותתמלאו באנרגיה מחודשת מהסביבה המיוחדת הזו.
+                </p>
+                <button 
+                  onClick={() => onPageChange('west-south-tour')}
+                  className="btn-primary"
+                >
+                  קראו עוד
+                </button>
+              </div>
+            </div>
+
+            {/* Kolkata Tour */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+              <img 
+                src="/kolkata.png" 
+                alt="קולקטה"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
+                  שם הטיול: מהבירה הכלכלית לתרבותית – הודו בין קצוות
+                </h3>
+                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
+                  הצטרפו למסע נדיר ממערב למזרח הודו – טיול צבעוני מסעיר שיטיל אור על שני עולמות שונים כל כך באותה מדינה. 
+                  במומבאי, לב ההודו המודרנית – שווקים, קולנוע, גורדי שחקים ונשמה גדולה. משם נמשיך בטיסה ללב המזרח – 
+                  מדינת מערב בנגל. נגיע לכולכתא, העיר שמכונה "עיר האושר": בירתה התרבותית של הודו, מקום הולדתו של טאגור, 
+                  ושל תה חם בלב חם. ולסיום – הרפתקה ייחודית בטבע: שייט וספארי בשמורת הסונדרבן, אזור הדלתא הגדול בעולם, 
+                  ביתו של הטיגריס הבנגלי והקסם הפראי. הודו שונה. הודו עמוקה. הודו, שלא הכרתם.
+                </p>
+                <button 
+                  onClick={() => onPageChange('west-east-tour')}
+                  className="btn-primary"
+                >
+                  קראו עוד
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
