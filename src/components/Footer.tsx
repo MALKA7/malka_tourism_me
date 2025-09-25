@@ -64,14 +64,6 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                   טיולים מאורגנים
                 </button>
               </li>
-              <li>
-                <button 
-                  onClick={() => onPageChange('weddings')}
-                  className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:translate-x-1 transform duration-200"
-                >
-                  חתונות בהודו
-                </button>
-              </li>
             </ul>
           </div>
 
