@@ -179,11 +179,8 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center text-center">
           <div className="text-white max-w-4xl">
             <h1 className="text-5xl font-bold mb-6 hebrew-text">
-              סיורים בעברית לקבוצות בהודו
+              גלה את מומבאי: סיור קבוצתי בן 8 שעות
             </h1>
-            <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
-              טיולים מאורגנים מקצועיים לקבוצות עם הדרכה בעברית ותכנון מותאם אישית
-            </p>
             <button 
               onClick={() => onPageChange('contact')}
               className="btn-primary text-lg px-8 py-4"
@@ -191,6 +188,15 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
               צור קשר לתכנון הטיול שלכם
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Tour Description Section */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xl text-gray-800 leading-relaxed hebrew-text">
+            הצטרפו לסיור המשותף במומבאי – חוויה ייחודית בתאריכים קבועים! הסיור מתקיים ברכב מיניבוס נוח המתאים ל-12 משתתפים בלבד, לכן חשוב להירשם מראש ולשמור את מקומכם. במהלך 8 שעות מרתקות נגלה יחד את סודות העיר, כולל עצירה לארוחת צהריים טעימה. אל תחמיצו את ההזדמנות לחוות את מומבאי בצורה אותנטית ומלאת חוויות!
+          </p>
         </div>
       </section>
 
