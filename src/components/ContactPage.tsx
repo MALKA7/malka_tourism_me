@@ -178,6 +178,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
             <p className="text-xl text-gray-600 hebrew-text">
               בחרו את הדרך הנוחה לכם ביותר ליצירת קשר
             </p>
+            <p className="text-lg text-gray-700 hebrew-text mt-4">
+              נשמח לענות לפנייתכם בדרך כלל בתוך 24–48 שעות
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -204,90 +207,120 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
         </div>
       </section>
 
-      {/* Working Hours */}
+      {/* Trusted by Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              שעות פעילות
+              אמון של מטיילים, חברות ומוסדות ברחבי העולם
             </h2>
             <p className="text-xl text-gray-600 hebrew-text">
-              מלכה זמינה לשירותכם בשעות הבאות
+              גאים לעבוד עם מטיילים, חברות ומוסדות מכל רחבי העולם
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-              {workingHours.map((schedule, index) => (
-                <div key={index} className={`p-6 flex items-center justify-between ${index !== workingHours.length - 1 ? 'border-b border-gray-200' : ''}`}>
-                  <div className="flex items-center">
-                    <Clock className="w-6 h-6 text-blue-600 mr-4" />
-                    <div>
-                      <h3 className="font-semibold text-gray-900 hebrew-text">{schedule.day}</h3>
-                      <p className="text-gray-600 hebrew-text">{schedule.hours}</p>
-                    </div>
-                  </div>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    schedule.status === 'זמינה' 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-yellow-100 text-yellow-800'
-                  } hebrew-text`}>
-                    {schedule.status}
-                  </span>
-                </div>
-              ))}
+          {/* Country Flags */}
+          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-6 mb-12">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇮🇹</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">איטליה</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇺🇸</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">ארה"ב</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇨🇦</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">קנדה</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇿🇦</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">דרום אפריקה</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇮🇱</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">ישראל</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇲🇽</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">מקסיקו</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇨🇳</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">סין</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇧🇷</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">ברזיל</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-12 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200">
+                <span className="text-2xl">🇬🇧</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text">אנגליה</span>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Why Choose Malka */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              למה לבחור במלכה?
-            </h2>
-            <p className="text-xl text-gray-600 hebrew-text">
-              הסיבות שהופכות את מלכה למדריכה המובילה בהודו
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChooseMalka.map((reason, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
-                  <reason.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 hebrew-text">{reason.title}</h3>
-                <p className="text-gray-600 hebrew-text leading-relaxed">{reason.description}</p>
+          {/* Company Logos */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
+                <span className="text-xs font-bold text-blue-600 text-center">BERMAD</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              השירותים שלנו
-            </h2>
-            <p className="text-xl text-gray-600 hebrew-text">
-              מגוון שירותים מקצועיים לטיול מושלם בהודו
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 hebrew-text">{service.name}</h3>
+              <span className="text-sm text-gray-600 hebrew-text text-center">ברמד</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
+                <span className="text-xs font-bold text-blue-600 text-center">EL AL</span>
               </div>
-            ))}
+              <span className="text-sm text-gray-600 hebrew-text text-center">אל על</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
+                <span className="text-xs font-bold text-blue-600 text-center">KNESSET</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text text-center">כנסת</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
+                <span className="text-xs font-bold text-blue-600 text-center">DR. FISCHER</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text text-center">ד"ר פישר</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
+                <span className="text-xs font-bold text-blue-600 text-center">LAGENTA</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text text-center">לגנטה</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
+                <span className="text-xs font-bold text-blue-600 text-center">EGGED</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text text-center">אגד</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
+                <span className="text-xs font-bold text-blue-600 text-center hebrew-text">שוקולד השחר</span>
+              </div>
+              <span className="text-sm text-gray-600 hebrew-text text-center">שוקולד השחר</span>
+            </div>
           </div>
         </div>
       </section>
