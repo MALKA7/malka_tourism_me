@@ -287,6 +287,9 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
               <p className="text-blue-800 leading-relaxed text-center">
                 All tours are conducted in English by Malka, who has lived in India for over 15 years and understands both Western and Indian cultures.
               </p>
+              <p className="text-blue-800 leading-relaxed mt-4 text-center">
+                For Historical monuments and museums, Malka works alongside licensed guides to ensure a complete experience.
+              </p>
             </div>
           </div>
         </div>
@@ -304,63 +307,133 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
             </p>
           </div>
 
-          {/* Destinations Grid - 4x2 layout */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {destinations.map((destination, index) => (
-              <div key={index} className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group">
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <img 
                   src={destination.image}
-                  alt={`${destination.name} - ${destination.description}`}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  alt={destination.name}
+                  className="w-full h-48 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                
-                {/* Tour Highlight Icons */}
-                <div className="absolute top-4 left-4 flex space-x-2">
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Clock className="w-4 h-4 text-white" />
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{destination.name}</h3>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center justify-center">
+                      <Clock className="w-5 h-5 text-blue-600 mr-3" />
+                      <span>8 hours</span>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <Car className="w-5 h-5 text-green-600 mr-3" />
+                      <span>Air-conditioned vehicle</span>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <Users className="w-5 h-5 text-purple-600 mr-3" />
+                      <span>English-speaking guide</span>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <span className="text-lg mr-3">🏛️</span>
+                      <span className="text-sm">Licensed guide at heritage sites</span>
+                    </div>
                   </div>
-                  <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Car className="w-4 h-4 text-white" />
+
+                  <div className="mb-6">
+                    <h4 className="font-bold text-gray-900 mb-2 text-center">Tour Highlights:</h4>
+                    <p className="text-gray-600 text-center text-sm">{destination.description}</p>
                   </div>
-                  <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Users className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-                
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="text-xl font-bold mb-1 text-left">{destination.name}</h3>
-                  <p className="text-sm opacity-90 text-left">{destination.description}</p>
+                  
+                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    Learn More
+                  </button>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Tour Information */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-200">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="flex flex-col items-start text-left">
-                <Globe className="w-12 h-12 text-blue-600 mb-3" />
-                <h3 className="text-lg font-bold text-blue-900 mb-2 text-left">English Tours</h3>
-                <p className="text-blue-700 text-left">All tours conducted in English with Western guide</p>
+      {/* YouTube Video Gallery Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Experience Our Tours
+            </h2>
+            <p className="text-xl text-gray-600">
+              Watch authentic videos from our tours across India
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {/* Video 1 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/aXMoMrTe5lA"
+                  title="India Tour Experience 1"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-              
-              <div className="flex flex-col items-start text-left">
-                <Car className="w-12 h-12 text-green-600 mb-3" />
-                <h3 className="text-lg font-bold text-blue-900 mb-2 text-left">Transportation</h3>
-                <p className="text-blue-700 text-left">Transportation included</p>
+            </div>
+
+            {/* Video 2 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/el6lc9AdRLs"
+                  title="India Tour Experience 2"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-              
-              <div className="flex flex-col items-start text-left">
-                <Clock className="w-12 h-12 text-purple-600 mb-3" />
-                <h3 className="text-lg font-bold text-blue-900 mb-2 text-left">Duration</h3>
-                <p className="text-blue-700 text-left">Duration: 8 hours</p>
+            </div>
+
+            {/* Video 3 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/JB-81GuRdgc"
+                  title="India Tour Experience 3"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
-              
-              <div className="flex flex-col items-start text-left">
-                <Award className="w-12 h-12 text-orange-600 mb-3" />
-                <h3 className="text-lg font-bold text-blue-900 mb-2 text-left">Unique Experience</h3>
-                <p className="text-blue-700 text-left">Unique way of exploring India that no other Cultural guide offers</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Video 4 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/WiTU4Q3AvEI"
+                  title="India Tour Experience 4"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Video 5 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-video">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/EFyEt2Jo1DQ"
+                  title="India Tour Experience 5"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -379,102 +452,144 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-center p-4 bg-blue-50 rounded-lg">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
-                    <Phone className="w-6 h-6 text-white" />
+            <div className="lg:col-span-2">
+              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center p-4 bg-blue-50 rounded-lg">
+                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-900 text-left">Phone</h4>
+                      <a href="tel:+919980601979" className="text-blue-600 hover:text-blue-800">
+                        +91-9980601979
+                      </a>
+                    </div>
                   </div>
-                  <div className="text-left">
-                    <h4 className="font-bold text-gray-900 text-left">Phone</h4>
-                    <a href="tel:+919980601979" className="text-blue-600 hover:text-blue-800">
-                      +91-9980601979
-                    </a>
+
+                  <div className="flex items-center p-4 bg-orange-50 rounded-lg">
+                    <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-900 text-left">Email</h4>
+                      <a 
+                        href="mailto:malka@shalom-india.com?subject=Ref:%20IndiabyMalka%20Website"
+                        className="text-orange-600 hover:text-orange-800"
+                      >
+                        malka@shalom-india.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center p-4 bg-green-50 rounded-lg">
+                    <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                      <MessageCircle className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-900 text-left">WhatsApp</h4>
+                      <a 
+                        href="https://wa.me/+919980601979"
+                        className="text-green-600 hover:text-green-800"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        +91-9980601979
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center p-4 bg-purple-50 rounded-lg">
+                    <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-bold text-gray-900 text-left">Location</h4>
+                      <p className="text-purple-600">Bangalore, Karnataka, India</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-center p-4 bg-orange-50 rounded-lg">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-bold text-gray-900 text-left">Email</h4>
+                {/* Social Media Icons */}
+                <div className="mt-8 pt-8 border-t border-gray-200">
+                  <h4 className="text-lg font-bold text-gray-900 mb-6 text-center">Follow Us</h4>
+                  <div className="flex justify-center space-x-6">
                     <a 
-                      href="mailto:malka@shalom-india.com?subject=Ref:%20IndiabyMalka%20Website"
-                      className="text-orange-600 hover:text-orange-800"
-                    >
-                      malka@shalom-india.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center p-4 bg-green-50 rounded-lg">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
-                    <MessageCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-bold text-gray-900 text-left">WhatsApp</h4>
-                    <a 
-                      href="https://wa.me/+919980601979"
-                      className="text-green-600 hover:text-green-800"
+                      href="https://www.facebook.com/groups/680827564461843"
+                      className="social-icon facebook hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
                       target="_blank"
                       rel="noopener noreferrer"
+                      title="Join our Facebook group"
                     >
-                      +91-9980601979
+                      <Facebook className="w-6 h-6" />
+                    </a>
+                    
+                    <a 
+                      href="https://www.instagram.com/indiabymalka/"
+                      className="social-icon instagram hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Follow us on Instagram"
+                    >
+                      <Instagram className="w-6 h-6" />
+                    </a>
+                    
+                    <a 
+                      href="https://www.youtube.com/@INDIABYMALKA"
+                      className="social-icon youtube hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Subscribe to our YouTube channel"
+                    >
+                      <Youtube className="w-6 h-6" />
                     </a>
                   </div>
                 </div>
-
-                <div className="flex items-center p-4 bg-purple-50 rounded-lg">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-bold text-gray-900 text-left">Location</h4>
-                    <p className="text-purple-600">Bangalore, Karnataka, India</p>
-                  </div>
-                </div>
               </div>
+            </div>
+            
+            {/* Malka's Image */}
+            <div className="lg:col-span-1">
+              <img 
+                src="/Malka.jpg" 
+                alt="Malka Irani - English-speaking tour guide in India"
+                className="w-full h-full object-cover rounded-xl shadow-lg max-w-sm mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-              {/* Social Media Icons */}
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h4 className="text-lg font-bold text-gray-900 mb-6 text-center">Follow Us</h4>
-                <div className="flex justify-center space-x-6">
-                  <a 
-                    href="https://www.facebook.com/groups/680827564461843"
-                    className="social-icon facebook hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Join our Facebook group"
-                  >
-                    <Facebook className="w-6 h-6" />
-                  </a>
-                  
-                  <a 
-                    href="https://www.instagram.com/indiabymalka/"
-                    className="social-icon instagram hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Follow us on Instagram"
-                  >
-                    <Instagram className="w-6 h-6" />
-                  </a>
-                  
-                  <a 
-                    href="https://www.youtube.com/@INDIABYMALKA"
-                    className="social-icon youtube hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Subscribe to our YouTube channel"
-                  >
-                    <Youtube className="w-6 h-6" />
-                  </a>
-                </div>
-              </div>
+      {/* Call to Action */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Start Your Indian Adventure?
+            </h2>
+            <p className="text-xl mb-8 leading-relaxed opacity-95">
+              Contact Malka today and let's start planning your dream trip to incredible India 
+              with professional English-speaking guidance
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                onClick={() => onPageChange('contact')}
+                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                Plan Your Journey
+              </button>
+              <a 
+                href="https://wa.me/+919980601979"
+                className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
