@@ -165,49 +165,22 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
 
   return (
     <div className="min-h-screen fade-in">
-      {/* Running Banner */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
-        <div className="running-banner whitespace-nowrap">
-          <span className="mx-8">ההרשמה נפתחה - מקומות מוגבלים</span>
-          <span className="mx-8">הרשמו לטיול המאורגן הקרוב לקרלה בהנחייתה של מלכה</span>
-        </div>
-      </div>
-
       {/* Hero Section */}
+          {/* Running Banner */}
+          <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
+            <div className="running-banner whitespace-nowrap">
+              <span className="mx-8">ההרשמה נפתחה - מקומות מוגבלים</span>
+              <span className="mx-8">הרשמו לטיול המאורגן הקרוב לקרלה בהנחייתה של מלכה</span>
+            </div>
+          </div>
+          
       <section className="relative h-96">
         <div className="absolute inset-0">
-          <img 
-            src="/organised tours.png" 
-            alt="טיולים מאורגנים"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        </div>
-        <div className="relative z-10 flex items-center justify-center h-full">
-          <div className="text-center text-white px-4">
-            <h1 className="text-5xl font-bold mb-6 hebrew-text">
               טיולים מאורגנים
-            </h1>
-            <p className="text-xl mb-8 hebrew-text max-w-2xl mx-auto">
-              חוויות בלתי נשכחות בהודו עם הדרכה מקצועית בעברית
-            </p>
-          </div>
-        </div>
-      </section>
+            src="/organised tours.png" 
+            alt="סיורים בעברית לקבוצות בהודו"
+            className="w-full h-full object-cover"
 
-      {/* Organized Tours Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              הטיולים המאורגנים שלנו
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Kerala Tour */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-              <img 
                 src="/Kerala.png" 
                 alt="קרלה"
                 className="w-full h-64 object-cover"
