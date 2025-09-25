@@ -179,7 +179,7 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center text-center">
           <div className="text-white max-w-4xl">
             <h1 className="text-5xl font-bold mb-6 hebrew-text">
-              סיורים בעברית לקבוצות בהודו – עם מלכה
+              סיורים בעברית לקבוצות בהודו
             </h1>
             <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
               טיולים מאורגנים מקצועיים לקבוצות עם הדרכה בעברית ותכנון מותאם אישית

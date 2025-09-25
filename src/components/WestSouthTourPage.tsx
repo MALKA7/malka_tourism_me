@@ -270,7 +270,7 @@ const WestSouthTourPage: React.FC<WestSouthTourPageProps> = ({ onPageChange }) =
               onClick={() => onPageChange('contact')}
               className="btn-primary text-lg px-8 py-4"
             >
-              גלו את המחירים
+              טיול בהכנה
             </button>
           </div>
         </div>

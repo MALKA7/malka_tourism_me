@@ -62,7 +62,7 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                 <div className="pricing-table bg-blue-50 p-6 rounded-xl shadow-lg border border-blue-200">
                   <h3 className="text-center mb-5 text-blue-900 text-xl font-bold hebrew-text">מחירי שירות התכנון</h3>
                   <div className="price-item border border-blue-200 p-4 rounded-lg mb-3 bg-white">
-                    <div className="text-2xl font-bold text-blue-600 mb-2">$350</div>
+                    <div className="text-2xl font-bold text-blue-600 mb-2">$200</div>
                     <p className="text-sm text-gray-700 hebrew-text m-0">טיול עד 10 ימים – תכנון מקיף לטיול קצר</p>
                   </div>
                   <div className="price-item border border-green-200 p-4 rounded-lg bg-white">
@@ -317,32 +317,6 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                 "מלכה תכננה לנו טיול בדרום הודו למשך 3 חודשים, במקצועיות רבה. ענתה בסבלנות לכל שאלה ומלווה אותנו לאורך כל הדרך."
               </p>
               <div className="testimonial-author hebrew-text font-bold text-gray-900">מלי</div>
-              <div className="testimonial-location text-gray-600">ישראל</div>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="testimonial-stars mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
-                "אני ואמי נעזרנו במלכה כדי לתכנן את טיולינו בקרלה, קיבלנו ייעוץ ברמה גבוהה מאוד, מקצועי, מתוכנן היטב, ממליצות מאוד! אישה מקסימה שיודעת את העבודה ומכירה את באיזור בצורה מעולה."
-              </p>
-              <div className="testimonial-author hebrew-text font-bold text-gray-900">רעות</div>
-              <div className="testimonial-location text-gray-600">ישראל</div>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="testimonial-stars mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
-                "טיילנו שלושה שבועות במומבאי ובדרום הודו - חוויה מרתקת ומעשירה גם בזכותה ובעזרתה של מלכה שסייעה לנו בהכנת הטיול, מיקוד הרצונות שלנו ובהכנת המסלול תוך התחשבות ברצונות, ביעדים, בתאריכים ובגאוגרפיה. הקשר עם מלכה לקראת הטיול ובמהלכו היה רצוף, זמין וענייני מאוד. למלכה יש ידע והכרות רבה עם האתרים השונים בדרום הודו. רוב מקומות הלינה שנבחרו והוזמנו על ידי מלכה היו מוצלחים ומתאימים לנו. מלכה גם עזרה לנו בייעוץ והתלבטיות במהלך הטיול כשנזקקו לעזרתה. שני ימי ההדרכה במומבאי על ידי בעלה, ברהם, ומדריכה נוספת מטעמה היו מוצלחים ומרתקים ואיפשרו לנו להכיר את הנקודות המרכזיות באופן שלא יכולנו לעשות זאת לבד. הנהג ויידיש שמלכה תאמה וליווה אותנו שבועיים במדינת תמיל נאדו וקארלה, היה אדיב, עמד בזמנים, נהג במיומנות בכבישי הודו המאתגרים ודובר אנגלית שאפשרה תקשורת. הטיול בזכות מלכה אפשר לנו להכיר מקומות מרתקים בדרום הודו המרוחקים מ'שביל החומוס' כגון אורוויל וקנציפוראום. הטיול שילב ערים, שייט, מקדשים, תרבות, יערות, קצת נופש ומגוון מרתק של מפגשים מקומיים. לסיכום - הלויווי והייעוץ של מלכה אפשר לנו להגשים את המסע בדרום הודו שלנו כפי שרצינו. ממליצים בחום רב"
-              </p>
-              <div className="testimonial-author hebrew-text font-bold text-gray-900">דני קליין</div>
               <div className="testimonial-location text-gray-600">ישראל</div>
             </div>
           </div>

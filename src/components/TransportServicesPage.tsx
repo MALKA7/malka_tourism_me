@@ -135,7 +135,7 @@ const TransportServicesPage: React.FC<TransportServicesPageProps> = ({ onPageCha
               סוגי רכבים זמינים
             </h2>
             <p className="text-xl text-gray-600 hebrew-text">
-              בחרו את הרכב המתאים לגודל הקבוצה שלכם
+              ראו בתמונה את הרכב המיועד
             </p>
           </div>
 

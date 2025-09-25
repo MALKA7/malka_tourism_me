@@ -705,13 +705,13 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
               <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-right p-6 bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer flex justify-between items-center"
+                  className="w-full text-right p-6 bg-[#0A2540] hover:bg-blue-800 text-white transition-colors cursor-pointer flex justify-between items-center"
                 >
-                  <span className="font-bold text-gray-900 hebrew-text">{item.question}</span>
+                  <span className="font-bold text-white hebrew-text">{item.question}</span>
                   {expandedFAQ === index ? (
-                    <ChevronUp className="w-5 h-5 text-gray-600" />
+                    <ChevronUp className="w-5 h-5 text-white" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-600" />
+                    <ChevronDown className="w-5 h-5 text-white" />
                   )}
                 </button>
                 {expandedFAQ === index && (
