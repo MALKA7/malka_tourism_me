@@ -187,12 +187,8 @@ const AdditionalCitiesPage: React.FC<AdditionalCitiesPageProps> = ({ onPageChang
                       <Clock className="w-5 h-5 text-blue-600 ml-2" />
                       <span className="text-gray-700 hebrew-text font-medium">{city.duration}</span>
                     </div>
-                    <div className="text-xl font-bold text-blue-600">{city.price}</div>
                   </div>
                   
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    למדו עוד
-                  </button>
                 </div>
               </div>
             ))}

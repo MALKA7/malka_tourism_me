@@ -26,7 +26,7 @@ const TransportServicesPage: React.FC<TransportServicesPageProps> = ({ onPageCha
       passengerCount: 10
     },
     {
-      name: 'אוטובוסים',
+      name: 'אוטובוס',
       capacity: 'קבוצות גדולות',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
       passengerCount: 25
