@@ -304,11 +304,6 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
           </div>
 
           {/* Photos with Malka and Groups */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="relative overflow-hidden rounded-xl shadow-lg">
-              <img 
-                src="/tours w malka.png"
-                alt="מלכה עם קבוצה גדולה"
           {/* Running Banner */}
           <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
             <div className="running-banner whitespace-nowrap">
@@ -317,13 +312,18 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
             </div>
           </div>
           
-                className="w-full h-64 object-cover"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
               טיולים מאורגנים
-                <p className="text-white text-lg font-medium hebrew-text text-center">מלכה עם קבוצה בטיול מאורגן</p>
-              </div>
-            </div>
-                
+                src="/tours w malka.png"
+                alt="מלכה עם קבוצה גדולה"
+          {/* Running Banner */}
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 hebrew-text leading-relaxed italic">"{testimonial.text}"</p>
                 <div className="text-center">
                   <div className="font-bold text-gray-900 hebrew-text">{testimonial.name}</div>
                   <div className="text-gray-600 text-sm hebrew-text">{testimonial.location}</div>
@@ -333,57 +333,6 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
           </div>
         </div>
       </section>
-          <img 
-            src="/organised tours.png" 
-            alt="סיורים בעברית לקבוצות בהודו"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 className="text-5xl font-bold text-white hebrew-text text-center">
-              טיולים מאורגנים
-            </h1>
-          </div>
-          <h2 className="text-4xl font-bold mb-6 hebrew-text">
-            צור קשר עם מלכה ותתחיל לתכנן את הטיול שלכם בהודו
-          </h2>
-          <p className="text-xl mb-8 hebrew-text leading-relaxed opacity-95">
-            מוכנים לחוויה בלתי נשכחת בהודו עם קבוצה שלכם? 
-            מלכה תדאג לכל הפרטים ותעניק לכם טיול מושלם
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => onPageChange('contact')}
-              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              תכננו את הטיול שלכם
-            </button>
-            <a 
-              href="https://wa.me/919980601979"
-              className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Tours Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Kerala Tour */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-              <img 
-                src="/Kerala.png" 
-                alt="קרלה"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
-                  שם הטיול: הודו בשלושה טעמים
-                </h3>
 
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
@@ -418,5 +367,3 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
 };
 
 export default OrganizedToursPage;
-  )
-}
