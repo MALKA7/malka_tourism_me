@@ -314,10 +314,24 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div className="relative overflow-hidden rounded-xl shadow-lg">
-              טיולים מאורגנים
+              <img 
                 src="/tours w malka.png"
                 alt="מלכה עם קבוצה גדולה"
-          {/* Running Banner */}
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <img 
+                src="/tours w malka 2.png"
+                alt="מלכה עם קבוצה נוספת"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
