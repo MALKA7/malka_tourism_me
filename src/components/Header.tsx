@@ -1,150 +1,326 @@
-import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Award, Shield, Globe, Heart, Car, Hotel, MessageCircle, FileText, CreditCard } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, Search, Phone, ChevronDown, Mail, Facebook } from 'lucide-react';
+import MobileMenu from './MobileMenu';
 
-interface OrganizedToursPageProps {
+interface HeaderProps {
+  currentPage: string;
   onPageChange: (page: string) => void;
 }
 
-const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange }) => {
-  const vehicles = [
+const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<string[]>([]);
+
+  const menuItems = [
     {
-      name: 'רכב פרטי',
-      capacity: '1-2 נוסעים',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      passengerCount: 2
+      id: 'home',
+      label: 'בית',
+      hasSubmenu: false
     },
     {
-      name: 'SUV',
-      capacity: '3-4 נוסעים',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
-      passengerCount: 4
+      id: 'about', 
+      label: 'אודות',
+      hasSubmenu: false
     },
     {
-      name: 'מיניו ואן',
-      capacity: '5-10 נוסעים',
-      image: '/transport bus.png',
-      passengerCount: 10
+      id: 'services', 
+      label: 'שירותים',
+      hasSubmenu: true,
+      submenu: [
+        { id: 'trip-planning', label: 'תכנון טיול מותאם אישית' },
+        { id: 'trip-execution', label: 'הפקת טיול מקצועית' },
+        { id: 'hebrew-guiding', label: 'הדרכה בעברית' },
+        { id: 'personal-hosting', label: 'אירוח אישי בווילה' },
+        { id: 'transport-services', label: 'שירותי הסעות ונהג' },
+        { id: 'visa-assistance', label: 'סיורים מאורגנים' }
+      ]
     },
     {
-      name: 'אוטובוסים',
-      capacity: 'קבוצות גדולות',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      passengerCount: 20
+      id: 'day-tours',
+      label: 'סיורי יום',
+      hasSubmenu: true,
+      submenu: [
+        { id: 'mumbai-private', label: 'מומבאי – טיול פרטי' },
+        { id: 'mumbai-shared', label: 'מומבאי – טיול משותף' },
+        { id: 'delhi-tours', label: 'דלהי – טיול פרטי' },
+        { id: 'additional-cities', label: 'ערים נוספות' }
+      ]
+    },
+    {
+      id: 'organized-tours',
+      label: 'טיולים מאורגנים',
+      hasSubmenu: true,
+      submenu: [
+        { id: 'west-south-tour', label: 'טיול ממערב לדרום הודו' },
+        { id: 'west-east-tour', label: 'טיול ממערב למזרח הודו' }
+      ]
+    },
+    {
+      id: 'testimonials', 
+      label: 'המלצות',
+      hasSubmenu: false
+    },
+    {
+      id: 'blog', 
+      label: 'בלוג',
+      hasSubmenu: false
+    },
+    {
+      id: 'contact',
+      label: 'צור קשר',
+      hasSubmenu: false
+    },
+    {
+      id: 'english',
+      label: 'English',
+      hasSubmenu: false
     }
   ];
 
-  const suitableFor = [
-    {
-      icon: Users,
-      title: 'משפחות עם ילדים',
-      description: 'חוויות מותאמות למשפחות עם פעילויות לכל הגילאים'
-    },
-    {
-      icon: Heart,
-      title: 'קבוצות חברים',
-      description: 'טיולים מהנים וחווייתיים לקבוצות חברים'
-    },
-    {
-      icon: Globe,
-      title: 'קבוצות פרטיות של 6–20 אנשים',
-      description: 'טיולים מותאמים לקבוצות בגדלים שונים'
-    },
-    {
-      icon: MessageCircle,
-      title: 'מטיילים שרוצים חוויה אישית בעברית',
-      description: 'הדרכה מקצועית בעברית עם הבנה תרבותית'
+  const allPages = [
+    'home', 'about', 'services', 'day-tours', 'organized-tours', 'testimonials', 'blog', 'contact', 'additional-cities',
+    'trip-planning', 'trip-execution', 'hebrew-guiding', 'personal-hosting', 
+    'transport-services', 'visa-assistance', 'mumbai-shared', 'mumbai-private', 
+    'west-south-tour', 'west-east-tour', 'additional-cities'
+  ];
+
+  const getPageTitle = (pageId: string): string => {
+    const pageTitles: { [key: string]: string } = {
+      'home': 'בית',
+      'about': 'אודות',
+      'services': 'שירותים',
+      'day-tours': 'סיורי יום',
+      'organized-tours': 'טיולים מאורגנים',
+      'weddings': 'חתונות בהודו',
+      'trip-planning': 'תכנון טיול מותאם אישית',
+      'trip-execution': 'הפקת טיול מקצועית',
+      'hebrew-guiding': 'הדרכה בעברית',
+      'personal-hosting': 'אירוח אישי בווילה',
+      'transport-services': 'שירותי הסעות ונהג',
+      'visa-assistance': 'סיוע בויזה והכנות',
+      'mumbai-shared': 'מומבאי - סיור משותף',
+      'mumbai-private': 'מומבאי - סיור פרטי',
+      'west-south-tour': 'טיול ממערב לדרום הודו',
+      'west-east-tour': 'טיול ממערב למזרח הודו',
+      'additional-cities': 'ערים נוספות',
+      'testimonials': 'המלצות',
+      'blog': 'בלוג',
+      'contact': 'צור קשר'
+    };
+    return pageTitles[pageId] || pageId;
+  };
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    if (query.length > 1) {
+      const results = allPages.filter(page => 
+        getPageTitle(page).includes(query) || 
+        page.includes(query.toLowerCase())
+      );
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
     }
-  ];
+  };
 
-  const services = [
-    {
-      icon: MapPin,
-      title: 'בניית מסלול מותאם אישית',
-      description: 'לפי הצרכים, התקציב והעדפות'
-    },
-    {
-      icon: Hotel,
-      title: 'תיאום מלונות',
-      description: 'רק מקומות שנבדקו על ידי מלכה'
-    },
-    {
-      icon: Car,
-      title: 'שירותי רכב',
-      description: 'רכבים פרטיים, מיניבוסים או אוטובוסים לקבוצות'
-    },
-    {
-      icon: Users,
-      title: 'מדריכה בעברית',
-      description: 'אפשרות שמלכה תצטרף לטיול בכל נקודה בהודו'
-    },
-    {
-      icon: Phone,
-      title: 'סיוע שוטף',
-      description: 'ליווי טלפוני ועזרה בכל בקשה'
+  const handleSearchResultClick = (pageId: string) => {
+    onPageChange(pageId);
+    setSearchQuery('');
+    setSearchResults([]);
+  };
+
+  const toggleSubmenu = (itemId: string) => {
+    setActiveSubmenu(activeSubmenu === itemId ? null : itemId);
+  };
+
+  const handleMenuClick = (itemId: string, hasSubmenu: boolean) => {
+    if (hasSubmenu) {
+      toggleSubmenu(itemId);
+    } else {
+      onPageChange(itemId);
+      setActiveSubmenu(null);
     }
-  ];
+  };
 
-  const processSteps = [
-    {
-      number: 1,
-      icon: MessageCircle,
-      title: 'ייעוץ והבנת מחירי תכנון והפקה',
-      description: 'יצירת קשר ראשוני להבנת הצרכים והתקציב'
-    },
-    {
-      number: 2,
-      icon: CreditCard,
-      title: 'תשלום ראשוני להבטחת המשך תהליך',
-      description: 'תשלום ראשוני להתחלת התהליך המקצועי'
-    },
-    {
-      number: 3,
-      icon: FileText,
-      title: 'מסירת תוכנית טיול',
-      description: 'לאחר שתוכנית הטיול תועבר בכתב, מתחילה הפקה בפועל של המסלול'
-    },
-    {
-      number: 4,
-      icon: Hotel,
-      title: 'הצגת תמחור ומלונות',
-      description: 'מלכה מספקת תמחור מפורט יחד עם רשימת המלונות שבהם היא בדקה והתנסתה, לרבות עלות רכבים ולפי בקשה גם מדריכים וכניסות לאתרים'
-    },
-    {
-      number: 5,
-      icon: CheckCircle,
-      title: 'שינויים והתאמות',
-      description: 'במידת הצורך, מבוצעים שינויים והתאמות עד לאישור הסופי של המטייל'
-    },
-    {
-      number: 6,
-      icon: Calendar,
-      title: 'תשלום סופי והזמנות',
-      description: 'לאחר אישור התוכנית הסופי, מתבצע תשלום מלא והזמנת החדרים, רכבים ושירותים נלווים'
-    },
-    {
-      number: 7,
-      icon: Shield,
-      title: 'ליווי בהודו',
-      description: 'במהלך הטיול, מתקיים ליווי יומי אישי והנכונות לסייע בכל בקשה או צורך שצץ במהלך המסע'
-    }
-  ];
+  const handleSubmenuClick = (itemId: string) => {
+    onPageChange(itemId);
+    setActiveSubmenu(null);
+  };
 
-  const uniqueAdvantages = [
-    'מלכה חיה בהודו מעל 15 שנה',
-    'ניסיון עשיר בהדרכת קבוצות ומשפחות ישראליות',
-    'הבנה מלאה בצרכים ישראליים (כשרות, ילדים, נוחות)',
-    'קשרים ישירים עם נהגים, מדריכים ומלונות – ללא מתווכים'
-  ];
+  return (
+    <>
+      <header className="bg-[#0A2540] shadow-lg border-b border-gray-700 sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo - Right Side */}
+            <div className="flex items-center">
+              <button 
+                onClick={() => onPageChange('home')}
+                className="hover:opacity-80 transition-opacity"
+              >
+                <div className="text-2xl font-bold text-white hebrew-text">
+                  הודו עם מלכה
+                </div>
+              </button>
+            </div>
 
-  const testimonials = [
-    {
-      name: 'תומר כנעני',
-      location: 'קבוצת חברים של נהגי אגד',
-      rating: 5,
-      text: 'היינו קבוצה של 14 מטיילים והכל התנהל בצורה טובה במשך יומיים למדנו המון על מומבאי בפרט והודו בכלל יש לציין את הידע הרב של מלכה וצורת ההדרכה כולנו מודים לה מאוד על ההדרכה והשרות הנלווה.'
-    },
-    {
-      name: 'קבוצת מנהלי ברמד העולמית',
-      location: 'ספטמבר 2025',
-      rating: 5,
-      text: 'מלכה היא מהות ההצדקה לטיול מאורגן, למי שמתלבט אם לנסות להכיר את העיר לבד או במתכונת הזו. מלכה הכירה לנו את החיים המקומיים באופן הכי Hands-On שיכולה להיות. היא הצליחה לה
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8 space-x-reverse">
+              {menuItems.map((item) => (
+                <div key={item.id} className="relative group">
+                  <button
+                    onClick={() => handleMenuClick(item.id, item.hasSubmenu)}
+                    className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      currentPage === item.id || (item.submenu && item.submenu.some(sub => sub.id === currentPage))
+                        ? 'text-blue-300 bg-gradient-to-r from-blue-900 to-blue-800 border border-blue-600 shadow-sm'
+                        : 'text-white hover:text-blue-300 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700'
+                    }`}
+                  >
+                    <span className="hebrew-text">{item.label}</span>
+                    {item.hasSubmenu && (
+                      <ChevronDown className={`w-4 h-4 mr-2 transition-transform duration-300 ${
+                        activeSubmenu === item.id ? 'rotate-180' : ''
+                      }`} />
+                    )}
+                  </button>
+                  
+                  {/* Desktop Submenu */}
+                  {item.hasSubmenu && activeSubmenu === item.id && (
+                    <div className="absolute top-full right-0 mt-2 w-80 bg-[#0A2540] rounded-xl shadow-xl border border-blue-600 py-2 z-50">
+                      {item.submenu?.map((subItem) => (
+                        <button
+                          key={subItem.id}
+                          onClick={() => handleSubmenuClick(subItem.id)}
+                          className={`flex items-center w-full text-right px-6 py-3 text-sm transition-all duration-200 ${
+                            currentPage === subItem.id
+                              ? 'text-blue-300 bg-gradient-to-r from-blue-800 to-blue-700 border-r-4 border-blue-400'
+                              : 'text-white hover:text-blue-300 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700'
+                          }`}
+                        >
+                          <span className="font-medium hebrew-text">{subItem.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            {/* English Logo - Left Side */}
+            <div className="hidden lg:flex items-center">
+              <div className="text-xl font-bold text-white">India by Malka</div>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="lg:hidden p-2 text-white hover:text-blue-300 hover:bg-blue-800 rounded-lg transition-all duration-200"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Search Bar */}
+        <div className="lg:hidden px-4 pb-4 bg-[#0A2540]">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="חיפוש באתר..."
+              value={searchQuery}
+              onChange={(e) => handleSearch(e.target.value)}
+              className="w-full px-4 py-3 pr-10 border border-blue-600 bg-blue-900 text-white placeholder-blue-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-right hebrew-text"
+            />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-blue-300" />
+          </div>
+          
+          {/* Mobile Search Results */}
+          {searchResults.length > 0 && (
+            <div className="mt-2 bg-[#0A2540] rounded-lg shadow-lg border border-blue-600 py-2 max-h-48 overflow-y-auto">
+              <div className="text-2xl font-bold text-white hebrew-text">הודו עם מלכה</div>
+              {searchResults.slice(0, 6).map((result) => (
+                <button
+                  key={result}
+                  className="w-full text-right px-4 py-3 text-sm text-white hover:bg-blue-800 hover:text-blue-300 transition-colors hebrew-text"
+                  onClick={() => handleSearchResultClick(result)}
+                >
+                  {getPageTitle(result)}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </header>
+
+      {/* Fixed Social Media Sidebar */}
+      <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-3">
+        <a 
+          href="https://www.facebook.com/groups/680827564461843"
+          className="flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          title="הצטרפו לקבוצת הפייסבוק שלנו"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+        </a>
+        
+        <a 
+          href="mailto:malka@shalom-india.com?subject=Ref:%20Indiabymalka%20website"
+          className="flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full hover:bg-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          title="שלחו אימייל למלכה"
+        >
+          <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+        </a>
+        
+        <a 
+          href="https://www.instagram.com/indiabymalka/"
+          className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          title="עקבו אחרינו באינסטגרם"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-instagram text-lg group-hover:scale-110 transition-transform duration-200"></i>
+        </a>
+        
+        <a 
+          href="https://www.youtube.com/@INDIABYMALKA"
+          className="flex items-center justify-center w-12 h-12 bg-red-600 text-white rounded-full hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          title="צפו בסרטונים שלנו ביוטיוב"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-youtube text-lg group-hover:scale-110 transition-transform duration-200"></i>
+        </a>
+        
+        <a 
+          href="https://wa.me/+919980601979"
+          className="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="שלחו הודעה בוואטסאפ"
+        >
+          <i className="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform duration-200"></i>
+        </a>
+      </div>
+      {/* Mobile Menu */}
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        menuItems={menuItems}
+        currentPage={currentPage}
+        onPageChange={onPageChange}
+        activeSubmenu={activeSubmenu}
+        onToggleSubmenu={toggleSubmenu}
+        searchQuery={searchQuery}
+        onSearchChange={handleSearch}
+        searchResults={searchResults}
+        onSearchResultClick={handleSearchResultClick}
+        getPageTitle={getPageTitle}
+      />
+    </>
+  );
+};
+
+export default Header;

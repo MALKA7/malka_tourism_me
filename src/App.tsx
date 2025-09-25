@@ -1,162 +1,118 @@
-import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Award, Shield, Globe, Heart, Car, Hotel, MessageCircle, FileText, CreditCard } from 'lucide-react';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
 
-interface OrganizedToursPageProps {
-  onPageChange: (page: string) => void;
+// Services Pages (6)
+import TripPlanningPage from './components/TripPlanningPage';
+import TripExecutionPage from './components/TripExecutionPage';
+import HebrewGuidingPage from './components/HebrewGuidingPage';
+import PersonalHostingPage from './components/PersonalHostingPage';
+import TransportServicesPage from './components/TransportServicesPage';
+import VisaAssistancePage from './components/VisaAssistancePage';
+
+// Day Tours Pages (3)
+import MumbaiSharedTourPage from './components/MumbaiSharedTourPage';
+import MumbaiPrivateTourPage from './components/MumbaiPrivateTourPage';
+import AdditionalCitiesPage from './components/AdditionalCitiesPage';
+
+// Organized Tours Pages (2)
+import KeralaOrganizedTourPage from './components/KeralaOrganizedTourPage';
+import KolkataOrganizedTourPage from './components/KolkataOrganizedTourPage';
+import WestSouthTourPage from './components/WestSouthTourPage';
+import WestEastTourPage from './components/WestEastTourPage';
+import DelhiToursPage from './components/DelhiToursPage';
+
+// English Page
+import EnglishPage from './components/EnglishPage';
+
+// New Pages
+import WeddingsPage from './components/WeddingsPage';
+// Main Pages
+import TestimonialsPage from './components/TestimonialsPage';
+import BlogPage from './components/BlogPage';
+import ContactPage from './components/ContactPage';
+import Footer from './components/Footer';
+
+function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const renderPage = () => {
+    switch (currentPage) {
+      // Main Pages (8)
+      case 'home':
+        return <HomePage onPageChange={setCurrentPage} />;
+      case 'about':
+        return <AboutPage onPageChange={setCurrentPage} />;
+      
+      // Services Pages (6)
+      case 'trip-planning':
+        return <TripPlanningPage onPageChange={setCurrentPage} />;
+      case 'trip-execution':
+        return <TripExecutionPage onPageChange={setCurrentPage} />;
+      case 'hebrew-guiding':
+        return <HebrewGuidingPage onPageChange={setCurrentPage} />;
+      case 'personal-hosting':
+        return <PersonalHostingPage onPageChange={setCurrentPage} />;
+      case 'transport-services':
+        return <TransportServicesPage onPageChange={setCurrentPage} />;
+      case 'visa-assistance':
+        return <VisaAssistancePage onPageChange={setCurrentPage} />;
+      
+      // Day Tours Pages (5)
+      case 'mumbai-shared':
+        return <MumbaiSharedTourPage onPageChange={setCurrentPage} />;
+      case 'mumbai-private':
+        return <MumbaiPrivateTourPage onPageChange={setCurrentPage} />;
+      case 'additional-cities':
+        return <AdditionalCitiesPage onPageChange={setCurrentPage} />;
+      
+      // Organized Tours Pages (2)
+      case 'west-south-tour':
+        return <WestSouthTourPage onPageChange={setCurrentPage} />;
+      case 'west-east-tour':
+        return <WestEastTourPage onPageChange={setCurrentPage} />;
+      
+      // Delhi Tours
+      case 'delhi-tours':
+        return <DelhiToursPage onPageChange={setCurrentPage} />;
+      
+      // Main Pages continued
+      case 'testimonials':
+        return <TestimonialsPage onPageChange={setCurrentPage} />;
+      case 'blog':
+        return <BlogPage onPageChange={setCurrentPage} />;
+      case 'contact':
+        return <ContactPage onPageChange={setCurrentPage} />;
+      case 'english':
+        return <EnglishPage onPageChange={setCurrentPage} />;
+      default:
+        return (
+          <div className="min-h-screen py-12 flex items-center justify-center fade-in">
+            <div className="text-center">
+              <h1 className="text-3xl font-bold text-gray-900 mb-4 hebrew-text">עמוד בבנייה</h1>
+              <p className="text-xl text-gray-600 mb-8 hebrew-text">העמוד שביקשתם עדיין בפיתוח</p>
+              <button 
+                onClick={() => setCurrentPage('home')}
+                className="btn-primary"
+              >
+                חזרה לעמוד הבית
+              </button>
+            </div>
+          </div>
+        );
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white" dir="rtl">
+      <Header currentPage={currentPage} onPageChange={setCurrentPage} />
+      <main>
+        {renderPage()}
+      </main>
+      <Footer onPageChange={setCurrentPage} />
+    </div>
+  );
 }
 
-const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange }) => {
-  const vehicles = [
-    {
-      name: 'רכב פרטי',
-      capacity: '1-2 נוסעים',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      passengerCount: 2
-    },
-    {
-      name: 'SUV',
-      capacity: '3-4 נוסעים',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
-      passengerCount: 4
-    },
-    {
-      name: 'מיניו ואן',
-      capacity: '5-10 נוסעים',
-      image: '/transport bus.png',
-      passengerCount: 10
-    },
-    {
-      name: 'אוטובוסים',
-      capacity: 'קבוצות גדולות',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      passengerCount: 20
-    }
-  ];
-
-  const suitableFor = [
-    {
-      icon: Users,
-      title: 'משפחות עם ילדים',
-      description: 'חוויות מותאמות למשפחות עם פעילויות לכל הגילאים'
-    },
-    {
-      icon: Heart,
-      title: 'קבוצות חברים',
-      description: 'טיולים מהנים וחווייתיים לקבוצות חברים'
-    },
-    {
-      icon: Globe,
-      title: 'קבוצות פרטיות של 6–20 אנשים',
-      description: 'טיולים מותאמים לקבוצות בגדלים שונים'
-    },
-    {
-      icon: MessageCircle,
-      title: 'מטיילים שרוצים חוויה אישית בעברית',
-      description: 'הדרכה מקצועית בעברית עם הבנה תרבותית'
-    }
-  ];
-
-  const services = [
-    {
-      icon: MapPin,
-      title: 'בניית מסלול מותאם אישית',
-      description: 'לפי הצרכים, התקציב והעדפות'
-    },
-    {
-      icon: Hotel,
-      title: 'תיאום מלונות',
-      description: 'רק מקומות שנבדקו על ידי מלכה'
-    },
-    {
-      icon: Car,
-      title: 'שירותי רכב',
-      description: 'רכבים פרטיים, מיניבוסים או אוטובוסים לקבוצות'
-    },
-    {
-      icon: Users,
-      title: 'מדריכה בעברית',
-      description: 'אפשרות שמלכה תצטרף לטיול בכל נקודה בהודו'
-    },
-    {
-      icon: Phone,
-      title: 'סיוע שוטף',
-      description: 'ליווי טלפוני ועזרה בכל בקשה'
-    }
-  ];
-
-  const processSteps = [
-    {
-      number: 1,
-      icon: MessageCircle,
-      title: 'ייעוץ והבנת מחירי תכנון והפקה',
-      description: 'יצירת קשר ראשוני להבנת הצרכים והתקציב'
-    },
-    {
-      number: 2,
-      icon: CreditCard,
-      title: 'תשלום ראשוני להבטחת המשך תהליך',
-      description: 'תשלום ראשוני להתחלת התהליך המקצועי'
-    },
-    {
-      number: 3,
-      icon: FileText,
-      title: 'מסירת תוכנית טיול',
-      description: 'לאחר שתוכנית הטיול תועבר בכתב, מתחילה הפקה בפועל של המסלול'
-    },
-    {
-      number: 4,
-      icon: Hotel,
-      title: 'הצגת תמחור ומלונות',
-      description: 'מלכה מספקת תמחור מפורט יחד עם רשימת המלונות שבהם היא בדקה והתנסתה, לרבות עלות רכבים ולפי בקשה גם מדריכים וכניסות לאתרים'
-    },
-    {
-      number: 5,
-      icon: CheckCircle,
-      title: 'שינויים והתאמות',
-      description: 'במידת הצורך, מבוצעים שינויים והתאמות עד לאישור הסופי של המטייל'
-    },
-    {
-      number: 6,
-      icon: Calendar,
-      title: 'תשלום סופי והזמנות',
-      description: 'לאחר אישור התוכנית הסופי, מתבצע תשלום מלא והזמנת החדרים, רכבים ושירותים נלווים'
-    },
-    {
-      number: 7,
-      icon: Shield,
-      title: 'ליווי בהודו',
-      description: 'במהלך הטיול, מתקיים ליווי יומי אישי והנכונות לסייע בכל בקשה או צורך שצץ במהלך המסע'
-    }
-  ];
-
-  const uniqueAdvantages = [
-    'מלכה חיה בהודו מעל 15 שנה',
-    'ניסיון עשיר בהדרכת קבוצות ומשפחות ישראליות',
-    'הבנה מלאה בצרכים ישראליים (כשרות, ילדים, נוחות)',
-    'קשרים ישירים עם נהגים, מדריכים ומלונות – ללא מתווכים'
-  ];
-
-  const testimonials = [
-    {
-      name: 'תומר כנעני',
-      location: 'קבוצת חברים של נהגי אגד',
-      rating: 5,
-      text: 'היינו קבוצה של 14 מטיילים והכל התנהל בצורה טובה במשך יומיים למדנו המון על מומבאי בפרט והודו בכלל יש לציין את הידע הרב של מלכה וצורת ההדרכה כולנו מודים לה מאוד על ההדרכה והשרות הנלווה.'
-    },
-    {
-      name: 'קבוצת מנהלי ברמד העולמית',
-      location: 'ספטמבר 2025',
-      rating: 5,
-      text: 'מלכה היא מהות ההצדקה לטיול מאורגן, למי שמתלבט אם לנסות להכיר את העיר לבד או במתכונת הזו. מלכה הכירה לנו את החיים המקומיים באופן הכי Hands-On שיכולה להיות. היא הצליחה להעביר לנו חוויה של האדם ההודי האמיתי. חוויה שלעולם לא תוכל ולא תעז לעשות בעצמך. נשארתי עם חוויה צרובה לכל החיים'
-    },
-    {
-      name: 'צפריר גרינברג, צוות אל על',
-      location: 'יולי 2018',
-      rating: 5,
-      text: 'ליום הסיור במומבאי, בדגש של \'טיול אחר\', אנחנו רוצים להמליץ בחום רב על מדריכה נהדרת. שמה מלכה אירני, ישראלית שנשואה להודי ומתגוררת בהודו שנים רבות. מלכה בעלת ידע רב על התרבות, ההיסטוריה והחיים בהודו. שולטת בשפה המקומית. בחרנו מספר אתרים לסיור במומבאי, מתוך רשימה ארוכה שמלכה הציעה. מלכה אספה אותנו מהמלון ברכב נוח ונעים, ובדרך שמענו את סיפור חייה המרתק. בקרנו בעיר באתרים שונים ומעניינים כגון, רציפי ששון, שכונת הסלאם ושכונת העדה הפרסית הזרתוסטרה (דת מונותאיסטית פרסית עתיקה). והכל תוך כדי אכפתיות, דאגה, מקצועיות, כריזמה, הפגנת ידע רב וחשיבה על כל פרט ופרט. אין ספק שבזכותה הסיור כאן הפך למיוחד, מעניין ומרתק. את יום הסיור העמוס, מלא הרשמים והחוויות סיימנו בארוחה מדהימה בביתם של מארחים נפלאים מהעדה הפרסית תוך כדי שמיעת פרטים וסיפורים על מנהגי העדה. ובקיצור יום סיור נפלא עם מלכה המקסימה, המרתקת והנהדרת שווה ומעניין. תודה ענקית צוות אלעל יולי 2018'
-    },
-    {
-      name: 'דבורה אורן',
-      location: 'טיול נשים - מרץ 2025',
-      rating: 5,
-      text: `הייתי במומבאי לא פעם… אהבתי אותה וחזרתי אליה שוב, הפעם עם קבוצת של חברות, במסגרת טיול מאורגן בדרום הודו, בתקווה ובחרדה שלא אאכזב, שמע הגזמתי בציפיות מהע
+export default App;
