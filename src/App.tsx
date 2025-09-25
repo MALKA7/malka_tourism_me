@@ -159,33 +159,4 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
       name: 'דבורה אורן',
       location: 'טיול נשים - מרץ 2025',
       rating: 5,
-      text: `הייתי במומבאי לא פעם… אהבתי אותה וחזרתי אליה שוב, הפעם עם קבוצת של חברות, במסגרת טיול מאורגן בדרום הודו, בתקווה ובחרדה שלא אאכזב, שמע הגזמתי בציפיות מהעיר… ושם, בבוקרו של יום פגשנו את מלכה בלובי של מלון "טאג' מהאל", ארמון מהמם בפני עצמו, כיאה לנסיכות מארץ הקודש, כדי לגלות את קסמיה של העיר "המשוגעת" הזאת… וזה אפשרי רק עם מי שמשוגעת על מומבאי. מלכה הובילה אותנו בעיר המהממת הזאת, בבטחה ובאהבה לעיר, בה חיה שנים ואותה מכירה על כל פניה… ולעיר הזאת פנים נסתרות ומסתוריות. מומבאי מחר כבר לא תהיה מומבאי של היום. מלכה הסירה בפנינו את מסך המסתורין וכולנו התאהבנו, גם בעיר וגם במלכה. חיינו וחווינו את העיר ולא שבעו… אם היה תלוי בנו, היינו נשארות ימים נוספים ומכתירות את מלכה כמלכת מומבאי. כי היא באמת מלכה👸 תודה מכל הלב בשם חברותי ובשמי❤️`
-    }
-  ];
-
-  return (
-    <div className="min-h-screen fade-in">
-      {/* Hero Section */}
-      <section className="relative h-96">
-        <div className="absolute inset-0">
-          <img 
-            src="/organised tours.png" 
-            alt="סיורים בעברית לקבוצות בהודו"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center text-center">
-          <div className="text-white max-w-4xl">
-            <h1 className="text-5xl font-bold mb-6 hebrew-text">
-              סיורים בעברית לקבוצות בהודו
-            </h1>
-            <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
-              טיולים מאורגנים מקצועיים לקבוצות עם הדרכה בעברית ותכנון מותאם אישית
-            </p>
-            <button 
-              onClick={() => onPageChange('contact')}
-              className="btn-primary text-lg px-8 py-4"
-            >
-              צור קשר ל
+      text: `הייתי במומבאי לא פעם… אהבתי אותה וחזרתי אליה שוב, הפעם עם קבוצת של חברות, במסגרת טיול מאורגן בדרום הודו, בתקווה ובחרדה שלא אאכזב, שמע הגזמתי בציפיות מהע
