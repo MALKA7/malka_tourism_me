@@ -384,49 +384,32 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
                   שם הטיול: הודו בשלושה טעמים
                 </h3>
-                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
-                  טיול שמתחיל בקצב המהיר של מומבאי, העיר הענקית והמרתקת שמציעה שילוב בלתי נגמר של המודרני והמסורתי. 
-                  תיהנו מהרחובות הסואנים, מהשווקים הצבעוניים ומתרבות עשירה, ותבינו את מהות העיר שתמיד במרוץ קדימה.
-                  לאחר מכן, תעברו לבנגלור, בירת הטכנולוגיה של הודו, מקום שבו היי-טק וחדשנות נפגשים עם קסם מקומי. 
-                  כאן תרגישו את האווירה המיוחדת של העיר, המשלבת בין עתיד לבין מסורת, בין תעשייה לבין טבע.
-                  החלק האחרון יוביל אתכם לקרלה – האזור הירוק, השקט והקסום של הודו. כאן תצללו לתוך חוויות טבע מרהיבות, 
-                  תיהנו מתעלות מים יפהפיות, תיהנו מהשקט ומהשלווה של האזור, ותתמלאו באנרגיה מחודשת מהסביבה המיוחדת הזו.
-                </p>
-                <button 
-                  onClick={() => onPageChange('west-south-tour')}
-                  className="btn-primary"
-                >
-                  קראו עוד
-                </button>
-              </div>
-            </div>
 
-            {/* Kolkata Tour */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-              <img 
-                src="/kolkata.png" 
-                alt="קולקטה"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
-                  שם הטיול: מהבירה הכלכלית לתרבותית – הודו בין קצוות
-                </h3>
-                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
-                  הצטרפו למסע נדיר ממערב למזרח הודו – טיול צבעוני מסעיר שיטיל אור על שני עולמות שונים כל כך באותה מדינה. 
-                  במומבאי, לב ההודו המודרנית – שווקים, קולנוע, גורדי שחקים ונשמה גדולה. משם נמשיך בטיסה ללב המזרח – 
-                  מדינת מערב בנגל. נגיע לכולכתא, העיר שמכונה "עיר האושר": בירתה התרבותית של הודו, מקום הולדתו של טאגור, 
-                  ושל תה חם בלב חם. ולסיום – הרפתקה ייחודית בטבע: שייט וספארי בשמורת הסונדרבן, אזור הדלתא הגדול בעולם, 
-                  ביתו של הטיגריס הבנגלי והקסם הפראי. הודו שונה. הודו עמוקה. הודו, שלא הכרתם.
-                </p>
-                <button 
-                  onClick={() => onPageChange('west-east-tour')}
-                  className="btn-primary"
-                >
-                  קראו עוד
-                </button>
-              </div>
-            </div>
+      {/* Call to Action Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6 hebrew-text">
+            צור קשר עם מלכה ותתחיל לתכנן את הטיול שלכם בהודו
+          </h2>
+          <p className="text-xl mb-8 hebrew-text leading-relaxed opacity-95">
+            מוכנים לחוויה בלתי נשכחת בהודו עם קבוצה שלכם? 
+            מלכה תדאג לכל הפרטים ותעניק לכם טיול מושלם
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => onPageChange('contact')}
+              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              תכננו את הטיול שלכם
+            </button>
+            <a 
+              href="https://wa.me/919980601979"
+              className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
       </section>
