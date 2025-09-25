@@ -418,3 +418,5 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
 };
 
 export default OrganizedToursPage;
+  )
+}
