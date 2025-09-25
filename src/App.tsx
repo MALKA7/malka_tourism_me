@@ -21,6 +21,7 @@ import KeralaOrganizedTourPage from './components/KeralaOrganizedTourPage';
 import KolkataOrganizedTourPage from './components/KolkataOrganizedTourPage';
 import WestSouthTourPage from './components/WestSouthTourPage';
 import WestEastTourPage from './components/WestEastTourPage';
+import DelhiToursPage from './components/DelhiToursPage';
 
 // English Page
 import EnglishPage from './components/EnglishPage';
@@ -71,6 +72,10 @@ function App() {
         return <WestSouthTourPage onPageChange={setCurrentPage} />;
       case 'west-east-tour':
         return <WestEastTourPage onPageChange={setCurrentPage} />;
+      
+      // Delhi Tours
+      case 'delhi-tours':
+        return <DelhiToursPage onPageChange={setCurrentPage} />;
       
       // Main Pages continued
       case 'testimonials':
