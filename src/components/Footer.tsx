@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               טיולים מותאמים אישית להודו עם מדריכה ישראלית מנוסה
             </p>
             <div className="flex space-x-4 space-x-reverse">
-              <a href="https://wa.me/919980601979" className="social-icon whatsapp hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/+919980601979" className="social-icon whatsapp hover:scale-110 transition-transform shadow-lg" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-whatsapp"></i>
               </a>
               <a href="mailto:malka@shalom-india.com?subject=Ref:%20IndiabyMalka%20Website" className="social-icon email hover:scale-110 transition-transform shadow-lg" title="שלחו אימייל למלכה">
@@ -91,7 +91,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               </li>
               <li>
                 <button 
-                  onClick={() => onPageChange('organised-tours')}
+                  onClick={() => onPageChange('visa-assistance')}
                   className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:translate-x-1 transform duration-200"
                 >
                   טיולים מאורגנים

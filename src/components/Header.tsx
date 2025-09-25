@@ -154,7 +154,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
       <header className="bg-[#0A2540] shadow-lg border-b border-gray-700 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
+            {/* Logo - Right Side */}
             <div className="flex items-center">
               <button 
                 onClick={() => onPageChange('home')}
@@ -208,8 +208,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
               ))}
             </nav>
 
-            {/* Search and Contact */}
-            <div className="hidden lg:flex items-center space-x-4">
+            {/* English Logo - Left Side */}
+            <div className="hidden lg:flex items-center">
               <div className="text-xl font-bold text-white">India by Malka</div>
             </div>
 
@@ -295,7 +295,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
         </a>
         
         <a 
-          href="https://wa.me/919980601979"
+          href="https://wa.me/+919980601979"
           className="flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110 group"
           target="_blank"
           rel="noopener noreferrer"
