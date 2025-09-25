@@ -52,13 +52,13 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
   const services = [
     {
       icon: Globe,
-      title: 'Custom Trip Planning',
-      description: 'Personalized itineraries designed specifically for your interests and budget with English-speaking guidance'
+      title: 'Custom Trip Planning', 
+      description: 'Specifically for your interests and budget with Malka.'
     },
     {
       icon: Users,
-      title: 'English-Speaking Guide',
-      description: 'Professional guidance in English by Malka, who has lived in India for 15 years and speaks fluent English'
+      title: 'Cultural Experience Guide',
+      description: 'Personalized tours of India\'s cities, markets, and cultural experiences offering insight into local life, cuisine, and traditions.'
     },
     {
       icon: Car,
@@ -71,14 +71,14 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       description: 'Hand-picked hotels and guesthouses that Malka has personally visited and approved'
     },
     {
-      icon: Shield,
-      title: '24/7 Support',
-      description: 'Round-the-clock assistance in English throughout your journey for peace of mind'
+      icon: Users,
+      title: 'Organized Tours for Groups',
+      description: 'Join our organized group tours with other travelers for a shared cultural experience'
     },
     {
-      icon: Award,
-      title: 'Authentic Experiences',
-      description: 'Unique cultural experiences and local insights that only a long-term resident can provide'
+      icon: Building,
+      title: 'Home Stay in Bangalore',
+      description: 'Experience authentic Indian hospitality at Malka\'s private villa in North Bangalore'
     }
   ];
 
@@ -98,7 +98,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
             Discover India with Malka
           </h1>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-            Personalized tours of India with an English-speaking Israeli guide who has lived in India for 15 years
+            Personalized tours of India with Cultural Experience guide who has lived in India for 15 years
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
@@ -161,8 +161,8 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
             <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-900 to-indigo-700 bg-clip-text text-transparent mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-blue-700 max-w-3xl mx-auto font-medium">
-              Professional travel services in India with English-speaking guidance
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto font-medium mb-8">
+              Professional & Trusted travel services in India
             </p>
           </div>
 
@@ -180,10 +180,13 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
 
           <div className="text-center mt-12">
             <div className="bg-blue-100 p-6 rounded-xl border border-blue-200 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-blue-900 mb-3">English-Speaking Professional Guide</h3>
+              <h3 className="text-2xl font-bold text-blue-900 mb-3">English-Speaking Cultural Guide</h3>
               <p className="text-blue-800 leading-relaxed">
-                <strong>Malka speaks fluent English</strong> and has been guiding English-speaking tourists for over a decade. 
+                <strong>Malka speaks fluent English</strong> and has been escorting English-speaking tourists for over a decade. 
                 All tours, consultations, and communications are conducted in clear, professional English.
+              </p>
+              <p className="text-blue-800 leading-relaxed mt-4">
+                For Historical monuments and museums, I work alongside licensed guides to ensure a complete experience.
               </p>
             </div>
           </div>
@@ -198,7 +201,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
               Popular Destinations
             </h2>
             <p className="text-xl text-gray-600">
-              Explore India's most captivating cities with expert English guidance
+              Explore India's most captivating cities with expert Private Tour Coordinator
             </p>
           </div>
 
@@ -244,7 +247,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
               <div className="flex flex-col items-center">
                 <Award className="w-12 h-12 text-orange-600 mb-3" />
                 <h3 className="text-lg font-bold text-blue-900 mb-2">Unique Experience</h3>
-                <p className="text-blue-700">Unique way of exploring India that no other guide offers</p>
+                <p className="text-blue-700">Unique way of exploring India that no other Cultural guide offers</p>
               </div>
             </div>
           </div>
