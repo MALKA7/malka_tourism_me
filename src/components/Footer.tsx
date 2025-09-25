@@ -149,22 +149,10 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
               מומבאי
             </button>
             <button 
-              onClick={() => onPageChange('bangalore-tours')}
+              onClick={() => onPageChange('delhi-tours')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
-              בנגלור
-            </button>
-            <button 
-              onClick={() => onPageChange('goa-tours')}
-              className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
-            >
-              גואה
-            </button>
-            <button 
-              onClick={() => onPageChange('kochi-tours')}
-              className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
-            >
-              קוצ'י
+              דלהי
             </button>
             <button 
               onClick={() => onPageChange('west-south-tour')}
