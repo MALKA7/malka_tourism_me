@@ -166,30 +166,72 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
   return (
     <div className="min-h-screen fade-in">
       {/* Hero Section */}
+          {/* Running Banner */}
+          <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
+            <div className="running-banner whitespace-nowrap">
+              <span className="mx-8">ההרשמה נפתחה - מקומות מוגבלים</span>
+              <span className="mx-8">הרשמו לטיול המאורגן הקרוב לקרלה בהנחייתה של מלכה</span>
+            </div>
+          </div>
+          
       <section className="relative h-96">
         <div className="absolute inset-0">
-          <img 
+              טיולים מאורגנים
             src="/organised tours.png" 
             alt="סיורים בעברית לקבוצות בהודו"
             className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center text-center">
-          <div className="text-white max-w-4xl">
-            <h1 className="text-5xl font-bold mb-6 hebrew-text">
-              סיורים בעברית לקבוצות בהודו
-            </h1>
-            <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
-              טיולים מאורגנים מקצועיים לקבוצות עם הדרכה בעברית ותכנון מותאם אישית
-            </p>
-            <button 
-              onClick={() => onPageChange('contact')}
-              className="btn-primary text-lg px-8 py-4"
-            >
-              צור קשר לתכנון הטיול שלכם
-            </button>
+
+                src="/Kerala.png" 
+                alt="קרלה"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
+                  שם הטיול: הודו בשלושה טעמים
+                </h3>
+                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
+                  טיול שמתחיל בקצב המהיר של מומבאי, העיר הענקית והמרתקת שמציעה שילוב בלתי נגמר של המודרני והמסורתי. 
+                  תיהנו מהרחובות הסואנים, מהשווקים הצבעוניים ומתרבות עשירה, ותבינו את מהות העיר שתמיד במרוץ קדימה.
+                  לאחר מכן, תעברו לבנגלור, בירת הטכנולוגיה של הודו, מקום שבו היי-טק וחדשנות נפגשים עם קסם מקומי. 
+                  כאן תרגישו את האווירה המיוחדת של העיר, המשלבת בין עתיד לבין מסורת, בין תעשייה לבין טבע.
+                  החלק האחרון יוביל אתכם לקרלה – האזור הירוק, השקט והקסום של הודו. כאן תצללו לתוך חוויות טבע מרהיבות, 
+                  תיהנו מתעלות מים יפהפיות, תיהנו מהשקט ומהשלווה של האזור, ותתמלאו באנרגיה מחודשת מהסביבה המיוחדת הזו.
+                </p>
+                <button 
+                  onClick={() => onPageChange('west-south-tour')}
+                  className="btn-primary"
+                >
+                  קראו עוד
+                </button>
+              </div>
+            </div>
+
+            {/* Kolkata Tour */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+              <img 
+                src="/kolkata.png" 
+                alt="קולקטה"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
+                  שם הטיול: מהבירה הכלכלית לתרבותית – הודו בין קצוות
+                </h3>
+                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
+                  הצטרפו למסע נדיר ממערב למזרח הודו – טיול צבעוני מסעיר שיטיל אור על שני עולמות שונים כל כך באותה מדינה. 
+                  במומבאי, לב ההודו המודרנית – שווקים, קולנוע, גורדי שחקים ונשמה גדולה. משם נמשיך בטיסה ללב המזרח – 
+                  מדינת מערב בנגל. נגיע לכולכתא, העיר שמכונה "עיר האושר": בירתה התרבותית של הודו, מקום הולדתו של טאגור, 
+                  ושל תה חם בלב חם. ולסיום – הרפתקה ייחודית בטבע: שייט וספארי בשמורת הסונדרבן, אזור הדלתא הגדול בעולם, 
+                  ביתו של הטיגריס הבנגלי והקסם הפראי. הודו שונה. הודו עמוקה. הודו, שלא הכרתם.
+                </p>
+                <button 
+                  onClick={() => onPageChange('west-east-tour')}
+                  className="btn-primary"
+                >
+                  קראו עוד
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
