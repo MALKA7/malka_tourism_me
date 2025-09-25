@@ -51,31 +51,37 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
 
   const services = [
     {
+      image: '/plan tour.png',
       icon: Globe,
       title: 'Custom Trip Planning', 
       description: 'Specifically for your interests and budget with Malka.'
     },
     {
+      image: '/tours w malka.png',
       icon: Users,
       title: 'Cultural Experience Guide',
       description: 'Personalized tours of India\'s cities, markets, and cultural experiences offering insight into local life, cuisine, and traditions.'
     },
     {
+      image: '/transport bus.png',
       icon: Car,
       title: 'Transportation Services',
       description: 'Comfortable air-conditioned vehicles with professional drivers for safe travel across India'
     },
     {
+      image: '/booking.png',
       icon: Building,
       title: 'Accommodation Booking',
       description: 'Hand-picked hotels and guesthouses that Malka has personally visited and approved'
     },
     {
+      image: '/organised tours.png',
       icon: Users,
       title: 'Organized Tours for Groups',
       description: 'Join our organized group tours with other travelers for a shared cultural experience'
     },
     {
+      image: '/Home stay malka.png',
       icon: Building,
       title: 'Home Stay in Bangalore',
       description: 'Experience authentic Indian hospitality at Malka\'s private villa in North Bangalore'
