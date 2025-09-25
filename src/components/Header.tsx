@@ -246,15 +246,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
 
 
               {/* Contact Button */}
-              <a 
-                href="https://wa.me/919980601979"
-                className="flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-whatsapp text-lg ml-2"></i>
-                <span className="font-medium hebrew-text">WhatsApp</span>
-              </a>
             </div>
 
             {/* Mobile Menu Button */}

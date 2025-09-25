@@ -143,16 +143,16 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-wrap justify-center space-x-6 space-x-reverse text-sm">
             <button 
-              onClick={() => onPageChange('mumbai-private')}
-              className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
-            >
-              מומבאי
-            </button>
-            <button 
               onClick={() => onPageChange('delhi-tours')}
               className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
             >
               דלהי
+            </button>
+            <button 
+              onClick={() => onPageChange('mumbai-private')}
+              className="text-slate-300 hover:text-blue-200 transition-colors hebrew-text hover:scale-105 transform duration-200"
+            >
+              מומבאי
             </button>
             <button 
               onClick={() => onPageChange('west-south-tour')}
