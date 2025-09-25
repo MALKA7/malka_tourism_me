@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Award, Shield, Globe, Heart, Car, Hotel, MessageCircle, FileText, CreditCard, Passport, Plane, Building } from 'lucide-react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Award, Shield, Globe, Heart, Car, Hotel, MessageCircle, FileText, CreditCard, Import as Passport, Plane, Building } from 'lucide-react';
 
 interface VisaAssistancePageProps {
   onPageChange: (page: string) => void;
