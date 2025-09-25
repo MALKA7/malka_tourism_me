@@ -71,14 +71,14 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
     {
       image: '/booking.png',
       icon: Building,
-      title: 'Accommodation Booking',
+      title: 'Tour Packages',
       description: 'Hand-picked hotels and guesthouses that Malka has personally visited and approved'
     },
     {
       image: '/organised tours.png',
       icon: Users,
       title: 'Organized Tours for Groups',
-      description: 'Join our organized group tours with other travelers for a shared cultural experience'
+      description: 'Let Malka join your group as a Cultural and City Escort, ensuring a rich and memorable experience.'
     },
     {
       image: '/Home stay malka.png',
@@ -199,7 +199,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Why Choose Malka?
+              Experience India with Malka – Here's Why
             </h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto">
               The reasons that make Malka the leading guide in India
@@ -272,6 +272,23 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-12">
+            <a 
+              href="mailto:malka@shalom-india.com?subject=Ref:%20Indiabymalka%20website"
+              className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-8"
+            >
+              <Mail className="w-5 h-5 mr-3" />
+              Contact Malka
+            </a>
+            
+            <div className="bg-blue-100 p-6 rounded-xl border border-blue-200 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-blue-900 mb-3 text-center">English-Speaking Cultural Guide</h3>
+              <p className="text-blue-800 leading-relaxed text-center">
+                All tours are conducted in English by Malka, who has lived in India for over 15 years and understands both Western and Indian cultures.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -297,6 +314,20 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                
+                {/* Tour Highlight Icons */}
+                <div className="absolute top-4 left-4 flex space-x-2">
+                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                    <Clock className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
+                    <Car className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                    <Users className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+                
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <h3 className="text-xl font-bold mb-1 text-left">{destination.name}</h3>
                   <p className="text-sm opacity-90 text-left">{destination.description}</p>
@@ -332,32 +363,6 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
                 <p className="text-blue-700 text-left">Unique way of exploring India that no other Cultural guide offers</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Malka Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Why Choose Malka?
-            </h2>
-            <p className="text-xl text-gray-600">
-              The reasons that make Malka the leading guide in India
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {whyChooseMalka.map((reason, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
-                  <reason.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{reason.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{reason.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -461,159 +466,4 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
                   
                   <a 
                     href="https://www.youtube.com/@INDIABYMALKA"
-                    className="social-icon youtube hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Watch our YouTube videos"
-                  >
-                    <Youtube className="w-6 h-6" />
-                  </a>
-                  
-                  <a 
-                    href="mailto:malka@shalom-india.com?subject=Ref:%20IndiabyMalka%20Website"
-                    className="social-icon email hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    title="Send us an email"
-                  >
-                    <Mail className="w-6 h-6" />
-                  </a>
-                  
-                  <a 
-                    href="https://wa.me/+919980601979"
-                    className="social-icon whatsapp hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Message us on WhatsApp"
-                  >
-                    <i className="fab fa-whatsapp text-xl"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Send Us a Message</h3>
-              
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2 text-left">Full Name *</label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2 text-left">Email *</label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2 text-left">Phone</label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="Your phone number"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2 text-left">Group Size</label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
-                      <option value="">Select group size</option>
-                      <option value="1">1 person</option>
-                      <option value="2">2 people</option>
-                      <option value="3-4">3-4 people</option>
-                      <option value="5-8">5-8 people</option>
-                      <option value="9+">9+ people</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2 text-left">Travel Dates</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                    placeholder="e.g., March 2024 or flexible"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2 text-left">Subject *</label>
-                  <select required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
-                    <option value="">Choose a subject</option>
-                    <option value="trip-planning">Custom Trip Planning</option>
-                    <option value="organized-tour">Organized Tour</option>
-                    <option value="city-tour">City Tour</option>
-                    <option value="accommodation">Personal Hosting</option>
-                    <option value="transport">Transportation Services</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2 text-left">Message *</label>
-                  <textarea
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
-                    placeholder="Tell us about your dream trip to India, your interests, and how we can help..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Ready to Start Your Indian Adventure?
-            </h2>
-            <p className="text-xl mb-8 leading-relaxed opacity-95">
-              Contact Malka today and let's start planning your dream trip to incredible India 
-              with professional English-speaking guidance
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => onPageChange('contact')}
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                Plan Your Trip
-              </button>
-              <a 
-                href="https://wa.me/+919980601979"
-                className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatsApp Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default EnglishPage;
+                
