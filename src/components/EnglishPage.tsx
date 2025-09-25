@@ -159,18 +159,19 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
                 Hello, I'm Malka Irani!
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed text-left">
-                I'm an Israeli woman who fell in love with India 15 years ago and haven't stopped exploring this amazing country since. 
-                After years of travel, learning, and building deep connections with local culture, I decided to dedicate my life 
-                to helping other travelers experience the magic of India.
+                I fell in love with India when I was 8 years old, and by luck—or perhaps a "calling"—I married an Indian man from the Zoroastrian community. I moved to India with my husband and twins, and since then, I haven't stopped exploring this amazing country.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed text-left">
-                I specialize in personalized tours that combine the most breathtaking sites with authentic experiences 
-                that only locals know about. My goal is for you to return home with lifelong memories 
-                and a deeper understanding of Indian culture.
+                Originally from the Holy Land, I have spent many years building deep connections with Indian culture. I have lived in Mumbai, Bangalore, and Delhi NCR since 2010, and having raised children in India, I understand the unique needs of travelers with kids, including those from Western countries visiting India. Professionally, I am a clinical psychologist and completed my second degree in Mumbai.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed text-left">
-                <strong>I conduct all tours in English</strong>, with confidence and lots of love - that's how I guide my tours. 
-                Having lived in India for 15 years, I speak fluent English and Hindi, making me your perfect bridge to authentic India.
+                I specialize in Cultural tours that combine the most breathtaking sites with authentic experiences known only to locals, such as markets and cultural experiences, offering insight into local life, cuisine, and traditions. For historical monuments and museums, I work alongside licensed guides to ensure complete experiences. My goal is for you to return home with lifelong memories and a deeper understanding of Indian culture.
+               </p>
+               <p className="text-lg text-gray-700 leading-relaxed text-left">
+                I conduct all tours in English, with confidence and lots of love—that's how I guide my tours. Having lived in India for many years, I speak fluent English and can communicate a little in Hindi, making me your perfect bridge to authentic India. I also drive in India, and it always makes me happy when locals sometimes confuse me for an Indian—it's my little way of feeling truly at home here.
+               </p>
+               <p className="text-lg text-gray-700 leading-relaxed text-left">
+                <strong>Please note:</strong> I spend a few months in India and a few months abroad, so booking my experience as a Cultural tour guide well in advance is recommended.
               </p>
             </div>
           </div>
@@ -180,35 +181,35 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-900 to-indigo-700 bg-clip-text text-transparent mb-4 text-left">
               Our Services
             </h2>
-            <p className="text-xl text-blue-700 max-w-3xl font-medium mb-8 text-left">
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto font-medium mb-8 text-center">
               Professional & Trusted travel services in India
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="text-left p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
+              <div key={index} className="text-center p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mb-6 shadow-lg">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-blue-900 text-left">{service.title}</h3>
-                <p className="text-blue-700 leading-relaxed text-left">{service.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-blue-900">{service.title}</h3>
+                <p className="text-blue-700 leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="text-left mt-12">
+          <div className="text-center mt-12">
             <div className="bg-blue-100 p-6 rounded-xl border border-blue-200 max-w-2xl">
-              <h3 className="text-2xl font-bold text-blue-900 mb-3 text-left">English-Speaking Cultural Guide</h3>
-              <p className="text-blue-800 leading-relaxed text-left">
+              <h3 className="text-2xl font-bold text-blue-900 mb-3">English-Speaking Cultural Guide</h3>
+              <p className="text-blue-800 leading-relaxed">
                 <strong>Malka speaks fluent English</strong> and has been escorting English-speaking tourists for over a decade. 
                 All tours, consultations, and communications are conducted in clear, professional English.
               </p>
-              <p className="text-blue-800 leading-relaxed mt-4 text-left">
+              <p className="text-blue-800 leading-relaxed mt-4">
                 For Historical monuments and museums, Malka works alongside licensed guides to ensure a complete experience.
               </p>
             </div>
@@ -219,11 +220,11 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       {/* Destinations Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 text-left">
               Popular Destinations
             </h2>
-            <p className="text-xl text-gray-600 text-left">
+            <p className="text-xl text-gray-600">
               Explore India's most captivating cities with expert Private Tour Coordinator
             </p>
           </div>
@@ -280,11 +281,11 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       {/* Why Choose Malka Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 text-left">
               Why Choose Malka?
             </h2>
-            <p className="text-xl text-gray-600 text-left">
+            <p className="text-xl text-gray-600">
               The reasons that make Malka the leading guide in India
             </p>
           </div>
@@ -306,11 +307,11 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       {/* Contact Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 text-left">
               Contact Us
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl text-left">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ready to explore India? Get in touch with Malka to plan your perfect Indian adventure
             </p>
           </div>
@@ -526,15 +527,15 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       {/* Call to Action */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left">
+          <div className="text-center">
             <h2 className="text-4xl font-bold mb-6 text-left">
               Ready to Start Your Indian Adventure?
             </h2>
-            <p className="text-xl mb-8 leading-relaxed opacity-95 text-left">
+            <p className="text-xl mb-8 leading-relaxed opacity-95">
               Contact Malka today and let's start planning your dream trip to incredible India 
               with professional English-speaking guidance
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => onPageChange('contact')}
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
