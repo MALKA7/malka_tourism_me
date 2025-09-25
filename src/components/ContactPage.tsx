@@ -208,14 +208,14 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
       </section>
 
       {/* Trusted by Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#0A2540]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              אמון של מטיילים, חברות ומוסדות ברחבי העולם
+            <h2 className="text-4xl font-bold text-white mb-6 hebrew-text">
+              בוחרים בנו שוב ושוב – לחוויות בלתי נשכחות
             </h2>
-            <p className="text-xl text-gray-600 hebrew-text">
-              גאים לעבוד עם מטיילים, חברות ומוסדות מכל רחבי העולם
+            <p className="text-xl text-blue-200 hebrew-text">
+              בזכות המקצועיות, החום האנושי והחוויות הייחודיות – הם חוזרים אלינו פעם אחר פעם
             </p>
           </div>
 
@@ -307,7 +307,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
               <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
                 <span className="text-xs font-bold text-blue-600 text-center">LAGENTA</span>
               </div>
-              <span className="text-sm text-gray-600 hebrew-text text-center">לגנטה</span>
+              <span className="text-sm text-gray-600 hebrew-text text-center">לג'נדה</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-20 h-16 bg-white rounded-lg shadow-lg flex items-center justify-center mb-2 border border-gray-200 p-2">
