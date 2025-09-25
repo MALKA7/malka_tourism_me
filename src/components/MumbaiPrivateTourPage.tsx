@@ -330,6 +330,10 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
     {
       question: 'שילמתי מקדמה לסיור איתך, אבל חברת התעופה שינתה לי את ימי ביקור העיר ליום למחרת. האם אפשר לשנות את תאריך הסיור בשלב זה?',
       answer: 'אני מגיעה לסיורים בטיסה ובדרך כלל נוחתת בבוקר וחוזרת בערב. כרטיס הטיסה נרכש ברגע ששולחת מקדמה. במקרה זה, ההגעה שלי למומבאי והחזרה כבר מובטחות, אבל יש אפשרות לשלם מחיר נוסף שישמש לשינויי כרטיסים כדי שהסיור יוכל להתקיים.'
+    },
+    {
+      question: 'מדוע את מציינת שאת משתפת פעולה עם מדריך נוסף באתרי מורשת?',
+      answer: 'בהודו, הנהלים מחייבים שלאתרי מורשת והיסטוריה ייכנס רק מדריך מוסמך בעל רישיון רשמי. כמדריכה תרבותית אני מתמקדת בהיכרות עם חיי היום-יום, תרבות, אוכל ושווקים, ולכן בשילוב מדריך מקומי מוסמך אני מבטיחה לכם גם עמידה בכללים וגם חוויה מלאה: ידע היסטורי מדויק לצד ההקשר התרבותי הרחב שאני מעניקה.'
     }
   ];
 
@@ -449,6 +453,10 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
                     <div className="flex items-center">
                       <Users className="w-5 h-5 text-purple-600 ml-3" />
                       <span className="hebrew-text">{tour.guide}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="text-lg ml-3">🏛️</span>
+                      <span className="hebrew-text text-sm">שיתוף פעולה עם מדריך מקומי מוסמך באתרי מורשת</span>
                     </div>
                   </div>
 

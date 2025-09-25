@@ -120,11 +120,11 @@ const DelhiToursPage: React.FC<DelhiToursPageProps> = ({ onPageChange }) => {
     {
       title: 'סיור בדלהי',
       image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      startTime: '08:00',
-      endTime: '16:00',
+      startTime: '10:00',
+      endTime: '18:00',
       transport: 'רכב ממוזג',
       guide: 'מדריך דובר עברית ואנגלית',
-      highlights: ['המצודה האדומה', 'שער הודו', 'מסגד ג\'אמה']
+      highlights: ['הטסת עפיפונים על גגות דלהי הישנה', 'נסיעה במטרו', 'סיור רגלי', 'מקדש סיקי', 'נסיעה באוטו ריקשה בשווקים']
     },
     {
       title: 'סיור באגרה',
@@ -133,7 +133,7 @@ const DelhiToursPage: React.FC<DelhiToursPageProps> = ({ onPageChange }) => {
       endTime: '20:00',
       transport: 'רכב ממוזג',
       guide: 'מדריך דובר עברית ואנגלית',
-      highlights: ['הטאג\' מהאל', 'מצודת אגרה', 'קבר איתמאד-אוד-דאולה']
+      highlights: ['הטאג\' מהאל', 'מצודת אגרה', 'shero cafe']
     },
     {
       title: 'סיור למטורה',
@@ -142,7 +142,7 @@ const DelhiToursPage: React.FC<DelhiToursPageProps> = ({ onPageChange }) => {
       endTime: '19:00',
       transport: 'רכב ממוזג',
       guide: 'מדריך דובר עברית ואנגלית',
-      highlights: ['מקדש קרישנה', 'גובינד דב גירי', 'ורינדבן']
+      highlights: ['טקס תפילה הינדי עם מנורת אש', 'שיט על נהר ימונה', 'מומלץ בחג ההולי במיוחד']
     },
     {
       title: 'סיור בתפירה אישית',
@@ -237,6 +237,10 @@ const DelhiToursPage: React.FC<DelhiToursPageProps> = ({ onPageChange }) => {
     {
       question: 'שילמתי מקדמה לסיור איתך, אבל חברת התעופה שינתה לי את ימי ביקור העיר ליום למחרת. האם אפשר לשנות את תאריך הסיור בשלב זה?',
       answer: 'אני מגיעה לסיורים בטיסה ובדרך כלל נוחתת בבוקר וחוזרת בערב. כרטיס הטיסה נרכש ברגע ששולחת מקדמה. במקרה זה, ההגעה שלי לדלהי והחזרה כבר מובטחות, אבל יש אפשרות לשלם מחיר נוסף שישמש לשינויי כרטיסים כדי שהסיור יוכל להתקיים.'
+    },
+    {
+      question: 'מדוע את מציינת שאת משתפת פעולה עם מדריך נוסף באתרי מורשת?',
+      answer: 'בהודו, הנהלים מחייבים שלאתרי מורשת והיסטוריה ייכנס רק מדריך מוסמך בעל רישיון רשמי. כמדריכה תרבותית אני מתמקדת בהיכרות עם חיי היום-יום, תרבות, אוכל ושווקים, ולכן בשילוב מדריך מקומי מוסמך אני מבטיחה לכם גם עמידה בכללים וגם חוויה מלאה: ידע היסטורי מדויק לצד ההקשר התרבותי הרחב שאני מעניקה.'
     }
   ];
 
@@ -288,7 +292,7 @@ const DelhiToursPage: React.FC<DelhiToursPageProps> = ({ onPageChange }) => {
       <section className="py-16 bg-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
-            אני מדריכה תרבותית המתמחה בהיכרות עם חיי היום-יום, אוכל, שווקים ותרבות. לאתרי מורשת והיסטוריה אני משתפת פעולה עם מדריכים מוסמכים בעלי רישיון. אין אפשרות לראות את כל האתרים ביום אחד
+            אני מדריכה תרבותית המתמחה בהיכרות עם חיי היום-יום, אוכל, שווקים ותרבות. לאתרי מורשת והיסטוריה אני משתפת פעולה עם מדריכים מוסמכים בעלי רישיון.
           </p>
         </div>
       </section>
@@ -362,6 +366,10 @@ const DelhiToursPage: React.FC<DelhiToursPageProps> = ({ onPageChange }) => {
                     <div className="flex items-center">
                       <Users className="w-5 h-5 text-purple-600 ml-3" />
                       <span className="hebrew-text">{tour.guide}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="text-lg ml-3">🏛️</span>
+                      <span className="hebrew-text text-sm">שיתוף פעולה עם מדריך מקומי מוסמך באתרי מורשת</span>
                     </div>
                   </div>
 
@@ -493,7 +501,7 @@ const DelhiToursPage: React.FC<DelhiToursPageProps> = ({ onPageChange }) => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative">
                 <a 
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  href="https://youtu.be/MHy1LtsetN4?si=2bYiL-SVeXtwVh3j"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
