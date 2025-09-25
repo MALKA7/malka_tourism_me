@@ -533,29 +533,49 @@ const DelhiToursPage: React.FC<DelhiToursPageProps> = ({ onPageChange }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-3">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 hebrew-text">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm hebrew-text">{testimonial.location}</p>
-                  </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-3">
+                  <Users className="w-6 h-6" />
                 </div>
-                
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                  ))}
+                <div>
+                  <h4 className="font-bold text-gray-900 hebrew-text">ניסים רוהקר, רוני אהרון וחנניה אטדגי</h4>
+                  <p className="text-gray-600 text-sm hebrew-text">ישראל</p>
                 </div>
-                
-                <p className="text-gray-700 hebrew-text leading-relaxed italic">
-                  "{testimonial.text}"
-                </p>
               </div>
-            ))}
+              
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                ))}
+              </div>
+              
+              <p className="text-gray-700 hebrew-text leading-relaxed italic">
+                "מלכה שלום, תודה על הכל, היה מאוד כיף הטיול לדלהי שסגרת לי ולחברים שלי. היינו שמחים ומרוצים מכל הבחינות – ידע, אמינות, יושר ומקצועיות. אני ממליץ בחום לכל המטיילים והמעוניינים. את פשוט תותחית בכל הקשור להודו. תמשיכי ותצליחי בכל מעשי ידייך."
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center ml-3">
+                  <Users className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 hebrew-text">משפחת לוי</h4>
+                  <p className="text-gray-600 text-sm hebrew-text">חיפה</p>
+                </div>
+              </div>
+              
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                ))}
+              </div>
+              
+              <p className="text-gray-700 hebrew-text leading-relaxed italic">
+                "חוויה בלתי נשכחת בדלהי! הילדים נהנו מכל רגע והמדריכה דיברה עברית מושלמת. הרכב היה נוח והנהג מקצועי. ממליצים בחום!"
+              </p>
+            </div>
           </div>
 
           <div className="text-center mt-12">
