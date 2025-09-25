@@ -232,8 +232,12 @@ const AdditionalCitiesPage: React.FC<AdditionalCitiesPageProps> = ({ onPageChang
               </div>
               <h3 className="text-xl font-bold mb-3 hebrew-text">ניסיון מוכח</h3>
               <p className="text-gray-600 hebrew-text">15 שנות ניסיון בהדרכה בהודו</p>
+            </div>
 
             <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-xl font-bold mb-3 hebrew-text">בטיחות מלאה</h3>
               <p className="text-gray-600 hebrew-text">נסיעות בטוחות עם תמיכה 24/7</p>
             </div>
