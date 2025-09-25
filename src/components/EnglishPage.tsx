@@ -152,11 +152,21 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="grid grid-cols-1 gap-6">
               <img 
-                src="/Malka.jpg" 
-                alt="Malka Irani - English-speaking tour guide in India"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
+                src="/mumbai gateway.jpg" 
+                alt="Malka in Mumbai - Gateway of India"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+              <img 
+                src="/tours w malka.png" 
+                alt="Malka with tour groups in India"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
+              />
+              <img 
+                src="/Home stay malka.png" 
+                alt="Malka's villa in Bangalore"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
               />
             </div>
             
@@ -204,22 +214,22 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
                   alt={service.title}
                   className="w-full h-48 object-cover"
                 />
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                <div className="p-4 text-center">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">{service.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed text-center">{service.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <div className="bg-blue-100 p-6 rounded-xl border border-blue-200 max-w-2xl">
-              <h3 className="text-2xl font-bold text-blue-900 mb-3">English-Speaking Cultural Guide</h3>
-              <p className="text-blue-800 leading-relaxed">
+            <div className="bg-blue-100 p-6 rounded-xl border border-blue-200 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-blue-900 mb-3 text-center">English-Speaking Cultural Guide</h3>
+              <p className="text-blue-800 leading-relaxed text-center">
                 <strong>Malka speaks fluent English</strong> and has been escorting English-speaking tourists for over a decade. 
                 All tours, consultations, and communications are conducted in clear, professional English.
               </p>
-              <p className="text-blue-800 leading-relaxed mt-4">
+              <p className="text-blue-800 leading-relaxed mt-4 text-center">
                 For Historical monuments and museums, Malka works alongside licensed guides to ensure a complete experience.
               </p>
             </div>
@@ -300,14 +310,14 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {whyChooseMalka.map((reason, index) => (
-              <div key={index} className="text-left group">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
                   <reason.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-left">{reason.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-left">{reason.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{reason.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{reason.description}</p>
               </div>
             ))}
           </div>
@@ -390,7 +400,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
               {/* Social Media Icons */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h4 className="text-lg font-bold text-gray-900 mb-6 text-center">Follow Us</h4>
-                <div className="flex justify-start space-x-6">
+                <div className="flex justify-center space-x-6">
                   <a 
                     href="https://www.facebook.com/groups/680827564461843"
                     className="social-icon facebook hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl"
