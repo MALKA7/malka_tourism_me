@@ -341,10 +341,6 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
                     <h4 className="font-bold text-gray-900 mb-2 text-center">Tour Highlights:</h4>
                     <p className="text-gray-600 text-center text-sm">{destination.description}</p>
                   </div>
-                  
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    Learn More
-                  </button>
                 </div>
               </div>
             ))}
