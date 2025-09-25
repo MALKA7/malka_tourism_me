@@ -1,172 +1,140 @@
-import React, { useState } from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Car, Camera, Building, Waves, Mountain, Globe, Award, Shield, Play, ChevronDown, ChevronUp, X } from 'lucide-react';
+import React from 'react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Award, Shield, Globe, Heart, Car, Hotel, MessageCircle, FileText, CreditCard } from 'lucide-react';
 
-interface MumbaiSharedTourPageProps {
+interface OrganizedToursPageProps {
   onPageChange: (page: string) => void;
 }
 
-const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChange }) => {
-  const [activeTab, setActiveTab] = useState('included');
-
-  const mumbaiPhotos = [
+const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange }) => {
+  const vehicles = [
     {
-      title: 'שער הכניסה להודו',
-      image: '/mumbai gateway.jpg'
+      name: 'רכב פרטי',
+      capacity: '1-2 נוסעים',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
+      passengerCount: 2
     },
     {
-      title: 'מכבסה פתוחה',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
+      name: 'SUV',
+      capacity: '3-4 נוסעים',
+      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
+      passengerCount: 4
     },
     {
-      title: 'שכונת סלאם דהרבי',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+      name: 'מיניו ואן',
+      capacity: '5-10 נוסעים',
+      image: '/transport bus.png',
+      passengerCount: 10
     },
     {
-      title: 'רכבת מקומית',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg'
-    },
-    {
-      title: 'שווקים צבעוניים',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg'
+      name: 'אוטובוסים',
+      capacity: 'קבוצות גדולות',
+      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
+      passengerCount: 20
     }
   ];
 
-  const tabContent = {
-    included: {
-      title: 'כלול',
-      content: (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-3">
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
-              <span className="hebrew-text">איסוף והחזרה לנקודת מפגש</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
-              <span className="hebrew-text">תחבורה פרטית עם נהג</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
-              <span className="hebrew-text">הדרכה בעברית</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
-              <span className="hebrew-text">8 שעות סיור</span>
-            </div>
-          </div>
-          <div className="space-y-3">
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
-              <span className="hebrew-text">ביקור באתרים מרכזיים</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
-              <span className="hebrew-text">חוויות תרבותיות</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
-              <span className="hebrew-text">ליווי מקצועי</span>
-            </div>
-            <div className="flex items-center">
-              <CheckCircle className="w-5 h-5 text-green-600 ml-2" />
-              <span className="hebrew-text">תמיכה במהלך הסיור</span>
-            </div>
-          </div>
-        </div>
-      )
+  const suitableFor = [
+    {
+      icon: Users,
+      title: 'משפחות עם ילדים',
+      description: 'חוויות מותאמות למשפחות עם פעילויות לכל הגילאים'
     },
-    notIncluded: {
-      title: 'לא כלול במחיר',
-      content: (
-        <div className="space-y-3">
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">ארוחות ושתייה</span>
-          </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">כניסות לאתרים</span>
-          </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">תשלום על מצלמות</span>
-          </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">ביטוחים שונים</span>
-          </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">טיפים לנותני שירות</span>
-          </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">קניות אישיות</span>
-          </div>
-          <div className="flex items-center">
-            <X className="w-5 h-5 text-red-600 ml-2" />
-            <span className="hebrew-text">שעות נוספות</span>
-          </div>
-        </div>
-      )
+    {
+      icon: Heart,
+      title: 'קבוצות חברים',
+      description: 'טיולים מהנים וחווייתיים לקבוצות חברים'
     },
-    pricing: {
-      title: 'מחיר',
-      content: (
-        <div className="space-y-6">
-          <div className="bg-blue-50 p-6 rounded-lg text-center">
-            <div className="text-4xl font-bold text-blue-600 mb-2">$150</div>
-            <div className="text-gray-700 hebrew-text">מחיר לאדם בקבוצה של 10 אנשים 150 דולר</div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-red-50 p-4 rounded-lg">
-              <h4 className="font-bold text-red-900 mb-2 hebrew-text">מעל גיל 13</h4>
-              <p className="text-gray-700 hebrew-text text-sm">הטיול לא מתאים לילדים</p>
-            </div>
-            <div className="bg-yellow-50 p-4 rounded-lg">
-              <h4 className="font-bold text-yellow-900 mb-2 hebrew-text">תשלומים</h4>
-              <p className="text-gray-700 hebrew-text text-sm">אפשרות לתשלום במספר תשלומים</p>
-            </div>
-          </div>
-        </div>
-      )
+    {
+      icon: Globe,
+      title: 'קבוצות פרטיות של 6–20 אנשים',
+      description: 'טיולים מותאמים לקבוצות בגדלים שונים'
     },
-    terms: {
-      title: 'תנאים',
-      content: (
-        <div className="space-y-4">
-          <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-            <h4 className="font-bold text-yellow-900 mb-2 hebrew-text">ביטול</h4>
-            <p className="text-gray-700 hebrew-text text-sm">ביטול עד 48 שעות לפני הטיול</p>
-          </div>
-          <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-            <h4 className="font-bold text-blue-900 mb-2 hebrew-text">שינויים</h4>
-            <p className="text-gray-700 hebrew-text text-sm">שינויים במסלול אפשריים עד 24 שעות לפני</p>
-          </div>
-          <div className="bg-red-50 p-4 rounded-lg border border-red-200">
-            <h4 className="font-bold text-red-900 mb-2 hebrew-text">דרישות</h4>
-            <p className="text-gray-700 hebrew-text text-sm">נדרש להגיע בזמן לנקודת המפגש</p>
-          </div>
-        </div>
-      )
-    },
-    notes: {
-      title: 'הערות',
-      content: (
-        <div className="space-y-4">
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <p className="text-gray-700 hebrew-text">נקודת איסוף משער הודו מול מלון טאג' בקולבה</p>
-          </div>
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <p className="text-gray-700 hebrew-text">המסלול עשוי להשתנות בהתאם לתנאי מזג האוויר ונסיבות מקומיות.</p>
-          </div>
-          <div className="bg-green-50 p-4 rounded-lg">
-            <p className="text-gray-700 hebrew-text">מומלץ להגיע 15 דקות לפני שעת האיסוף.</p>
-          </div>
-        </div>
-      )
+    {
+      icon: MessageCircle,
+      title: 'מטיילים שרוצים חוויה אישית בעברית',
+      description: 'הדרכה מקצועית בעברית עם הבנה תרבותית'
     }
-  };
+  ];
+
+  const services = [
+    {
+      icon: MapPin,
+      title: 'בניית מסלול מותאם אישית',
+      description: 'לפי הצרכים, התקציב והעדפות'
+    },
+    {
+      icon: Hotel,
+      title: 'תיאום מלונות',
+      description: 'רק מקומות שנבדקו על ידי מלכה'
+    },
+    {
+      icon: Car,
+      title: 'שירותי רכב',
+      description: 'רכבים פרטיים, מיניבוסים או אוטובוסים לקבוצות'
+    },
+    {
+      icon: Users,
+      title: 'מדריכה בעברית',
+      description: 'אפשרות שמלכה תצטרף לטיול בכל נקודה בהודו'
+    },
+    {
+      icon: Phone,
+      title: 'סיוע שוטף',
+      description: 'ליווי טלפוני ועזרה בכל בקשה'
+    }
+  ];
+
+  const processSteps = [
+    {
+      number: 1,
+      icon: MessageCircle,
+      title: 'ייעוץ והבנת מחירי תכנון והפקה',
+      description: 'יצירת קשר ראשוני להבנת הצרכים והתקציב'
+    },
+    {
+      number: 2,
+      icon: CreditCard,
+      title: 'תשלום ראשוני להבטחת המשך תהליך',
+      description: 'תשלום ראשוני להתחלת התהליך המקצועי'
+    },
+    {
+      number: 3,
+      icon: FileText,
+      title: 'מסירת תוכנית טיול',
+      description: 'לאחר שתוכנית הטיול תועבר בכתב, מתחילה הפקה בפועל של המסלול'
+    },
+    {
+      number: 4,
+      icon: Hotel,
+      title: 'הצגת תמחור ומלונות',
+      description: 'מלכה מספקת תמחור מפורט יחד עם רשימת המלונות שבהם היא בדקה והתנסתה, לרבות עלות רכבים ולפי בקשה גם מדריכים וכניסות לאתרים'
+    },
+    {
+      number: 5,
+      icon: CheckCircle,
+      title: 'שינויים והתאמות',
+      description: 'במידת הצורך, מבוצעים שינויים והתאמות עד לאישור הסופי של המטייל'
+    },
+    {
+      number: 6,
+      icon: Calendar,
+      title: 'תשלום סופי והזמנות',
+      description: 'לאחר אישור התוכנית הסופי, מתבצע תשלום מלא והזמנת החדרים, רכבים ושירותים נלווים'
+    },
+    {
+      number: 7,
+      icon: Shield,
+      title: 'ליווי בהודו',
+      description: 'במהלך הטיול, מתקיים ליווי יומי אישי והנכונות לסייע בכל בקשה או צורך שצץ במהלך המסע'
+    }
+  ];
+
+  const uniqueAdvantages = [
+    'מלכה חיה בהודו מעל 15 שנה',
+    'ניסיון עשיר בהדרכת קבוצות ומשפחות ישראליות',
+    'הבנה מלאה בצרכים ישראליים (כשרות, ילדים, נוחות)',
+    'קשרים ישירים עם נהגים, מדריכים ומלונות – ללא מתווכים'
+  ];
 
   const testimonials = [
     {
@@ -185,15 +153,45 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
       name: 'צפריר גרינברג, צוות אל על',
       location: 'יולי 2018',
       rating: 5,
-      text: 'ליום הסיור במומבאי, בדגש של טיול אחר, אנחנו רוצים להמליץ בחום רב על מדריכה נהדרת. שמה מלכה אירני, ישראלית שנשואה להודי ומתגוררת בהודו שנים רבות. מלכה בעלת ידע רב על התרבות, ההיסטוריה והחיים בהודו. שולטת בשפה המקומית.'
+      text: 'ליום הסיור במומבאי, בדגש של \'טיול אחר\', אנחנו רוצים להמליץ בחום רב על מדריכה נהדרת. שמה מלכה אירני, ישראלית שנשואה להודי ומתגוררת בהודו שנים רבות. מלכה בעלת ידע רב על התרבות, ההיסטוריה והחיים בהודו. שולטת בשפה המקומית. בחרנו מספר אתרים לסיור במומבאי, מתוך רשימה ארוכה שמלכה הציעה. מלכה אספה אותנו מהמלון ברכב נוח ונעים, ובדרך שמענו את סיפור חייה המרתק. בקרנו בעיר באתרים שונים ומעניינים כגון, רציפי ששון, שכונת הסלאם ושכונת העדה הפרסית הזרתוסטרה (דת מונותאיסטית פרסית עתיקה). והכל תוך כדי אכפתיות, דאגה, מקצועיות, כריזמה, הפגנת ידע רב וחשיבה על כל פרט ופרט. אין ספק שבזכותה הסיור כאן הפך למיוחד, מעניין ומרתק. את יום הסיור העמוס, מלא הרשמים והחוויות סיימנו בארוחה מדהימה בביתם של מארחים נפלאים מהעדה הפרסית תוך כדי שמיעת פרטים וסיפורים על מנהגי העדה. ובקיצור יום סיור נפלא עם מלכה המקסימה, המרתקת והנהדרת שווה ומעניין. תודה ענקית צוות אלעל יולי 2018'
     },
     {
       name: 'דבורה אורן',
       location: 'טיול נשים - מרץ 2025',
       rating: 5,
-      text: 'הייתי במומבאי לא פעם… אהבתי אותה וחזרתי אליה שוב, הפעם עם קבוצת של חברות, במסגרת טיול מאורגן בדרום הודו. מלכה הובילה אותנו בעיר המהממת הזאת, בבטחה ובאהבה לעיר, בה חיה שנים ואותה מכירה על כל פניה.'
+      text: `הייתי במומבאי לא פעם… אהבתי אותה וחזרתי אליה שוב, הפעם עם קבוצת של חברות, במסגרת טיול מאורגן בדרום הודו, בתקווה ובחרדה שלא אאכזב, שמע הגזמתי בציפיות מהעיר… ושם, בבוקרו של יום פגשנו את מלכה בלובי של מלון "טאג' מהאל", ארמון מהמם בפני עצמו, כיאה לנסיכות מארץ הקודש, כדי לגלות את קסמיה של העיר "המשוגעת" הזאת… וזה אפשרי רק עם מי שמשוגעת על מומבאי. מלכה הובילה אותנו בעיר המהממת הזאת, בבטחה ובאהבה לעיר, בה חיה שנים ואותה מכירה על כל פניה… ולעיר הזאת פנים נסתרות ומסתוריות. מומבאי מחר כבר לא תהיה מומבאי של היום. מלכה הסירה בפנינו את מסך המסתורין וכולנו התאהבנו, גם בעיר וגם במלכה. חיינו וחווינו את העיר ולא שבעו… אם היה תלוי בנו, היינו נשארות ימים נוספים ומכתירות את מלכה כמלכת מומבאי. כי היא באמת מלכה👸 תודה מכל הלב בשם חברותי ובשמי❤️`
     }
   ];
+
+  const tabContent = {
+    route: {
+      title: 'מסלול',
+      content: (
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h4 className="font-bold text-blue-900 mb-3 hebrew-text">בוקר (10:00-13:00)</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="hebrew-text">• איסוף מנקודת המפגש</li>
+                <li className="hebrew-text">• שער הכניסה להודו</li>
+                <li className="hebrew-text">• מכבסה פתוחה</li>
+                <li className="hebrew-text">• שכונת סלאם דהרבי</li>
+              </ul>
+            </div>
+            <div className="bg-green-50 p-6 rounded-lg">
+              <h4 className="font-bold text-green-900 mb-3 hebrew-text">אחר הצהריים (13:00-18:00)</h4>
+              <ul className="space-y-2 text-gray-700">
+                <li className="hebrew-text">• הפסקת צהריים</li>
+                <li className="hebrew-text">• רכבת מקומית</li>
+                <li className="hebrew-text">• שווקים צבעוניים</li>
+                <li className="hebrew-text">• החזרה לנקודת המפגש</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    included: {
 
   return (
     <div className="min-h-screen fade-in">
@@ -201,8 +199,8 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
       <section className="relative h-96">
         <div className="absolute inset-0">
           <img 
-            src="/mumbai gateway.jpg" 
-            alt="גלה את מומבאי: סיור קבוצתי בן 8 שעות"
+            src="/organised tours.png" 
+            alt="סיורים בעברית לקבוצות בהודו"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -211,45 +209,91 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center text-center">
           <div className="text-white max-w-4xl">
             <h1 className="text-5xl font-bold mb-6 hebrew-text">
-              גלה את מומבאי: סיור קבוצתי בן 8 שעות
+              סיורים בעברית לקבוצות בהודו
             </h1>
+            <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
+              טיולים מאורגנים מקצועיים לקבוצות עם הדרכה בעברית ותכנון מותאם אישית
+            </p>
+            <button 
+              onClick={() => onPageChange('contact')}
+              className="btn-primary text-lg px-8 py-4"
+            >
+              צור קשר לתכנון הטיול שלכם
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Description Section */}
-      <section className="py-16 bg-blue-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg text-gray-800 leading-relaxed hebrew-text">
-            הצטרפו לסיור קבוצתי מרתק במומבאי עם מדריכה ישראלית מקצועית. גלו את הבירה הכלכלית של הודו, 
-            חוו את התרבות המקומית והכירו את האתרים המפורסמים ביותר של העיר. סיור של 8 שעות מלאות 
-            עם קבוצה קטנה ואינטימית שמאפשרת חוויה אישית ומעמיקה.
-          </p>
+      {/* Who Is It For Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              למי מתאים?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {suitableFor.map((item, index) => (
+              <div key={index} className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <item.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 hebrew-text">{item.title}</h3>
+                <p className="text-gray-600 hebrew-text leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Mumbai Photos Gallery */}
+      {/* What's Included Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              תמונות ממומבאי
+              מה השירות כולל?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3 hebrew-text">{service.title}</h3>
+                <p className="text-gray-600 hebrew-text text-sm leading-relaxed">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              איך זה עובד?
             </h2>
             <p className="text-xl text-gray-600 hebrew-text">
-              הצצה לאתרים המרכזיים שנבקר בהם
+              שלבי הפקת טיול בהודו עם מלכה
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {mumbaiPhotos.map((photo, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <img 
-                  src={photo.image}
-                  alt={photo.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-900 hebrew-text text-center">{photo.title}</h3>
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {processSteps.map((step, index) => (
+              <div key={index} className="flex items-start bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full flex items-center justify-center ml-4 flex-shrink-0 font-bold text-lg shadow-lg">
+                  {step.number}
+                </div>
+                <div className="mr-4">
+                  <step.icon className="w-8 h-8 text-blue-600 mb-2" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-gray-900 mb-3 hebrew-text text-xl">{step.title}</h4>
+                  <p className="text-gray-700 hebrew-text leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -257,98 +301,24 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
         </div>
       </section>
 
-      {/* Tabs Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              מוכנים לצאת לדרך? הנה הפרטים
-            </h2>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            {/* Tab Headers */}
-            <div className="flex flex-wrap border-b border-gray-200">
-              {Object.entries(tabContent).map(([key, tab]) => (
-                <button
-                  key={key}
-                  onClick={() => setActiveTab(key)}
-                  className={`px-6 py-4 font-medium hebrew-text transition-all duration-300 ${
-                    activeTab === key
-                      ? 'bg-blue-600 text-white border-b-2 border-blue-600'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-                  }`}
-                >
-                  {tab.title}
-                </button>
-              ))}
-            </div>
-            
-            {/* Tab Content */}
-            <div className="p-8">
-              {tabContent[activeTab as keyof typeof tabContent].content}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Transport Section */}
+      {/* Unique Advantages Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              תחבורה לסיור
+              יתרונות ייחודיים
             </h2>
-            <p className="text-xl text-gray-600 hebrew-text">
-              מיניבוס נוח ומזוגן לקבוצה
-            </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
-              <img 
-                src="/transport bus.png"
-                alt="מיניבוס לסיור קבוצתי"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text text-center">מיניבוס מזוגן</h3>
-                
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="w-8 h-8 text-white" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 hebrew-text">עד 10 נוסעים</h4>
-                    <p className="text-gray-600 hebrew-text text-sm">קבוצה קטנה ואינטימית</p>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Building className="w-8 h-8 text-white" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 hebrew-text">מזוגן</h4>
-                    <p className="text-gray-600 hebrew-text text-sm">נוחות מלאה</p>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Award className="w-8 h-8 text-white" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 hebrew-text">נהג מקצועי</h4>
-                    <p className="text-gray-600 hebrew-text text-sm">ניסיון רב בעיר</p>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Shield className="w-8 h-8 text-white" />
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 hebrew-text">בטיחות</h4>
-                    <p className="text-gray-600 hebrew-text text-sm">רכב מבוטח ובטוח</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {uniqueAdvantages.map((advantage, index) => (
+              <div key={index} className="flex items-center p-6 bg-blue-50 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center ml-4 flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </div>
+                <p className="text-gray-800 hebrew-text font-medium leading-relaxed">{advantage}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -361,6 +331,32 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
               מה אומרים הלקוחות
             </h2>
             <p className="text-xl text-gray-600 hebrew-text">חוויות אמיתיות של קבוצות ישראליות שטיילו עם מלכה</p>
+          </div>
+
+          {/* Photos with Malka and Groups */}
+          {/* Running Banner */}
+          <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
+            <div className="running-banner whitespace-nowrap">
+              <span className="mx-8">ההרשמה נפתחה - מקומות מוגבלים</span>
+              <span className="mx-8">הרשמו לטיול המאורגן הקרוב לקרלה בהנחייתה של מלכה</span>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <img 
+                src="/tours w malka.png"
+                alt="מלכה עם קבוצה גדולה"
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg">
+              <img 
+                src="/tours w malka 2.png"
+                alt="מלכה עם קבוצה נוספת"
+                className="w-full h-64 object-cover"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -386,18 +382,18 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6 hebrew-text">
-            הצטרפו לסיור הקבוצתי במומבאי
+            צור קשר עם מלכה ותתחיל לתכנן את הטיול שלכם בהודו
           </h2>
           <p className="text-xl mb-8 hebrew-text leading-relaxed opacity-95">
-            מוכנים לחוויה בלתי נשכחת במומבאי עם קבוצה? 
-            מלכה תדאג לכל הפרטים ותעניק לכם סיור מושלם
+            מוכנים לחוויה בלתי נשכחת בהודו עם קבוצה שלכם? 
+            מלכה תדאג לכל הפרטים ותעניק לכם טיול מושלם
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => onPageChange('contact')}
               className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              הצטרפו לסיור
+              תכננו את הטיול שלכם
             </button>
             <a 
               href="https://wa.me/919980601979"
@@ -414,4 +410,4 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
   );
 };
 
-export default MumbaiSharedTourPage;
+export default OrganizedToursPage;
