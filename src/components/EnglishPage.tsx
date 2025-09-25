@@ -182,7 +182,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-900 to-indigo-700 bg-clip-text text-transparent mb-4 text-left">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-900 to-indigo-700 bg-clip-text text-transparent mb-4">
               Our Services
             </h2>
             <p className="text-xl text-blue-700 max-w-3xl mx-auto font-medium mb-8 text-center">
@@ -190,14 +190,18 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="text-center p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mb-6 shadow-lg">
-                  <service.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <img 
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-blue-900">{service.title}</h3>
-                <p className="text-blue-700 leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
@@ -221,7 +225,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 text-left">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Popular Destinations
             </h2>
             <p className="text-xl text-gray-600">
@@ -282,7 +286,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 text-left">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Why Choose Malka?
             </h2>
             <p className="text-xl text-gray-600">
@@ -308,7 +312,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 text-left">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Contact Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -319,7 +323,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-left">Get In Touch</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h3>
               
               <div className="space-y-6">
                 <div className="flex items-center p-4 bg-blue-50 rounded-lg">
@@ -379,7 +383,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
 
               {/* Social Media Icons */}
               <div className="mt-8 pt-8 border-t border-gray-200">
-                <h4 className="text-lg font-bold text-gray-900 mb-6 text-left">Follow Us</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-6 text-center">Follow Us</h4>
                 <div className="flex justify-start space-x-6">
                   <a 
                     href="https://www.facebook.com/groups/680827564461843"
@@ -434,7 +438,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
 
             {/* Contact Form */}
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-left">Send Us a Message</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Send Us a Message</h3>
               
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -528,7 +532,7 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl font-bold mb-6 text-left">
+            <h2 className="text-4xl font-bold mb-6">
               Ready to Start Your Indian Adventure?
             </h2>
             <p className="text-xl mb-8 leading-relaxed opacity-95">
