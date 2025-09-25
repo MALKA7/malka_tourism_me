@@ -194,6 +194,54 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
         </div>
       </section>
 
+      {/* Why Choose Malka Section - New Design */}
+      <section className="py-20 bg-[#0A2540]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Why Choose Malka?
+            </h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              The reasons that make Malka the leading guide in India
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Safety & Comfort</h3>
+              <p className="text-blue-200 leading-relaxed">Trusted transportation, vetted hotels, and family-friendly options for worry-free travel.</p>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Cultural Insight</h3>
+              <p className="text-blue-200 leading-relaxed">Authentic experiences, guidance on customs, and a bridge between cultures.</p>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Personalized Experiences</h3>
+              <p className="text-blue-200 leading-relaxed">Markets, cultural activities, monuments, and licensed guides for full experiences.</p>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-110">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Stress-Free Travel</h3>
+              <p className="text-blue-200 leading-relaxed">I handle logistics—hotels, transfers, meals, tickets—so you can focus on exploring India.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,32 +259,6 @@ const EnglishPage: React.FC<EnglishPageProps> = ({ onPageChange }) => {
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <img 
                   src={service.image}
-                  alt={service.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4 text-center">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">{service.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed text-center">{service.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <div className="bg-blue-100 p-6 rounded-xl border border-blue-200 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-blue-900 mb-3 text-center">English-Speaking Cultural Guide</h3>
-              <p className="text-blue-800 leading-relaxed text-center">
-                <strong>Malka speaks fluent English</strong> and has been escorting English-speaking tourists for over a decade. 
-                All tours, consultations, and communications are conducted in clear, professional English.
-              </p>
-              <p className="text-blue-800 leading-relaxed mt-4 text-center">
-                For Historical monuments and museums, Malka works alongside licensed guides to ensure a complete experience.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Destinations Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
