@@ -163,7 +163,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                 <img 
                   src="/Logo.png" 
                   alt="India by Malka Logo"
-                  className="h-16 w-auto object-contain"
+                  className="h-20 w-auto object-contain"
                 />
               </button>
             </div>
