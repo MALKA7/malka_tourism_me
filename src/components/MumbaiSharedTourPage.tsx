@@ -212,7 +212,7 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
             <span className="text-blue-600 font-bold">סיור משותף במומבאי</span>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Professional Description Section */}
       <section className="py-20 bg-white">
@@ -372,87 +372,6 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
         </div>
       </section>
 
-      {/* Important Notes Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              הערות חשובות לסיור
-            </h2>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
-              <h3 className="text-xl font-bold text-blue-900 mb-3 hebrew-text">סוג הסיור</h3>
-              <p className="text-gray-700 hebrew-text">זהו סיור קבוצתי פתוח למטיילים ישראלים בלבד ולא סיור פרטי.</p>
-            </div>
-
-            <div className="bg-green-50 p-6 rounded-xl border border-green-200">
-              <h3 className="text-xl font-bold text-green-900 mb-3 hebrew-text">דרישות השתתפות</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="hebrew-text">• יש לבוא עם נעליים סגורות חובה</li>
-                <li className="hebrew-text">• יש להביא מסמך מזהה לאימות פרטים</li>
-                <li className="hebrew-text">• הגעה עצמאית לנקודת האיסוף (הפרטים יישלחו לאחר אישור ותשלום)</li>
-              </ul>
-            </div>
-
-            <div className="bg-purple-50 p-6 rounded-xl border border-purple-200">
-              <h3 className="text-xl font-bold text-purple-900 mb-3 hebrew-text">מדיניות קבוצות</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="hebrew-text">• הסיור ייצא עם מינימום 5 מטיילים</li>
-                <li className="hebrew-text">• במידה ויש ביקוש ליותר מ-12 מטיילים, הרכב ישודרג</li>
-              </ul>
-            </div>
-
-            <div className="bg-red-50 p-6 rounded-xl border border-red-200">
-              <h3 className="text-xl font-bold text-red-900 mb-3 hebrew-text">הגבלות צילום</h3>
-              <p className="text-gray-700 hebrew-text">אסור לצלם את תחנת הרכבת לפי בקשת המשטרה.</p>
-            </div>
-
-            <div className="bg-yellow-50 p-6 rounded-xl border border-yellow-200">
-              <h3 className="text-xl font-bold text-yellow-900 mb-3 hebrew-text">ארוחות</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="hebrew-text">• פחות מ-10 מטיילים: ארוחת צהריים בתוספת תשלום לפי בחירת המסעדה</li>
-                <li className="hebrew-text">• 10 מטיילים ומעלה: ארוחת צהריים (ללא שתייה) כלולה במחיר במסגרת "אכול כפי יכולתך" במסעדה הודית</li>
-              </ul>
-            </div>
-
-            <div className="bg-orange-50 p-6 rounded-xl border border-orange-200">
-              <h3 className="text-xl font-bold text-orange-900 mb-3 hebrew-text">מדיניות ביטולים</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li className="hebrew-text">• לאחר כרטוס כרטיס הטיסה של המדריכה: לא יהיה החזר תשלום במידה ויתבקש ביטול עם 5 מטיילים בלבד</li>
-                <li className="hebrew-text">• ביטול לפני כרטוס: החזר יתקבל לאחר ניכוי עמלות והמרות בנק</li>
-                <li className="hebrew-text">• ביטול לאחר כרטוס עם מעל 5 מטיילים: יוחזר 50% מהתשלום</li>
-              </ul>
-            </div>
-
-            <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-200">
-              <h3 className="text-xl font-bold text-indigo-900 mb-3 hebrew-text">כסף מזומן</h3>
-              <p className="text-gray-700 hebrew-text">נא להביא 200 רופי בשטרות של 50 למתן טיפים לאנשי העיר שנפגוש.</p>
-            </div>
-
-            <div className="bg-teal-50 p-6 rounded-xl border border-teal-200">
-              <h3 className="text-xl font-bold text-teal-900 mb-3 hebrew-text">ציוד נדרש</h3>
-              <div className="space-y-3">
-                <div>
-                  <h4 className="font-bold text-gray-800 hebrew-text mb-2">כל השנה:</h4>
-                  <p className="text-gray-700 hebrew-text">מסיכה, כובע נגד שמש, משקפי שמש, צעיף, נעלי הליכה סגורות עם גרביים, מגבונים או נייר טואלט, בקבוק מים</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-800 hebrew-text mb-2">עונה גשומה:</h4>
-                  <p className="text-gray-700 hebrew-text">מטריות</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-pink-50 p-6 rounded-xl border border-pink-200">
-              <h3 className="text-xl font-bold text-pink-900 mb-3 hebrew-text">קוד לבוש</h3>
-              <p className="text-gray-700 hebrew-text">נא לבוא בבגדים המתאימים לתרבות המקומית - להימנע מגופיות, חולצות בטן ומכנסונים קצרים.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500 to-red-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -480,7 +399,6 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
           </div>
         </div>
       </section>
-      </div>
     </div>
   );
 };
