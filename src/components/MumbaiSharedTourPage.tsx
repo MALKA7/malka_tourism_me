@@ -197,6 +197,7 @@ const MumbaiSharedTourPage: React.FC<MumbaiSharedTourPageProps> = ({ onPageChang
             >
               רשמו אותי לסיור
             </button>
+            </button>
           </div>
         </div>
       </section>
