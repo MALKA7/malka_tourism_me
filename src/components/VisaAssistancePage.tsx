@@ -1,296 +1,198 @@
 import React from 'react';
-import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Award, Shield, Globe, Heart, Car, Hotel, MessageCircle, FileText, CreditCard } from 'lucide-react';
+import { MapPin, Clock, Users, Star, Phone, Mail, CheckCircle, Calendar, Award, Shield, Globe, Heart, Car, Hotel, MessageCircle, FileText, CreditCard, Import as Passport, Plane, Building } from 'lucide-react';
 
-interface OrganizedToursPageProps {
+interface VisaAssistancePageProps {
   onPageChange: (page: string) => void;
 }
 
-const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange }) => {
-  const vehicles = [
+const VisaAssistancePage: React.FC<VisaAssistancePageProps> = ({ onPageChange }) => {
+  const visaServices = [
     {
-      name: 'רכב פרטי',
-      capacity: '1-2 נוסעים',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      passengerCount: 2
+      icon: Passport,
+      title: 'ויזה תיירותית',
+      description: 'סיוע בהגשת בקשה לויזה תיירותית להודו'
     },
     {
-      name: 'SUV',
-      capacity: '3-4 נוסעים',
-      image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg',
-      passengerCount: 4
-    },
-    {
-      name: 'מיניו ואן',
-      capacity: '5-10 נוסעים',
-      image: '/transport bus.png',
-      passengerCount: 10
-    },
-    {
-      name: 'אוטובוסים',
-      capacity: 'קבוצות גדולות',
-      image: 'https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg',
-      passengerCount: 20
-    }
-  ];
-
-  const suitableFor = [
-    {
-      icon: Users,
-      title: 'משפחות עם ילדים',
-      description: 'חוויות מותאמות למשפחות עם פעילויות לכל הגילאים'
-    },
-    {
-      icon: Heart,
-      title: 'קבוצות חברים',
-      description: 'טיולים מהנים וחווייתיים לקבוצות חברים'
-    },
-    {
-      icon: Globe,
-      title: 'קבוצות פרטיות של 6–20 אנשים',
-      description: 'טיולים מותאמים לקבוצות בגדלים שונים'
-    },
-    {
-      icon: MessageCircle,
-      title: 'מטיילים שרוצים חוויה אישית בעברית',
-      description: 'הדרכה מקצועית בעברית עם הבנה תרבותית'
-    }
-  ];
-
-  const services = [
-    {
-      icon: MapPin,
-      title: 'בניית מסלול מותאם אישית',
-      description: 'לפי הצרכים, התקציב והעדפות'
-    },
-    {
-      icon: Hotel,
-      title: 'תיאום מלונות',
-      description: 'רק מקומות שנבדקו על ידי מלכה'
-    },
-    {
-      icon: Car,
-      title: 'שירותי רכב',
-      description: 'רכבים פרטיים, מיניבוסים או אוטובוסים לקבוצות'
+      icon: Building,
+      title: 'ויזה עסקית',
+      description: 'ויזות עסקיות לפגישות ועסקים בהודו'
     },
     {
       icon: Users,
-      title: 'מדריכה בעברית',
-      description: 'אפשרות שמלכה תצטרף לטיול בכל נקודה בהודו'
+      title: 'ויזה קבוצתית',
+      description: 'ויזות לקבוצות וטיולים מאורגנים'
     },
     {
-      icon: Phone,
-      title: 'סיוע שוטף',
-      description: 'ליווי טלפוני ועזרה בכל בקשה'
+      icon: Calendar,
+      title: 'ויזה מהירה',
+      description: 'שירות מהיר לויזות דחופות'
     }
+  ];
+
+  const requiredDocuments = [
+    'דרכון בתוקף לפחות 6 חודשים',
+    'תמונה פספורט צבעונית',
+    'טופס בקשה מלא',
+    'אישור הזמנת טיסות',
+    'אישור הזמנת מלון',
+    'אישור כספי מהבנק'
   ];
 
   const processSteps = [
     {
       number: 1,
       icon: MessageCircle,
-      title: 'ייעוץ והבנת מחירי תכנון והפקה',
-      description: 'יצירת קשר ראשוני להבנת הצרכים והתקציב'
+      title: 'יעוץ ראשוני',
+      description: 'בדיקת הדרישות והמסמכים הנדרשים'
     },
     {
       number: 2,
-      icon: CreditCard,
-      title: 'תשלום ראשוני להבטחת המשך תהליך',
-      description: 'תשלום ראשוני להתחלת התהליך המקצועי'
+      icon: FileText,
+      title: 'הכנת מסמכים',
+      description: 'עזרה במילוי הטפסים והכנת המסמכים'
     },
     {
       number: 3,
-      icon: FileText,
-      title: 'מסירת תוכנית טיול',
-      description: 'לאחר שתוכנית הטיול תועבר בכתב, מתחילה הפקה בפועל של המסלול'
+      icon: CreditCard,
+      title: 'הגשת הבקשה',
+      description: 'הגשת הבקשה לקונסוליה ההודית'
     },
     {
       number: 4,
-      icon: Hotel,
-      title: 'הצגת תמחור ומלונות',
-      description: 'מלכה מספקת תמחור מפורט יחד עם רשימת המלונות שבהם היא בדקה והתנסתה, לרבות עלות רכבים ולפי בקשה גם מדריכים וכניסות לאתרים'
-    },
-    {
-      number: 5,
       icon: CheckCircle,
-      title: 'שינויים והתאמות',
-      description: 'במידת הצורך, מבוצעים שינויים והתאמות עד לאישור הסופי של המטייל'
-    },
-    {
-      number: 6,
-      icon: Calendar,
-      title: 'תשלום סופי והזמנות',
-      description: 'לאחר אישור התוכנית הסופי, מתבצע תשלום מלא והזמנת החדרים, רכבים ושירותים נלווים'
-    },
-    {
-      number: 7,
-      icon: Shield,
-      title: 'ליווי בהודו',
-      description: 'במהלך הטיול, מתקיים ליווי יומי אישי והנכונות לסייע בכל בקשה או צורך שצץ במהלך המסע'
+      title: 'מעקב ואיסוף',
+      description: 'מעקב אחר הבקשה ואיסוף הויזה'
     }
   ];
 
-  const uniqueAdvantages = [
-    'מלכה חיה בהודו מעל 15 שנה',
-    'ניסיון עשיר בהדרכת קבוצות ומשפחות ישראליות',
-    'הבנה מלאה בצרכים ישראליים (כשרות, ילדים, נוחות)',
-    'קשרים ישירים עם נהגים, מדריכים ומלונות – ללא מתווכים'
-  ];
-
-  const testimonials = [
+  const visaTypes = [
     {
-      name: 'תומר כנעני',
-      location: 'קבוצת חברים של נהגי אגד',
-      rating: 5,
-      text: 'היינו קבוצה של 14 מטיילים והכל התנהל בצורה טובה במשך יומיים למדנו המון על מומבאי בפרט והודו בכלל יש לציין את הידע הרב של מלכה וצורת ההדרכה כולנו מודים לה מאוד על ההדרכה והשרות הנלווה.'
+      type: 'ויזה תיירותית',
+      duration: 'עד 90 יום',
+      price: '$50-80',
+      processing: '3-7 ימי עבודה'
     },
     {
-      name: 'קבוצת מנהלי ברמד העולמית',
-      location: 'ספטמבר 2025',
-      rating: 5,
-      text: 'מלכה היא מהות ההצדקה לטיול מאורגן, למי שמתלבט אם לנסות להכיר את העיר לבד או במתכונת הזו. מלכה הכירה לנו את החיים המקומיים באופן הכי Hands-On שיכולה להיות. היא הצליחה להעביר לנו חוויה של האדם ההודי האמיתי. חוויה שלעולם לא תוכל ולא תעז לעשות בעצמך. נשארתי עם חוויה צרובה לכל החיים'
+      type: 'ויזה עסקית',
+      duration: 'עד 180 יום',
+      price: '$80-120',
+      processing: '5-10 ימי עבודה'
     },
     {
-      name: 'צפריר גרינברג, צוות אל על',
-      location: 'יולי 2018',
-      rating: 5,
-      text: 'ליום הסיור במומבאי, בדגש של \'טיול אחר\', אנחנו רוצים להמליץ בחום רב על מדריכה נהדרת. שמה מלכה אירני, ישראלית שנשואה להודי ומתגוררת בהודו שנים רבות. מלכה בעלת ידע רב על התרבות, ההיסטוריה והחיים בהודו. שולטת בשפה המקומית. בחרנו מספר אתרים לסיור במומבאי, מתוך רשימה ארוכה שמלכה הציעה. מלכה אספה אותנו מהמלון ברכב נוח ונעים, ובדרך שמענו את סיפור חייה המרתק. בקרנו בעיר באתרים שונים ומעניינים כגון, רציפי ששון, שכונת הסלאם ושכונת העדה הפרסית הזרתוסטרה (דת מונותאיסטית פרסית עתיקה). והכל תוך כדי אכפתיות, דאגה, מקצועיות, כריזמה, הפגנת ידע רב וחשיבה על כל פרט ופרט. אין ספק שבזכותה הסיור כאן הפך למיוחד, מעניין ומרתק. את יום הסיור העמוס, מלא הרשמים והחוויות סיימנו בארוחה מדהימה בביתם של מארחים נפלאים מהעדה הפרסית תוך כדי שמיעת פרטים וסיפורים על מנהגי העדה. ובקיצור יום סיור נפלא עם מלכה המקסימה, המרתקת והנהדרת שווה ומעניין. תודה ענקית צוות אלעל יולי 2018'
-    },
-    {
-      name: 'דבורה אורן',
-      location: 'טיול נשים - מרץ 2025',
-      rating: 5,
-      text: `הייתי במומבאי לא פעם… אהבתי אותה וחזרתי אליה שוב, הפעם עם קבוצת של חברות, במסגרת טיול מאורגן בדרום הודו, בתקווה ובחרדה שלא אאכזב, שמע הגזמתי בציפיות מהעיר… ושם, בבוקרו של יום פגשנו את מלכה בלובי של מלון "טאג' מהאל", ארמון מהמם בפני עצמו, כיאה לנסיכות מארץ הקודש, כדי לגלות את קסמיה של העיר "המשוגעת" הזאת… וזה אפשרי רק עם מי שמשוגעת על מומבאי. מלכה הובילה אותנו בעיר המהממת הזאת, בבטחה ובאהבה לעיר, בה חיה שנים ואותה מכירה על כל פניה… ולעיר הזאת פנים נסתרות ומסתוריות. מומבאי מחר כבר לא תהיה מומבאי של היום. מלכה הסירה בפנינו את מסך המסתורין וכולנו התאהבנו, גם בעיר וגם במלכה. חיינו וחווינו את העיר ולא שבעו… אם היה תלוי בנו, היינו נשארות ימים נוספים ומכתירות את מלכה כמלכת מומבאי. כי היא באמת מלכה👸 תודה מכל הלב בשם חברותי ובשמי❤️`
+      type: 'ויזה מהירה',
+      duration: 'עד 30 יום',
+      price: '$100-150',
+      processing: '1-3 ימי עבודה'
     }
   ];
 
   return (
     <div className="min-h-screen fade-in">
       {/* Hero Section */}
-          {/* Running Banner */}
-          <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 overflow-hidden shadow-md mb-12 rounded-lg">
-            <div className="running-banner whitespace-nowrap">
-              <span className="mx-8">ההרשמה נפתחה - מקומות מוגבלים</span>
-              <span className="mx-8">הרשמו לטיול המאורגן הקרוב לקרלה בהנחייתה של מלכה</span>
-            </div>
-          </div>
-          
       <section className="relative h-96">
         <div className="absolute inset-0">
-              טיולים מאורגנים
-            src="/organised tours.png" 
-            alt="סיורים בעברית לקבוצות בהודו"
+          <img 
+            src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
+            alt="סיוע בויזה להודו"
             className="w-full h-full object-cover"
-
-                src="/Kerala.png" 
-                alt="קרלה"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
-                  שם הטיול: הודו בשלושה טעמים
-                </h3>
-                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
-                  טיול שמתחיל בקצב המהיר של מומבאי, העיר הענקית והמרתקת שמציעה שילוב בלתי נגמר של המודרני והמסורתי. 
-                  תיהנו מהרחובות הסואנים, מהשווקים הצבעוניים ומתרבות עשירה, ותבינו את מהות העיר שתמיד במרוץ קדימה.
-                  לאחר מכן, תעברו לבנגלור, בירת הטכנולוגיה של הודו, מקום שבו היי-טק וחדשנות נפגשים עם קסם מקומי. 
-                  כאן תרגישו את האווירה המיוחדת של העיר, המשלבת בין עתיד לבין מסורת, בין תעשייה לבין טבע.
-                  החלק האחרון יוביל אתכם לקרלה – האזור הירוק, השקט והקסום של הודו. כאן תצללו לתוך חוויות טבע מרהיבות, 
-                  תיהנו מתעלות מים יפהפיות, תיהנו מהשקט ומהשלווה של האזור, ותתמלאו באנרגיה מחודשת מהסביבה המיוחדת הזו.
-                </p>
-                <button 
-                  onClick={() => onPageChange('west-south-tour')}
-                  className="btn-primary"
-                >
-                  קראו עוד
-                </button>
-              </div>
-            </div>
-
-            {/* Kolkata Tour */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-              <img 
-                src="/kolkata.png" 
-                alt="קולקטה"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text">
-                  שם הטיול: מהבירה הכלכלית לתרבותית – הודו בין קצוות
-                </h3>
-                <p className="text-gray-700 leading-relaxed hebrew-text mb-6">
-                  הצטרפו למסע נדיר ממערב למזרח הודו – טיול צבעוני מסעיר שיטיל אור על שני עולמות שונים כל כך באותה מדינה. 
-                  במומבאי, לב ההודו המודרנית – שווקים, קולנוע, גורדי שחקים ונשמה גדולה. משם נמשיך בטיסה ללב המזרח – 
-                  מדינת מערב בנגל. נגיע לכולכתא, העיר שמכונה "עיר האושר": בירתה התרבותית של הודו, מקום הולדתו של טאגור, 
-                  ושל תה חם בלב חם. ולסיום – הרפתקה ייחודית בטבע: שייט וספארי בשמורת הסונדרבן, אזור הדלתא הגדול בעולם, 
-                  ביתו של הטיגריס הבנגלי והקסם הפראי. הודו שונה. הודו עמוקה. הודו, שלא הכרתם.
-                </p>
-                <button 
-                  onClick={() => onPageChange('west-east-tour')}
-                  className="btn-primary"
-                >
-                  קראו עוד
-                </button>
-              </div>
-            </div>
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div className="text-white max-w-3xl">
+            <h1 className="text-5xl font-bold mb-6 hebrew-text">
+              סיוע בויזה להודו
+            </h1>
+            <p className="text-xl mb-8 leading-relaxed hebrew-text opacity-95">
+              קבלו עזרה מקצועית בהגשת בקשה לויזה להודו. מלכה תלווה אתכם בכל התהליך 
+              ותוודא שתקבלו את הויזה בזמן ובקלות
+            </p>
+            <button 
+              onClick={() => onPageChange('contact')}
+              className="btn-primary text-lg px-8 py-4"
+            >
+              קבלו עזרה בויזה
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Who Is It For Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Breadcrumb */}
+      <div className="bg-gray-50 py-4 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              למי מתאים?
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {suitableFor.map((item, index) => (
-              <div key={index} className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <item.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 hebrew-text">{item.title}</h3>
-                <p className="text-gray-600 hebrew-text leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+          <div className="breadcrumb">
+            <button onClick={() => onPageChange('home')} className="breadcrumb-item">בית</button>
+            <span className="breadcrumb-separator">←</span>
+            <button onClick={() => onPageChange('services')} className="breadcrumb-item">שירותים</button>
+            <span className="breadcrumb-separator">←</span>
+            <span className="text-blue-600 font-bold">סיוע בויזה להודו</span>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* What's Included Section */}
+      {/* Visa Services Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              מה השירות כולל?
+              סוגי ויזות להודו
             </h2>
+            <p className="text-xl text-gray-600 hebrew-text">
+              שירותי ויזה מקצועיים לכל סוג של נסיעה
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {visaServices.map((service, index) => (
+              <div key={index} className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3 hebrew-text">{service.title}</h3>
-                <p className="text-gray-600 hebrew-text text-sm leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 hebrew-text">{service.title}</h3>
+                <p className="text-gray-600 hebrew-text leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* Required Documents Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              איך זה עובד?
+              מסמכים נדרשים
             </h2>
             <p className="text-xl text-gray-600 hebrew-text">
-              שלבי הפקת טיול בהודו עם מלכה
+              רשימת המסמכים הנדרשים להגשת בקשה לויזה
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {requiredDocuments.map((document, index) => (
+                  <div key={index} className="flex items-center p-4 bg-blue-50 rounded-lg">
+                    <CheckCircle className="w-6 h-6 text-green-600 ml-4 flex-shrink-0" />
+                    <span className="text-gray-800 hebrew-text font-medium">{document}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Steps Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
+              תהליך קבלת הויזה
+            </h2>
+            <p className="text-xl text-gray-600 hebrew-text">
+              4 שלבים פשוטים לקבלת ויזה להודו
             </p>
           </div>
 
@@ -313,112 +215,164 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
         </div>
       </section>
 
-      {/* Unique Advantages Section */}
-      <section className="py-20 bg-white">
+      {/* Visa Types and Pricing */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              יתרונות ייחודיים
+              סוגי ויזות ומחירים
             </h2>
+            <p className="text-xl text-gray-600 hebrew-text">
+              בחרו את סוג הויזה המתאים לכם
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {uniqueAdvantages.map((advantage, index) => (
-              <div key={index} className="flex items-center p-6 bg-blue-50 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center ml-4 flex-shrink-0">
-                  <CheckCircle className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {visaTypes.map((visa, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 hebrew-text text-center">{visa.type}</h3>
+                
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                    <span className="text-gray-700 hebrew-text font-medium">משך שהייה:</span>
+                    <span className="text-blue-600 font-bold">{visa.duration}</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                    <span className="text-gray-700 hebrew-text font-medium">מחיר:</span>
+                    <span className="text-green-600 font-bold">{visa.price}</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                    <span className="text-gray-700 hebrew-text font-medium">זמן עיבוד:</span>
+                    <span className="text-yellow-600 font-bold">{visa.processing}</span>
+                  </div>
                 </div>
-                <p className="text-gray-800 hebrew-text font-medium leading-relaxed">{advantage}</p>
+                
+                <button 
+                  onClick={() => onPageChange('contact')}
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  הגישו בקשה
+                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Contact Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 hebrew-text">
-              מה אומרים הלקוחות
-            </h2>
-            <p className="text-xl text-gray-600 hebrew-text">חוויות אמיתיות של קבוצות ישראליות שטיילו עם מלכה</p>
-          </div>
-
-          {/* Photos with Malka and Groups */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="relative overflow-hidden rounded-xl shadow-lg">
-              <img 
-                src="/tours w malka.png"
-                alt="מלכה עם קבוצה גדולה"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <p className="text-white text-lg font-medium hebrew-text text-center">מלכה עם קבוצה בטיול מאורגן</p>
-              </div>
-            </div>
-            
-            <div className="relative overflow-hidden rounded-xl shadow-lg">
-              <img 
-                src="/organised tours.png"
-                alt="קבוצה גדולה בטיול"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <p className="text-white text-lg font-medium hebrew-text text-center">קבוצות ישראליות בהודו</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <div className="text-center mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/3581368/pexels-photo-3581368.jpeg" 
+                  alt="מלכה"
+                  className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-blue-300"
+                />
+                <h3 className="text-2xl font-bold text-gray-900 hebrew-text">מלכה אירני</h3>
+                <p className="text-gray-700 hebrew-text">יועצת ויזות להודו</p>
+                <div className="flex justify-center mt-2">
+                  {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
                   ))}
                 </div>
-                
-                <p className="text-gray-700 hebrew-text leading-relaxed italic mb-4 text-sm">
-                  "{testimonial.text}"
-                </p>
-                
-                <div className="text-center">
-                  <div className="font-bold text-gray-900 hebrew-text">{testimonial.name}</div>
-                  <div className="text-gray-600 text-sm hebrew-text">{testimonial.location}</div>
+              </div>
+
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center bg-gray-50 p-3 rounded-lg">
+                  <Phone className="w-5 h-5 text-blue-600 ml-3" />
+                  <span className="text-gray-800">+91-9980601979</span>
+                </div>
+                <div className="flex items-center bg-gray-50 p-3 rounded-lg">
+                  <Mail className="w-5 h-5 text-blue-600 ml-3" />
+                  <span className="text-gray-800">Malka@shalom-india.com</span>
+                </div>
+                <div className="flex items-start bg-gray-50 p-3 rounded-lg">
+                  <MapPin className="w-5 h-5 text-blue-600 ml-3 mt-1" />
+                  <span className="text-gray-800">בנגלור, הודו</span>
                 </div>
               </div>
-            ))}
+
+              <button 
+                onClick={() => onPageChange('contact')}
+                className="w-full btn-primary py-4 text-lg"
+              >
+                קבלו עזרה בויזה
+              </button>
+            </div>
+
+            {/* Why Choose Us */}
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 hebrew-text">למה לבחור בנו?</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-center p-4 bg-blue-50 rounded-lg">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center ml-4">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 hebrew-text">ניסיון מוכח</h4>
+                    <p className="text-gray-600 hebrew-text text-sm">15 שנות ניסיון בסיוע לישראלים</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center p-4 bg-green-50 rounded-lg">
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center ml-4">
+                    <Shield className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 hebrew-text">שירות אמין</h4>
+                    <p className="text-gray-600 hebrew-text text-sm">מאות ויזות שאושרו בהצלחה</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center p-4 bg-purple-50 rounded-lg">
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center ml-4">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 hebrew-text">ידע מקומי</h4>
+                    <p className="text-gray-600 hebrew-text text-sm">מכירה את התהליכים מקרוב</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center p-4 bg-orange-50 rounded-lg">
+                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center ml-4">
+                    <MessageCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 hebrew-text">תמיכה מלאה</h4>
+                    <p className="text-gray-600 hebrew-text text-sm">ליווי אישי לאורך כל התהליך</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <Users className="w-8 h-8 text-blue-600" />
-            </div>
-          </div>
           <h2 className="text-4xl font-bold mb-6 hebrew-text">
-            צור קשר עם מלכה ותתחיל לתכנן את הטיול שלכם בהודו
+            מוכנים להגיש בקשה לויזה?
           </h2>
-          <p className="text-xl mb-8 hebrew-text leading-relaxed opacity-95">
-            מוכנים לחוויה בלתי נשכחת בהודו עם קבוצה שלכם? 
-            מלכה תדאג לכל הפרטים ותעניק לכם טיול מושלם
+          <p className="text-xl mb-8 hebrew-text leading-relaxed">
+            צרו קשר עוד היום וקבלו עזרה מקצועית בהגשת בקשה לויזה להודו. 
+            מלכה תדאג שהתהליך יהיה חלק ומהיר
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => onPageChange('contact')}
-              className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300"
             >
-              תכננו את הטיול שלכם
+              התחילו את התהליך
             </button>
             <a 
               href="https://wa.me/919980601979"
-              className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block"
+              className="bg-green-600 text-white hover:bg-green-700 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-300 inline-block"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -431,4 +385,4 @@ const OrganizedToursPage: React.FC<OrganizedToursPageProps> = ({ onPageChange })
   );
 };
 
-export default OrganizedToursPage;
+export default VisaAssistancePage;
