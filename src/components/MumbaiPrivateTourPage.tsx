@@ -593,13 +593,13 @@ const MumbaiPrivateTourPage: React.FC<MumbaiPrivateTourPageProps> = ({ onPageCha
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative">
                 <a 
-                  href="https://www.youtube.com/watch?v=EFyEt2Jo1DQ"
+                  href="https://youtube.com/shorts/YheEkhWvrMc?si=JKVYEukzQDdA_NXS"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
                 >
                   <img 
-                    src="https://img.youtube.com/vi/EFyEt2Jo1DQ/maxresdefault.jpg"
+                    src="https://img.youtube.com/vi/YheEkhWvrMc/maxresdefault.jpg"
                     alt="10 Facts of Mumbai"
                     className="w-full h-48 object-cover"
                   />
