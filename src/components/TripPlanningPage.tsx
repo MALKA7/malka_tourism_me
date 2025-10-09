@@ -314,6 +314,32 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
                 ))}
               </div>
               <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
+                "המלצה על מלכה, פניתי אליה לאחר שקראתי המלצות רבות ברשת. עקב זמן טיול קצר של שלושה שבועות והרצון למצות את הטיול, ערכתי עם מלכה שיחת יעוץ לגבי טיול משפחתי בדרום הודו, מלכה תושבת המקום, גם רוחב לב וגם ידע רב ומקצועיות מעדכנת בכל דבר ועניין. ממליץ מכל הלב."
+              </p>
+              <div className="testimonial-author hebrew-text font-bold text-gray-900">איתי אהרון</div>
+              <div className="testimonial-location text-gray-600">ישראל</div>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="testimonial-stars mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
+                ))}
+              </div>
+              <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
+                "אחר שפניתי דרך קבוצה מקבילה לעזרה במציאת סוכן שיסייע לי לרכוש כרטיסי רכבת - חזרה אלי malca irani והציעה את שירותיה בעזרה. בנחישות, בהנחייה בהסברים ובחיפוש מאתגר של רכבת מתאימה לצרכי, מלכה סגרה לי כרטיסים. מלכה לא חסכה כל פרט מידע וייעוץ. כל כך לא מובן מאליו. כל הכבוד ותודה"
+              </p>
+              <div className="testimonial-author hebrew-text font-bold text-gray-900">ירון קלם</div>
+              <div className="testimonial-location text-gray-600">חנניאל</div>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="testimonial-stars mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
+                ))}
+              </div>
+              <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
                 "מלכה תכננה לנו טיול בדרום הודו למשך 3 חודשים, במקצועיות רבה. ענתה בסבלנות לכל שאלה ומלווה אותנו לאורך כל הדרך."
               </p>
               <div className="testimonial-author hebrew-text font-bold text-gray-900">מלי</div>
