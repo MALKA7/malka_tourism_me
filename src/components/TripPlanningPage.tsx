@@ -306,7 +306,7 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
             <p className="text-xl text-gray-600 hebrew-text">חוויות אמיתיות של ישראלים שטיילו בהודו עם מלכה</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <div className="testimonial-stars mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -331,19 +331,6 @@ const TripPlanningPage: React.FC<TripPlanningPageProps> = ({ onPageChange }) => 
               </p>
               <div className="testimonial-author hebrew-text font-bold text-gray-900">ירון קלם</div>
               <div className="testimonial-location text-gray-600">חנניאל</div>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="testimonial-stars mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <p className="testimonial-text hebrew-text text-gray-700 mb-4 italic">
-                "מלכה תכננה לנו טיול בדרום הודו למשך 3 חודשים, במקצועיות רבה. ענתה בסבלנות לכל שאלה ומלווה אותנו לאורך כל הדרך."
-              </p>
-              <div className="testimonial-author hebrew-text font-bold text-gray-900">מלי</div>
-              <div className="testimonial-location text-gray-600">ישראל</div>
             </div>
           </div>
         </div>
